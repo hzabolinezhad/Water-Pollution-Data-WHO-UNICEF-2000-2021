@@ -1,3 +1,6 @@
+Author:            H.zabolinezhad
+Date:              2023-02-10
+  
 # Final_assingment
 This is where you can find my final assignment for programming1
 Water Pollution Data (WHO/UNICEF) | 2000-2020
