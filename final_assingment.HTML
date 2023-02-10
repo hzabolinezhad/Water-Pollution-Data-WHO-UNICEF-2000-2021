@@ -1,0 +1,355 @@
+{
+  "metadata": {
+    "language_info": {
+      "name": ""
+    },
+    "kernelspec": {
+      "name": "python",
+      "display_name": "Python (Pyodide)",
+      "language": "python"
+    }
+  },
+  "nbformat_minor": 4,
+  "nbformat": 4,
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "source": "# Water Pollution Data (WHO/UNICEF) | 2000-2020\n## About Dataset\nContext\nAccording to the United Nations, about 4 billion people experience severe water shortages for at least one month a year and around 1.6 billion people - almost a quarter of the world's population - have problems accessing a clean, safe water supply.\n\nOn October 29, 2019, thousands of content creators across the world have collaborated to start the project #TeamSeas as an attempt to manage this waste and help reduce pollution.\n\nThis dataset aims to talk about this issue and spread awareness by encouraging Data Analysts and Data Scientists on Kaggle to work on this and present their findings.\n\nThe dataset can be found at https://www.kaggle.com/datasets/harshjhunjhunwala/water-pollution-data-whounicef-20002021?resource=download \n\n## Content\nThis dataset contains data on drinking water, sanitation, and hygiene (2000 - 2020) for several regions in the world as well as aggregate values for the world itself. The data is split into categories of household, schools, and healthcare with some countries having results on inequalities as well\n\n\n\n## Research questions\n<p>1- How has the global access to clean water and sanitation changed from 2000 to 2020?</p>\n<p>2- Can we observe any correlation between the global access to clean water and sanitation?</p>\n<p>3-How has been regional access to clean water and sanitation over the years</p>\n<p>4-Are there significant inequalities in access to clean water and sanitation within the different regions?</p>\n<p>5-How does the access to clean water and sanitation differ between High_income and lowincome regions?</p>",
+      "metadata": {}
+    },
+    {
+      "cell_type": "code",
+      "source": "import pandas as pd\nimport yaml\nimport numpy as np\n\n#open the config file and load the file into a dataframe \nwith open (\"config.yaml\",'r') as conf_file:\n    config=yaml.safe_load(conf_file)\n\n#The df contains regional as well as global information about availabiliyt of \n# clean, safe water \ndf =pd.read_csv(config['region_household_water_path'])\n\n#The df contains regional as well as global information anout availabiliyt of \n# sanitation\ndf_sanit =pd.read_csv(config['region_household_sanitatione_path'])\n",
+      "metadata": {
+        "trusted": true
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": "## Data preperation\nRemove unnecessary rows and columns from the data farmes and rename the columns",
+      "metadata": {}
+    },
+    {
+      "cell_type": "code",
+      "source": "\n\n#load the file into a dataframes again to keep original data to refere whenever\n#needed\ndf =pd.read_table(config['region_household_water_path'],delimiter=',')\ndf_sanit =pd.read_table(config['region_household_sanitatione_path'],delimiter=',')\n\ndf_wat = pd.DataFrame()\ndf_san = pd.DataFrame()\n\n#######################################\n#remove unnecessary rows and columns from data farmes and rename the columns\n########################################\ndf_wat['Year']=df['Year']\ndf_wat['Population']=df['Population \\n(thousands)']\ndf_san['Year']=df_sanit['Year']\ndf_san['Population']=df_sanit['Population \\n(thousands)']\n\n#load the file into a dataframe while skipping the firs row\ndf =pd.read_table(config['region_household_water_path'],delimiter=',',skiprows=1)\ndf_wat['REGION']=df['REGION']\n\ndf_sanit =pd.read_table(config['region_household_sanitatione_path'],delimiter=',',skiprows=1)\ndf_san['REGION']=df_sanit['REGION']\n\n#load the file into a dataframe while skipping the two firs rows\ndf =pd.read_table(config['region_household_water_path'],delimiter=',',skiprows=2)\n\ndf_wat['national'] = df['At least basic'].str.replace(\">\", \"\")\ndf_wat['rural'] = df['At least basic.1'].str.replace(\">\", \"\")\ndf_wat['urban'] = df['At least basic.2'].str.replace(\">\", \"\")\n\ndf_sanit =pd.read_table(config['region_household_sanitatione_path'],delimiter=',',skiprows=2)\ndf_san['national'] = df_sanit['At least basic'].str.replace(\">\", \"\")\ndf_san['rural'] = df_sanit['At least basic.1'].str.replace(\">\", \"\")\ndf_san['urban'] = df_sanit['At least basic.2'].str.replace(\">\", \"\")\n\n\n\ndf_wat.loc[(df_wat['Year'] == 2020) & (df_wat['REGION'] == 'World'), ['Population', 'REGION', 'national', 'rural','urban']] = [7794799, 'World',90,82,96]\n\ndf_san.loc[(df_san['Year'] == 2020) & (df_san['REGION'] == 'World'), ['Population', 'REGION', 'national', 'rural','urban']] = [7794799, 'World',78,66,88]\n\n",
+      "metadata": {
+        "trusted": true
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": "#inspect water data\ndf_wat.columns\ndf_san.columns",
+      "metadata": {
+        "trusted": true
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": "## Data Cleaning\nThe data is not clean. There are empty cells in the dataframe which  to be replaced with NaN's and then interpolated. The type of year, population, andnational,rural, and urban values have been changed for both water and sanitation. For water and sanitaion missing data, my strategy for national, urban and rural was to fill tha missing data with the previous value of the same column supposing that the situation in the related regions has not changed over a year. If the first value of the column is missing, it will remain missing as ffill only propagates values forward. However, I used  the bfill method (backward fill) instead to fill to the both direction in a column. For probable missing year and region's name I deleted data where the year is missing, and for missing population I used linear interpolation.",
+      "metadata": {}
+    },
+    {
+      "cell_type": "code",
+      "source": "\n#replace cells with '-' to NaN\ndf_wat.replace('-', np.nan, inplace=True)\ndf_san.replace('-', np.nan, inplace=True) \n\n\n#This will return a  DataFrame that contains only the rows where\n#  the year is not missingrue)\ndf_wat = df_wat.dropna(subset=['Year'])\ndf_san = df_san.dropna(subset=['Year'])\n\n#change year type to integer\ndf_wat['Year']=df_wat['Year'].astype(int)\ndf_san['Year']=df_san['Year'].astype(int)\n\n#This will return a  DataFrame that contains only the rows where\n#  the year is not missingrue)\ndf_wat = df_wat.dropna(subset=['REGION'])\ndf_san = df_san.dropna(subset=['REGION'])\n\n#change year type to string\ndf_wat['REGION']=df_wat['REGION'].astype(str)\ndf_san['REGION']=df_san['REGION'].astype(str)\n\n\n#Interpolating population\ndf_wat['Population'].fillna(method='ffill', inplace=True)\ndf_san['Population'].fillna(method='ffill', inplace=True)\n\n#change year type to int\ndf_wat['Population']=df_wat['Population'].astype(int)\ndf_san['Population']=df_san['Population'].astype(int)\n\n\n\n#to cahnge the type to int\ndf_wat['national'].fillna(0, inplace=True)\ndf_wat['rural'].fillna(0, inplace=True)\ndf_wat['urban'].fillna(0, inplace=True)\n\n\ndf_san['national'].fillna(0, inplace=True)\ndf_san['rural'].fillna(0, inplace=True)\ndf_san['urban'].fillna(0, inplace=True)\n\n\ndf_wat['national']=df_wat['national'].astype(int)\ndf_san['national']=df_san['national'].astype(int)\n\ndf_wat['rural']=df_wat['rural'].astype(int)\ndf_san['rural']=df_san['rural'].astype(int)\n\ndf_wat['urban']=df_wat['urban'].astype(int)\ndf_san['urban']=df_san['urban'].astype(int)\n\n",
+      "metadata": {
+        "trusted": true
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": "#inspect the data\ndf_wat.info()\ndf_san.info()",
+      "metadata": {
+        "trusted": true
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": "## More data cleaning to draw a plot\nFirst I separated the global data for both sanitation and water. Then, did more data cleaning.\n I did data interpolation here becuase I found out that it yields better results on data set with smaller size.\n Next, two line graphs created to display the changes in population and access to the\n clean water and sanition facilities from 2000 to 2020.",
+      "metadata": {}
+    },
+    {
+      "cell_type": "code",
+      "source": "\nimport pandas as pd\nimport matplotlib.pyplot as plt\n\n\n# Create global DataFrame\nglob_df_wat = df_wat[df_wat.loc[:, 'REGION'] =='World']\nglob_san_df = df_san[df_san.loc[:, 'REGION'] =='World']\n\n\n# more data cleaning\n# Data interpolation\nglob_df_wat.replace(0, np.nan, inplace=True)\nglob_san_df.replace(0, np.nan, inplace=True)\n\n\nglob_df_wat['national'].interpolate(method='linear', inplace=True)\nglob_df_wat['rural'].interpolate(method='linear', inplace=True)\nglob_df_wat['urban'].interpolate(method='linear', inplace=True)\n\nglob_san_df['national'].interpolate(method='linear', inplace=True)\nglob_san_df['rural'].interpolate(method='linear', inplace=True)\nglob_san_df['urban'].interpolate(method='linear', inplace=True)\n\nglob_df_wat.sort_values(by='Year', ascending=True, inplace=True)\nglob_san_df.sort_values(by='Year', ascending=True, inplace=True)\n",
+      "metadata": {
+        "trusted": true
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": "print(glob_df_wat)",
+      "metadata": {
+        "trusted": true
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": "print(glob_san_df)",
+      "metadata": {
+        "trusted": true
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": "## Create the plots",
+      "metadata": {}
+    },
+    {
+      "cell_type": "code",
+      "source": "\n\nx = glob_df_wat['Year']\ny_water_national = glob_df_wat['national']\ny_water_rural = glob_df_wat['rural']\ny_water_urban = glob_df_wat['urban']\n\ny_pop = glob_df_wat['Population']\ny_san_national=glob_san_df['national']\ny_san_rural=glob_san_df['rural']\ny_san_urban=glob_san_df['urban']\n\n\n\nfig, (ax1, ax2) = plt.subplots(1, 2, figsize=(13,4))\nfig.subplots_adjust(wspace=0.4) # adjust the width space between the two subplots\n# Plot the first figure on ax1\ncolor = 'tab:blue'\nax1.set_xlabel('Year')\nax1.set_ylabel('Access to clean Water (%)', color=color)\n#ax1.scatter(x, y_water_national, color=color)\nax1.plot(x, y_water_national, color=color, label=' national')\nax1.plot(x, y_water_rural,'k--', color=color, label=' rural')\nax1.plot(x, y_water_urban,'k:', color=color, label=' urban')\n\nax1.tick_params(axis='y', labelcolor=color)\nax1.set_xticks(x)\nax1.set_xticklabels(x, rotation=-45)\n\n\n# a second axes that shares the same x-axis\nax2_1 = ax1.twinx() \nax2_1.get_yaxis().get_major_formatter().set_scientific(False)\ncolor = 'tab:red'\nax2_1.set_ylabel('Population (thousands)', color=color)  \n#ax2_1.scatter(x, y_pop, color=color)\nax2_1.plot(x, y_pop, color=color, label='Population ')\nax2_1.tick_params(axis='y', labelcolor=color)\nax2_1.set_yticks(y_pop)\n#ax2_1.legend(loc='upper right')\n\nplt.title('Trend of global Population Access to clean water from 2000 to 2019\\n', size=10)\n# Plot the second figure on ax2\ncolor = 'tab:green'\nax2.set_xlabel('Year')\nax2.set_ylabel('Access to sanitation (%)', color=color)\n#ax2.scatter(x, y_san.astype(str), color=color)\nax2.plot(x, y_san_national, color=color, label='national')\nax2.plot(x, y_san_rural,'k--' ,color=color, label='rural ')\nax2.plot(x, y_san_urban,'k:', color=color, label='urban')\nax2.tick_params(axis='y', labelcolor=color)\nax2.set_xticks(x)\nax2.set_xticklabels(x, rotation=-45,fontsize=10)\n#ax2.legend(loc='upper left')\n\nax2_2 = ax2.twinx() \nax2_2.get_yaxis().get_major_formatter().set_scientific(False)\ncolor = 'tab:red'\nax2_2.set_ylabel('Population (thousands)', color=color, fontsize=10)  \n#ax2_2.scatter(x, y_pop, color=color)\nax2_2.plot(x, y_pop, color=color, label='Population')\nax2_2.tick_params(axis='y', labelcolor=color)\nax2_2.set_yticks(y_pop)\n#ax2_2.legend(loc='upper right')\n\n#add the legends\nax1.legend(loc='lower center', fontsize=8)\nax2_1.legend(loc='lower right', fontsize=8)\nax2.legend(loc='lower center', fontsize=8)\nax2_2.legend(loc='lower right', fontsize=8)\n\nplt.title('Trend of global Population Access to  sanitation from 2000 to 2019\\n', size=10)\nplt.show()",
+      "metadata": {
+        "trusted": true
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": "# Question:Can we observe any correlation between the global access to clean water and sanitation?\nIn this code, a scatterplot is created  to visualize the relationship between the access to drinking water and population . The pearsonr function is then used to calculate Pearson's correlation coefficient and the corresponding p-value.",
+      "metadata": {}
+    },
+    {
+      "cell_type": "code",
+      "source": "from scipy.stats import pearsonr\n\ndef calc_pearson(x,y):\n    #calculate  Pearson's correlation coefficient and the corresponding p-value. \n    correlation, p_value = pearsonr(x, y)\n    print(\"Pearson correlation coefficient:\", correlation)\n    print(\"P-value:\", p_value)\n\n    if p_value < 0.05:\n        print(\"There is a significant correlation between access to clean water and population growth.\")\n    else:\n        print(\"There is no significant correlation between access to clean water and population growth.\")\n\n    if correlation == 1:\n        print(\"There is a strong positive correlation.\")\n    elif correlation == -1:\n        print(\"There is a strong negative correlation.\")\n    elif correlation == 0:\n        print(\"There is no correlation.\")\n    elif correlation != 0:\n        print(\"There is a positive correlation.\")\n    else:\n        print(\"There is a negative correlation.\") \n         \nprint('_____________national_______________________________\\n')\n  \ncalc_pearson(y_water_national,y_san_national)\nprint('____________rural________________________________\\n')\n\ncalc_pearson(y_water_rural,y_san_rural)\nprint('____________urban________________________________\\n')\n\ncalc_pearson(y_water_urban,y_san_urban)\n",
+      "metadata": {
+        "trusted": true
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": "## Visualization\nTo investigate the correlation between two variables visually, I made a plot on the variables,clean water and sanitation, andscatter plot to see if there is a relationship between clean water and sanitation\n\nDistribution of points: If the points are clustered together, it suggests a strong relationship between the variables. If the points are dispersed, it suggests a weak relationship.\n\nDirection of relationship: If the points tend to increase as they move from left to right, it suggests a positive relationship between the variables. If the points decrease as they move from left to right, it suggests a negative relationship.\n\nStrength of relationship: The strength of the relationship can be determined by the amount of scatter in the plot. A small amount of scatter suggests a strong relationship, while a large amount of scatter suggests a weak relationship.\n\nOutliers: Points that lie significantly away from the main pattern of the plot are called outliers and can indicate a departure from the overall relationship between the variables",
+      "metadata": {}
+    },
+    {
+      "cell_type": "code",
+      "source": "fig, (ax1,ax2,ax3) = plt.subplots(1, 3, figsize=(13,4))\n# Make a plot of the marginal prior, likelihood and posterior distributions:\nax1.scatter(y_water_national,y_san_national, label='national')\nax1.set_xlabel(\"clean water (%)\")\nax1.set_ylabel(\"sanitation (%)\")\nax1.legend(loc='best')\n#ax1.ylim(0,0.8)\n\nax2.scatter(y_water_rural,y_san_rural, label='rural')\nax2.set_xlabel(\"clean water (%)\")\nax2.set_ylabel(\"sanitation (%)\")\nax2.legend(loc='best')\n# ax2.ylim(0,0.8)\n\nax3.scatter(y_water_urban,y_san_urban, label='urban')\nax3.set_xlabel(\"clean water (%)\")\nax3.set_ylabel(\"sanitation (%)\")\nax3.legend(loc='best')\nfig.suptitle('Relationship between percentage of population who access to clean water and the percentage who access to sanitation \\n', size=12)\nplt.show()",
+      "metadata": {
+        "trusted": true
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": "# Question:How has been regional access to clean water and sanitation over the years",
+      "metadata": {}
+    },
+    {
+      "cell_type": "markdown",
+      "source": "## Data cleaning and creating dataframes\nThree data frames were created according to 8 main SDG regions (Australia and New Zealand, Central and Southern Asia, Eastern, and South-Eastern Asia,\nEurope and Northern America, Latin America and the Caribbean, Northern Africa and Western Asia, Oceania, and Sub-Saharan Africa ) additional to Others which refers to the minor regions together. There is also another data frame according to  SDG's income categories",
+      "metadata": {}
+    },
+    {
+      "cell_type": "markdown",
+      "source": "### Create and clean water data frames ",
+      "metadata": {}
+    },
+    {
+      "cell_type": "code",
+      "source": "#Do more data cleaning to create the required data frame \n#the minor regions and income data have been removed from the data\nexcept_list=['World','Small Island Developing States',\n                               'Landlocked Developing Countries',\n                               'Least Developed Countries','Low-income',\n                                'Lower-middle-income','Upper-middle-income',\n                                  'High-income','Fragile or Extremely Fragile']\n\nminor_region_list=['Small Island Developing States',\n                               'Landlocked Developing Countries',\n                               'Least Developed Countries',\n                               'Fragile or Extremely Fragile']\nincome_region_list=['Low-income',\n                               'Lower-middle-income','Upper-middle-income',\n                               'High-income']\n\ndf_wat.replace(np.nan,0, inplace=True)\n#SDG main regions data \ndf_reg_wat= df_wat[~df_wat['REGION'].isin(except_list)]\n\n\n#create dataset accordin to income categories\nincome_reg_wat=df_wat[df_wat['REGION'].isin(income_region_list)]\n\n#to  add  water access for minor regions together  to the main dataframe\n# it is done to interpolate abundant null data in the \n# 'Small Island Developing States','Landlocked Developing Countries',\n# and 'Least Developed Countries' regions   \nminor_reg_wat=df_wat[df_wat['REGION'].isin(minor_region_list)]\n\n#creat minor regions together data frame\nfor year in range(2000,2021): \n    df_temp=minor_reg_wat[minor_reg_wat['Year']==year]  \n    \n    new_data = {\n    'Year': year,\n    'REGION': 'Others',\n    'Population': sum(df_temp['Population']),\n    'national':(df_temp['national'].mean()),\n    'rural':(df_temp['rural'].mean()),\n    'urban':(df_temp['urban'].mean()),\n    }\n    new_df = pd.DataFrame(new_data, index=[0])\n    df_reg_wat = pd.concat([df_reg_wat, new_df], ignore_index=True) \n\n\n# Data interpolation\ndf_reg_wat.replace(0, np.nan, inplace=True)\ndf_reg_wat['national'].interpolate(method='linear', inplace=True)\ndf_reg_wat['rural'].interpolate(method='linear', inplace=True)\ndf_reg_wat['urban'].interpolate(method='linear', inplace=True)\n\nincome_reg_wat.replace(0, np.nan, inplace=True)\nincome_reg_wat['national'].interpolate(method='linear', inplace=True)\nincome_reg_wat['rural'].interpolate(method='linear', inplace=True)\nincome_reg_wat['urban'].interpolate(method='linear', inplace=True)",
+      "metadata": {
+        "trusted": true
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": "### Create and clean sanitation data frames",
+      "metadata": {}
+    },
+    {
+      "cell_type": "code",
+      "source": "df_san.replace(np.nan,0, inplace=True)\n#SDG main regions data \ndf_reg_san= df_san[~df_san['REGION'].isin(except_list)]\n\n\n#create dataset accordin to income categories\nincome_reg_san=df_san[df_san['REGION'].isin(income_region_list)]\n\n#to  add  water access for minor regions together  to the main dataframe\n# it is done to interpolate abundant null data in the \n# 'Small Island Developing States','Landlocked Developing Countries',\n# and 'Least Developed Countries' regions   \nminor_reg_san=df_san[df_san['REGION'].isin(minor_region_list)]\n\n#creat minor regions together data frame\n\n\nfor year in range(2000,2021): \n    df_temp=minor_reg_san[minor_reg_san['Year']==year]  \n    \n    new_data = {\n    'Year': year,\n    'REGION': 'Others',\n    'Population': sum(df_temp['Population']),\n    'national':(df_temp['national'].mean()),\n    'rural':(df_temp['rural'].mean()),\n    'urban':(df_temp['urban'].mean()),\n    }\n    new_df = pd.DataFrame(new_data, index=[0])\n    df_reg_san = pd.concat([df_reg_san, new_df], ignore_index=True) \n\n\n# Data interpolation\ndf_reg_san.replace(0, np.nan, inplace=True)\ndf_reg_san['national'].interpolate(method='linear', inplace=True)\ndf_reg_san['rural'].interpolate(method='linear', inplace=True)\ndf_reg_san['urban'].interpolate(method='linear', inplace=True)\n\nincome_reg_san.replace(0, np.nan, inplace=True)\nincome_reg_san['national'].interpolate(method='linear', inplace=True)\nincome_reg_san['rural'].interpolate(method='linear', inplace=True)\nincome_reg_san['urban'].interpolate(method='linear', inplace=True)",
+      "metadata": {
+        "trusted": true
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": "#inspect the data\n#inspect the data\nprint(income_reg_wat)\nprint(df_reg_wat)",
+      "metadata": {
+        "trusted": true
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": "\n#inspect the data\nprint(income_reg_san.info())\nprint(df_reg_san.info())",
+      "metadata": {
+        "trusted": true
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": "\n#inspect the data\nprint(income_reg_wat.info())\nprint(df_reg_wat.info())",
+      "metadata": {
+        "trusted": true
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": "## visualization\nTwo  plots were created to show regional access to clean water and sanitation per year, \nin addition to a plot for reginal water and sanitation according to income categories .\nThe plots are interactive as they show the changes using a slider taht slide from 2000 to 2020.\nin this code  draw_plot and draw_plot_san, which are used to create two bar charts that represent the access to clean water and sanitation in eight main SDG regions, respectively. Both functions take a year parameter, which is used to filter the data for that year. The data for the bar charts is stored in two dataframes: df_reg_wat and df_reg_san. The draw_plot function uses the ColumnDataSource method to create a bar chart that displays the access to clean water in each of the eight regions. \nThe draw_plot_san function is similar to the draw_plot function, with the difference that it displays the access to sanitation in each region. \nIn addition to these two functions, there is another function named draw_plot_income_water that is similar to the first two functions, but it considers the region's income categories instead of the regions. This function uses the data stored in the income_reg_wat dataframe",
+      "metadata": {}
+    },
+    {
+      "cell_type": "code",
+      "source": "from bokeh.io import output_notebook, show\nfrom bokeh.plotting import figure\nfrom bokeh.layouts import column\nfrom ipywidgets import interact, IntSlider, Select, Layout, HBox, VBox\nfrom bokeh.models import ColumnDataSource, LabelSet\nfrom bokeh.layouts import row\n# Enable display of Bokeh plots in the notebook\noutput_notebook()\n\n\n\nblue_colors=['#00BFFF','#87CEEB','#1E90FF','#ADD8E6','#6495ED','#4682B4',\n          '#0077BE','#7B68EE','#007FFF']\ngreen_colors = ['#00FF7F', '#90EE90', '#32CD32', '#228B22', '#008000', \n                '#7FFF00', '#ADFF2F', '#006400', '#66CDAA']\n\n############################################################################ \ndef draw_plot(year,select):\n    \"\"\"\n     function draws plot for acces to clean water in \n     8 main SDG regions \n\n    \"\"\"\n    # Get the unique regions in the data\n    x_list = sorted(list(set(df_reg_wat['REGION'])))\n\n    year_df = df_reg_wat[df_reg_wat['Year'] == year]\n    year_df=sorted(year_df)\n\n    source1= ColumnDataSource(data=dict(REGION=year_df['REGION'] ,\n     Access_to_CleanWater=year_df[select], color=blue_colors))\n\n    # Create the bar chart\n    p = figure(x_range=x_list, y_range=(0, 100), plot_height=350,\n                title='Access to Drinking Water per Region in ' + str(year),\n            toolbar_location=None, tools=\"\")\n\n    p.vbar(x='REGION', top='Access_to_CleanWater', width=0.7,\n            source=source1, color='color')\n\n    p.xgrid.grid_line_color = None\n    p.y_range.start = 0\n    p.y_range.end = 100\n    p.xaxis.major_label_orientation = 1\n    p.xaxis.axis_label = \"Region\"\n    p.yaxis.axis_label = \"Access to Drinking Water (%)\"\n\n   \n    # Add the labels on top of the bars\n    # labels = LabelSet(x='REGION', y='Access_to_CleanWater',\n    #                    text='Access_to_CleanWater', level='glyph',\n    #           x_offset=-13.5, y_offset=0, source=source1, render_mode='canvas')\n    return p\n############################################################################\ndef draw_plot_san(year,select):\n\n    \"\"\"\n     function draws plot for acces to clean sanitatin in \n     8 main SDG regions \n     \n    \"\"\"\n    # Get the unique regions in the data\n    x_list = sorted(list(set(df_reg_wat['REGION'])))\n\n    year_df = df_reg_san[df_reg_san['Year'] == year]\n    \n    source2 = ColumnDataSource(data=dict(REGION=year_df['REGION'] ,\n     Access_to_sanitation=year_df[select], color=green_colors))\n\n    # Create the bar chart\n    p = figure(x_range=x_list, y_range=(0, 100), plot_height=350,\n                title='Access to sanitation per Region in ' + str(year),\n            toolbar_location=None, tools=\"\")\n\n    p.vbar(x='REGION', top='Access_to_sanitation', \n           width=0.7, source=source2, color='color')\n\n    p.xgrid.grid_line_color = None\n    p.y_range.start = 0\n    p.y_range.end = 100\n    p.xaxis.major_label_orientation = 1\n    p.xaxis.axis_label = \"Region\"\n    p.yaxis.axis_label = \"Access to sanitation (%)\"\n\n   \n    # Add the labels on top of the bars\n    # labels = LabelSet(x='REGION', y='Access_to_sanitation',\n    #                    text='Access_to_sanitation', level='glyph',\n    #           x_offset=-13.5, y_offset=0, source=source2, render_mode='canvas')\n    return p\n\n\ndef draw_all_plots(year,select):\n    \n\n    p1 = draw_plot(year,select)\n    p2 = draw_plot_san(year,select)\n   \n    show(row(p1, p2))\n\ndef main():\n    \n    select = Select(title=\"Population Type:\", value='national', options=['national','rural','urban'], \n                 description='Select population type:', layout=Layout(height='auto', width='500', align_items='center'))\n\n    slider = IntSlider(min=2000, max=2020, step=1, description='Year:', readout_format='d', \n                   layout=Layout(height='auto', width='1000', align_items='center'))\n\n    interact(draw_all_plots, year=slider, select=select)\n\n    \nif __name__ == \"__main__\":\n    main()",
+      "metadata": {
+        "trusted": true
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": "# Question:How does the access to clean water and sanitation differ between High_income and low_income regions?",
+      "metadata": {}
+    },
+    {
+      "cell_type": "markdown",
+      "source": "## visualization\n These two functions, draw_plot_income_water and draw_plot_income_san, are similar to the first two above functions, but they consider the region's income categories instead of the regions.",
+      "metadata": {}
+    },
+    {
+      "cell_type": "code",
+      "source": "# Enable display of Bokeh plots in the notebook\noutput_notebook()\n  \ndef draw_plot_income_water(year,select):\n    \n    \"\"\"\n     function draws plot for acces to clean water considering\n     region's income categories\n     \n    \"\"\"\n    # Get the unique regions in the data\n    x_list = sorted(list(set(income_reg_wat['REGION'])))\n    \n    year_df = income_reg_wat[income_reg_wat['Year'] == year]\n\n    source1 = ColumnDataSource(data=dict(REGION=year_df['REGION'] ,\n     Access_to_cleanWater=year_df[select], \n     color=['#00BFFF','#87CEEB','#1E90FF','#ADD8E6']))\n\n    # Create the bar chart\n    p = figure(x_range=x_list, y_range=(0, 100), plot_height=350,\n                title='Access to clean water per income category in '\n                  + str(year),toolbar_location=None, tools=\"\")\n\n    p.vbar(x='REGION', top='Access_to_cleanWater', width=0.4,\n            source=source1, color='color')\n\n    p.xgrid.grid_line_color = None\n    p.y_range.start = 0\n    p.y_range.end = 100\n    p.xaxis.major_label_orientation = 1\n    p.xaxis.axis_label = \"Income\"\n    p.yaxis.axis_label = \"Access to clean water (%)\"\n\n   \n    # Add the labels on top of the bars\n    labels = LabelSet(x='REGION', y='Access_to_cleanWater',\n                       text='Access_to_clean', level='glyph',\n              source=source1, render_mode='canvas')\n    return p\n############################################################################\ndef draw_plot_income_san(year,select):\n    \n    \"\"\"\n     function draws plot for acces to sanitation considering\n     region's income categories\n     \n    \"\"\"\n    # Get the unique regions in the data\n    x_list = sorted(list(set(income_reg_san['REGION'])))\n    \n    year_df = income_reg_san[income_reg_san['Year'] == year]\n\n    source2 = ColumnDataSource(data=dict(REGION=year_df['REGION'] ,\n     Access_to_sanitation=year_df[select], \n     color=['#00FF7F', '#90EE90', '#32CD32', '#228B22']))\n\n    # Create the bar chart\n    p = figure(x_range=x_list, y_range=(0, 100), plot_height=350,\n                title='Access to sanitation per income category in '\n                  + str(year),toolbar_location=None, tools=\"\")\n\n    p.vbar(x='REGION', top='Access_to_sanitation', width=0.4, source=source2, \n           color='color')\n\n    p.xgrid.grid_line_color = None\n    p.y_range.start = 0\n    p.y_range.end = 100\n    p.xaxis.major_label_orientation = 1\n    p.xaxis.axis_label = \"Incom\"\n    p.yaxis.axis_label = \"Access to sanitation (%)\"\n\n   \n    # Add the labels on top of the bars\n    labels = LabelSet(x='REGION', y='Access_to_sanitation',\n                       text='Access_to_sanitation', level='glyph',\n               source=source2, render_mode='canvas')\n    return p\n\ndef draw_all_plots(year,select):\n    \n\n    p1= draw_plot_income_water(year,select)\n    p2= draw_plot_income_san(year,select)\n    show(row(p1, p2))\n    \n\ndef main():\n    \n    select = Select(title=\"Population Type:\", value='national',\n                     options=['national','rural','urban'], \n                     description='Select population type:', \n                     layout=Layout(height='auto', width='500',\n                                    align_items='center'))\n\n    slider = IntSlider(min=2000, max=2020, step=1, description='Year:',\n                        readout_format='d',\n                          layout=Layout(height='auto', \n                                        width='1000', align_items='center'))\n\n    interact(draw_all_plots, year=slider, select=select)\n\n    \nif __name__ == \"__main__\":\n    main()\n ",
+      "metadata": {
+        "trusted": true
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": "## Statistics\nTo statistically investigating the difference between high and low incom regions, the t-test can be used to determine if high-income regions and the low-income regions, are equal accorfding to the means of access to the clean water and sanitation, or not. The variables of interest would be access to clean water and access to sanitation.\n\nTo perform a t-test, I first  separated the data for high-income regions and low-income regions, and then calculated the mean for each group for the access to clean water and access to sanitation. Then, I would use a t-test to compare the means between the two groups and calculate a p-value. A p-value of less than 0.05 would indicate that the differences between the two groups are statistically significant.\n\nA t-test assumes that the data is normally distributed and that the variances of the two groups are equal. If these assumptions are not met, alternative tests, such as a Welch's t-test or a Mann-Whitney U test, may need to be used.",
+      "metadata": {}
+    },
+    {
+      "cell_type": "markdown",
+      "source": "### Histograms",
+      "metadata": {}
+    },
+    {
+      "cell_type": "code",
+      "source": "def hist_plot(y1_law,y1_high,y2_law,y2_high):\n\n    #print('mean = {:.4g}, variance = {:.4g}'.format(y_av_law_wat, m2_law_wat))\n    fig, (ax1,ax2) = plt.subplots(1, 2, figsize=(13,4))\n\n    #Draw His plot for clean water in low/high incom regions\n    my_bins = np.arange(30,85, 5)\n\n    # Make histograms of water access in low_income and  high_income regions:\n    ax1.hist(x=y1_law, density=True,\n            bins=my_bins, \n            color='pink',alpha=0.50, rwidth=1, label='low incom ')\n    ax1.hist(x=y1_high, density=True,\n            bins=my_bins, \n            color='blue',alpha=0.50, rwidth=1, label='high income)')\n    ax1.grid(axis='y', alpha=0.5)\n    ax1.set_xlabel('population, $y$ (%)')\n    ax1.set_ylabel('Probability $f(y)$')\n    ax1.set_title('Histogram of access to clean water')\n    ax1.legend(loc='best')\n\n    #Draw His plot for sanitation in low/high incom regions\n    my_bins = np.arange(0,50, 5)\n\n    # Make histograms of water access in low_income and  high_income regions:\n    ax2.hist(x=y2_law, density=True,\n            bins=my_bins, \n            color='pink',alpha=0.50, rwidth=1, label='low incom ')\n    ax2.hist(x=y2_high, density=True,\n            bins=my_bins, \n            color='blue',alpha=0.50, rwidth=1, label='high income)')\n    ax2.grid(axis='y', alpha=0.5)\n    ax2.set_xlabel('population, $y$ (%)')\n    ax2.set_ylabel('Probability $f(y)$')\n    ax2.set_title('Histogram of access to sanitation)')\n    ax2.legend(loc='best')\n",
+      "metadata": {
+        "trusted": true
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": "def DS_Q_Q_parameters(y, est = 'ML'):\n    \"\"\"\n    *\n    Function DS_Q_Q_Plot(y, est = 'preset', **kwargs)\n    \n       This function makes a normal quantile-quantile plot (Q-Q-plot), also known\n       as a probability plot, to visually check whether data follow a normal distribution.\n    \n    Requires:            - \n    \n    Arguments:\n      y                  data array\n      est                Estimation method for normal parameters mu and sigma:\n                         either 'robust' (default), or 'ML' (Maximum Likelihood),\n                         or 'preset' (given values)\n      N.B. If est='preset' than the *optional* parameters mu, sigma must be provided:\n      mu                 preset value of mu\n      sigma              preset value of sigma\n      \n    Returns:\n      Estimated mu, sigma, n, and expected number of datapoints outside CI in Q-Q-plot.\n      Q-Q-plot\n      \n    Author:            M.E.F. Apol\n    Date:              2020-01-06, revision 2022-08-30\n    \"\"\"\n    \n   \n    from scipy.stats import iqr # iqr is the Interquartile Range function\n\n    \n    \n    n = len(y)\n    \n    # Calculate order statistic:\n    y_os = np.sort(y)\n  \n    # Estimates of mu and sigma:\n    # ML estimates:\n    mu_ML = np.mean(y)\n    sigma2_ML = np.var(y)\n    sigma_ML = np.std(y) # biased estimate\n    s2 = np.var(y, ddof=1)\n    s = np.std(y, ddof=1) # unbiased estimate\n    # Robust estimates:\n    mu_R = np.median(y)\n    sigma_R = iqr(y)/1.349\n\n    # Assign values of mu and sigma for z-transform:\n    if est == 'ML':\n        mu, sigma = mu_ML, s\n    elif est == 'robust':\n        mu, sigma = mu_R, sigma_R\n   \n    else:\n        print('Wrong estimation method chosen!')\n        return()\n        \n    \n    # Expected number of deviations (95% confidence level):\n    n_dev = np.round(0.05*n)\n    \n   \n         \n    # Perform z-transform: sample quantiles z.i\n    z_i = (y_os - mu)/sigma\n\n    # Calculate cumulative probabilities p.i:\n    i = np.array(range(n)) + 1\n    p_i = (i - 0.5)/n\n\n    # Calculate theoretical quantiles z.(i):\n    from scipy.stats import norm\n    z_th = norm.ppf(p_i, 0, 1)\n\n    # Calculate SE or theoretical quantiles:\n    SE_z_th = (1/norm.pdf(z_th, 0, 1)) * np.sqrt((p_i * (1 - p_i)) / n)\n\n    # Calculate 95% CI of diagonal line:\n    CI_upper = z_th + 1.96 * SE_z_th\n    CI_lower = z_th - 1.96 * SE_z_th\n    return z_th, z_i, CI_upper,CI_lower,mu, sigma\n",
+      "metadata": {
+        "trusted": true
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": "def DS_Q_Q_plots(y1_low,y1_high,y2_low,y2_high) :\n\n    fig, (ax1,ax2,ax3,ax4) = plt.subplots(1, 4, figsize=(13,4) )\n \n    z_th, z_i, CI_upper,CI_lower,mu,sigma=DS_Q_Q_parameters(y1_low, est = 'ML')\n    # Make first Q-Q plots:\n    ax1.plot(z_th, z_i, 'o', color='k', label='clean water')\n    ax1.plot(z_th, z_th, '--', color='r', label='normal line')\n    ax1.plot(z_th, CI_upper, '--', color='b', label='95% CI')\n    ax1.plot(z_th, CI_lower, '--', color='b')\n    ax1.set_xlabel('Theoretical quantiles, $z_{(i)}$')\n    ax1.set_ylabel('Sample quantiles, $z_i$')\n    ax1.set_title('low_income\\n  mu = {:.4g}, sigma = {:.4g}'.format(mu,sigma))\n    ax1.legend(loc='best')\n\n    z_th, z_i, CI_upper,CI_lower,mu,sigma=DS_Q_Q_parameters(y1_high, est = 'ML')\n    # Make second  Q-Q plots:\n    ax2.plot(z_th, z_i, 'o', color='k', label='clean water')\n    ax2.plot(z_th, z_th, '--', color='r', label='normal line')\n    ax2.plot(z_th, CI_upper, '--', color='b', label='95% CI')\n    ax2.plot(z_th, CI_lower, '--', color='b')\n    ax2.set_xlabel('Theoretical quantiles, $z_{(i)}$')\n    ax2.set_ylabel('Sample quantiles, $z_i$')\n    ax2.set_title('high_income\\n  mu = {:.4g}, sigma = {:.4g}'.format(mu,sigma))\n    ax2.legend(loc='best')\n\n    z_th, z_i, CI_upper,CI_lower,mu,sigma=DS_Q_Q_parameters(y2_low, est = 'ML')\n    # Make third  Q-Q plots:\n    ax3.plot(z_th, z_i, 'o', color='k', label='sanitation')\n    ax3.plot(z_th, z_th, '--', color='r', label='normal line')\n    ax3.plot(z_th, CI_upper, '--', color='b', label='95% CI')\n    ax3.plot(z_th, CI_lower, '--', color='b')\n    ax3.set_xlabel('Theoretical quantiles, $z_{(i)}$')\n    ax3.set_ylabel('Sample quantiles, $z_i$')\n    ax3.set_title('low_income\\n  mu = {:.4g}, sigma = {:.4g}'.format(mu,sigma))\n    ax3.legend(loc='best')\n\n    z_th, z_i, CI_upper,CI_lowe,mu,sigmar=DS_Q_Q_parameters(y2_high, est = 'ML')\n    # Make forth  Q-Q plots:\n    ax4.plot(z_th, z_i, 'o', color='k', label='sanitation')\n    ax4.plot(z_th, z_th, '--', color='r', label='normal line')\n    ax4.plot(z_th, CI_upper, '--', color='b', label='95% CI')\n    ax4.plot(z_th, CI_lower, '--', color='b')\n    ax4.set_xlabel('Theoretical quantiles, $z_{(i)}$')\n    ax4.set_ylabel('Sample quantiles, $z_i$')\n    ax4.set_title('high_income\\n  mu = {:.4g}, sigma = {:.4g}'.format(mu,sigma))\n    ax4.legend(loc='best')",
+      "metadata": {
+        "trusted": true
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": "# Data preperation for water\nLow_income_reg_wat=income_reg_wat[income_reg_wat['REGION'] == 'Low-income']\nlow_list=list(Low_income_reg_wat['national'])\n\nHigh_income_reg_wat=income_reg_wat[income_reg_wat['REGION'] == 'High-income']\nHigh_list=list(High_income_reg_wat['national'])\n\ny1_law = np.array(low_list)\ny1_high=np.array(High_list)\n\n\ny_av_law_wat = np.mean(y1_law)\nm2_law_wat = np.var(y1_law, ddof=0)\n\ny_av_high_wat = np.mean(y1_high)\nm2_high_wat = np.var(y1_high, ddof=0)\n\n# Data preperation for sanitation\nLow_income_reg_san=income_reg_san[income_reg_san['REGION'] == 'Low-income']\nlow_list=list(Low_income_reg_san['national'])\n\nHigh_income_reg_san=income_reg_san[income_reg_san['REGION'] == 'High-income']\nHigh_list=list(High_income_reg_san['national'])\n\ny2_law = np.array(low_list)\ny2_high=np.array(High_list)\n\ny_av_law_san = np.mean(y2_law)\nm2_law_san = np.var(y1_law, ddof=0)\n\ny_av_high_san = np.mean(y2_high)\nm2_high_san = np.var(y2_high, ddof=0)\n\nhist_plot(y1_law,y1_high,y2_law,y2_high)\n\n#fig, (ax1,ax2,ax3,ax4) = plt.subplots(1, 4, figsize=(13,4))\nDS_Q_Q_plots(y1_law,y1_high,y2_law,y2_high)\n",
+      "metadata": {
+        "trusted": true
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": "I used Kruskal-Wallis test becuse as you see above data is not normalize and varainces are far different so, T-test seems that not a proper test for these datasets. The kruskal test takes two or more arrays as input and performs the Kruskal-Wallis test. The function returns two values: the Kruskal-Wallis statistic and the p-value. If the p-value is less than a predetermined significance level (such as 0.05), you can conclude that there is a significant difference in the medians of the groups. The two-sided test compares the medians of all groups against each other, so it can determine if any group has a different median, not just if one group has a higher or lower median than the others. Before I tried to transform  data  to normal data using different functions such as Logarithmic Transformation, bout the histtograms showed that dataalredy is not normal.",
+      "metadata": {}
+    },
+    {
+      "cell_type": "markdown",
+      "source": "### Investigating Access to clean water  between High_income and low_income regions",
+      "metadata": {}
+    },
+    {
+      "cell_type": "code",
+      "source": "# Kruskal-Wallis test test for water\nimport numpy as np\nfrom scipy.stats import kruskal\n\n\nhigh_income =np.array(y1_law)\nlow_income = np.array(y1_high)\n\n# Combine the data into a single array\ndata = np.concatenate([high_income, low_income])\n\n# Create a label array to identify the groups\ngroups = [1] * len(high_income) + [2] * len(low_income)\n\n# Perform the Kruskal-Wallis test\nstatistic, p_value = kruskal(high_income, low_income)\n\n\nstatistic, p_value = kruskal(high_income, low_income)\nprint('p_value = {:.4g}'.format(p_value))\n\nif p_value<0.05:\n    print (' Access to clean water differs significantly between High_income and low_income regions')\nelse:\n    print (' Access to clean water does not differ significantly between High_income and low_income regions')",
+      "metadata": {
+        "trusted": true
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": "### Investigating Access to sanitation between High_income and low_income regions",
+      "metadata": {}
+    },
+    {
+      "cell_type": "code",
+      "source": "# Kruskal-Wallis test test for sanitation\nimport numpy as np\nfrom scipy.stats import kruskal\n\n\nhigh_income =np.array(y2_law)\nlow_income = np.array(y2_high)\n\n# Combine the data into a single array\ndata = np.concatenate([high_income, low_income])\n\n# Create a label array to identify the groups\ngroups = [1] * len(high_income) + [2] * len(low_income)\n\n# Perform the Kruskal-Wallis test\nstatistic, p_value = kruskal(high_income, low_income)\n\n\nstatistic, p_value = kruskal(high_income, low_income)\nprint('p_value = {:.4g}'.format(p_value))\n\nif p_value<0.05:\n    print (' Access to sanitation differs significantly between High_income and low_income regions')\nelse:\n    print (' Access to csanitation does not differ significantly between High_income and low_income regions')\n    ",
+      "metadata": {
+        "trusted": true
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": "",
+      "metadata": {},
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": "",
+      "metadata": {},
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": "",
+      "metadata": {},
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": "",
+      "metadata": {},
+      "execution_count": null,
+      "outputs": []
+    }
+  ]
+}
