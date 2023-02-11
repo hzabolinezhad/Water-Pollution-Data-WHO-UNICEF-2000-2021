@@ -1,0 +1,1808 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>a6d7feb28d3c4993a1256817d7bc7456</title>
+  <style>
+    html {
+      line-height: 1.5;
+      font-family: Georgia, serif;
+      font-size: 20px;
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 1em;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, 'Lucida Console', Consolas, monospace;
+      font-size: 85%;
+      margin: 0;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      {   }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+    code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+    code span.at { color: #7d9029; } /* Attribute */
+    code span.bn { color: #40a070; } /* BaseN */
+    code span.bu { color: #008000; } /* BuiltIn */
+    code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #4070a0; } /* Char */
+    code span.cn { color: #880000; } /* Constant */
+    code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+    code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+    code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+    code span.dt { color: #902000; } /* DataType */
+    code span.dv { color: #40a070; } /* DecVal */
+    code span.er { color: #ff0000; font-weight: bold; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #40a070; } /* Float */
+    code span.fu { color: #06287e; } /* Function */
+    code span.im { color: #008000; font-weight: bold; } /* Import */
+    code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+    code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+    code span.op { color: #666666; } /* Operator */
+    code span.ot { color: #007020; } /* Other */
+    code span.pp { color: #bc7a00; } /* Preprocessor */
+    code span.sc { color: #4070a0; } /* SpecialChar */
+    code span.ss { color: #bb6688; } /* SpecialString */
+    code span.st { color: #4070a0; } /* String */
+    code span.va { color: #19177c; } /* Variable */
+    code span.vs { color: #4070a0; } /* VerbatimString */
+    code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<section id="water-pollution-data-whounicef--2000-2020"
+class="cell markdown">
+<h1>Water Pollution Data (WHO/UNICEF) | 2000-2020</h1>
+<h2 id="about-dataset">About Dataset</h2>
+<p>Context According to the United Nations, about 4 billion people
+experience severe water shortages for at least one month a year and
+around 1.6 billion people - almost a quarter of the world's population -
+have problems accessing a clean, safe water supply.</p>
+<p>On October 29, 2019, thousands of content creators across the world
+have collaborated to start the project #TeamSeas as an attempt to manage
+this waste and help reduce pollution.</p>
+<p>This dataset aims to talk about this issue and spread awareness by
+encouraging Data Analysts and Data Scientists on Kaggle to work on this
+and present their findings.</p>
+<p>The dataset can be found at <a
+href="https://www.kaggle.com/datasets/harshjhunjhunwala/water-pollution-data-whounicef-20002021?resource=download"
+class="uri">https://www.kaggle.com/datasets/harshjhunjhunwala/water-pollution-data-whounicef-20002021?resource=download</a></p>
+<h2 id="content">Content</h2>
+<p>This dataset contains data on drinking water, sanitation, and hygiene
+(2000 - 2020) for several regions in the world as well as aggregate
+values for the world itself. The data is split into categories of
+household, schools, and healthcare with some countries having results on
+inequalities as well</p>
+<h2 id="research-questions">Research questions</h2>
+<p>1- How has the global access to clean water and sanitation changed from 2000 to 2020?</p>
+<p>2- Can we observe any correlation between the global access to clean water and sanitation?</p>
+<p>3-How has been regional access to clean water and sanitation over the years</p>
+<p>4-Are there significant inequalities in access to clean water and sanitation within the different regions?</p>
+<p>5-How does the access to clean water and sanitation differ between High_income and lowincome regions?</p>
+</section>
+<div class="cell code" data-execution_count="59">
+<div class="sourceCode" id="cb1"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> yaml</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="co">#open the config file and load the file into a dataframe </span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="cf">with</span> <span class="bu">open</span> (<span class="st">&quot;config.yaml&quot;</span>,<span class="st">&#39;r&#39;</span>) <span class="im">as</span> conf_file:</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>    config<span class="op">=</span>yaml.safe_load(conf_file)</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="co">#The df contains regional as well as global information about availabiliyt of </span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="co"># clean, safe water </span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span>pd.read_csv(config[<span class="st">&#39;region_household_water_path&#39;</span>])</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="co">#The df contains regional as well as global information anout availabiliyt of </span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="co"># sanitation</span></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>df_sanit <span class="op">=</span>pd.read_csv(config[<span class="st">&#39;region_household_sanitatione_path&#39;</span>])</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a></span></code></pre></div>
+</div>
+<div class="cell markdown">
+<hr />
+</div>
+<section id="data-preperation" class="cell markdown">
+<h2>Data preperation</h2>
+<p>Remove unnecessary rows and columns from the data farmes and rename
+the columns</p>
+</section>
+<div class="cell code" data-execution_count="2">
+<div class="sourceCode" id="cb2"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="co">#load the file into a dataframes again to keep original data to refere whenever</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="co">#needed</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span>pd.read_table(config[<span class="st">&#39;region_household_water_path&#39;</span>],delimiter<span class="op">=</span><span class="st">&#39;,&#39;</span>)</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>df_sanit <span class="op">=</span>pd.read_table(config[<span class="st">&#39;region_household_sanitatione_path&#39;</span>],delimiter<span class="op">=</span><span class="st">&#39;,&#39;</span>)</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>df_wat <span class="op">=</span> pd.DataFrame()</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>df_san <span class="op">=</span> pd.DataFrame()</span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a><span class="co">#######################################</span></span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a><span class="co">#remove unnecessary rows and columns from data farmes and rename the columns</span></span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a><span class="co">########################################</span></span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>df_wat[<span class="st">&#39;Year&#39;</span>]<span class="op">=</span>df[<span class="st">&#39;Year&#39;</span>]</span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>df_wat[<span class="st">&#39;Population&#39;</span>]<span class="op">=</span>df[<span class="st">&#39;Population </span><span class="ch">\n</span><span class="st">(thousands)&#39;</span>]</span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>df_san[<span class="st">&#39;Year&#39;</span>]<span class="op">=</span>df_sanit[<span class="st">&#39;Year&#39;</span>]</span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>df_san[<span class="st">&#39;Population&#39;</span>]<span class="op">=</span>df_sanit[<span class="st">&#39;Population </span><span class="ch">\n</span><span class="st">(thousands)&#39;</span>]</span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a><span class="co">#load the file into a dataframe while skipping the firs row</span></span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span>pd.read_table(config[<span class="st">&#39;region_household_water_path&#39;</span>],delimiter<span class="op">=</span><span class="st">&#39;,&#39;</span>,skiprows<span class="op">=</span><span class="dv">1</span>)</span>
+<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a>df_wat[<span class="st">&#39;REGION&#39;</span>]<span class="op">=</span>df[<span class="st">&#39;REGION&#39;</span>]</span>
+<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a>df_sanit <span class="op">=</span>pd.read_table(config[<span class="st">&#39;region_household_sanitatione_path&#39;</span>],delimiter<span class="op">=</span><span class="st">&#39;,&#39;</span>,skiprows<span class="op">=</span><span class="dv">1</span>)</span>
+<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a>df_san[<span class="st">&#39;REGION&#39;</span>]<span class="op">=</span>df_sanit[<span class="st">&#39;REGION&#39;</span>]</span>
+<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a><span class="co">#load the file into a dataframe while skipping the two firs rows</span></span>
+<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span>pd.read_table(config[<span class="st">&#39;region_household_water_path&#39;</span>],delimiter<span class="op">=</span><span class="st">&#39;,&#39;</span>,skiprows<span class="op">=</span><span class="dv">2</span>)</span>
+<span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-29"><a href="#cb2-29" aria-hidden="true" tabindex="-1"></a>df_wat[<span class="st">&#39;national&#39;</span>] <span class="op">=</span> df[<span class="st">&#39;At least basic&#39;</span>].<span class="bu">str</span>.replace(<span class="st">&quot;&gt;&quot;</span>, <span class="st">&quot;&quot;</span>)</span>
+<span id="cb2-30"><a href="#cb2-30" aria-hidden="true" tabindex="-1"></a>df_wat[<span class="st">&#39;rural&#39;</span>] <span class="op">=</span> df[<span class="st">&#39;At least basic.1&#39;</span>].<span class="bu">str</span>.replace(<span class="st">&quot;&gt;&quot;</span>, <span class="st">&quot;&quot;</span>)</span>
+<span id="cb2-31"><a href="#cb2-31" aria-hidden="true" tabindex="-1"></a>df_wat[<span class="st">&#39;urban&#39;</span>] <span class="op">=</span> df[<span class="st">&#39;At least basic.2&#39;</span>].<span class="bu">str</span>.replace(<span class="st">&quot;&gt;&quot;</span>, <span class="st">&quot;&quot;</span>)</span>
+<span id="cb2-32"><a href="#cb2-32" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-33"><a href="#cb2-33" aria-hidden="true" tabindex="-1"></a>df_sanit <span class="op">=</span>pd.read_table(config[<span class="st">&#39;region_household_sanitatione_path&#39;</span>],delimiter<span class="op">=</span><span class="st">&#39;,&#39;</span>,skiprows<span class="op">=</span><span class="dv">2</span>)</span>
+<span id="cb2-34"><a href="#cb2-34" aria-hidden="true" tabindex="-1"></a>df_san[<span class="st">&#39;national&#39;</span>] <span class="op">=</span> df_sanit[<span class="st">&#39;At least basic&#39;</span>].<span class="bu">str</span>.replace(<span class="st">&quot;&gt;&quot;</span>, <span class="st">&quot;&quot;</span>)</span>
+<span id="cb2-35"><a href="#cb2-35" aria-hidden="true" tabindex="-1"></a>df_san[<span class="st">&#39;rural&#39;</span>] <span class="op">=</span> df_sanit[<span class="st">&#39;At least basic.1&#39;</span>].<span class="bu">str</span>.replace(<span class="st">&quot;&gt;&quot;</span>, <span class="st">&quot;&quot;</span>)</span>
+<span id="cb2-36"><a href="#cb2-36" aria-hidden="true" tabindex="-1"></a>df_san[<span class="st">&#39;urban&#39;</span>] <span class="op">=</span> df_sanit[<span class="st">&#39;At least basic.2&#39;</span>].<span class="bu">str</span>.replace(<span class="st">&quot;&gt;&quot;</span>, <span class="st">&quot;&quot;</span>)</span>
+<span id="cb2-37"><a href="#cb2-37" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-38"><a href="#cb2-38" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-39"><a href="#cb2-39" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-40"><a href="#cb2-40" aria-hidden="true" tabindex="-1"></a>df_wat.loc[(df_wat[<span class="st">&#39;Year&#39;</span>] <span class="op">==</span> <span class="dv">2020</span>) <span class="op">&amp;</span> (df_wat[<span class="st">&#39;REGION&#39;</span>] <span class="op">==</span> <span class="st">&#39;World&#39;</span>), [<span class="st">&#39;Population&#39;</span>, <span class="st">&#39;REGION&#39;</span>, <span class="st">&#39;national&#39;</span>, <span class="st">&#39;rural&#39;</span>,<span class="st">&#39;urban&#39;</span>]] <span class="op">=</span> [<span class="dv">7794799</span>, <span class="st">&#39;World&#39;</span>,<span class="dv">90</span>,<span class="dv">82</span>,<span class="dv">96</span>]</span>
+<span id="cb2-41"><a href="#cb2-41" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-42"><a href="#cb2-42" aria-hidden="true" tabindex="-1"></a>df_san.loc[(df_san[<span class="st">&#39;Year&#39;</span>] <span class="op">==</span> <span class="dv">2020</span>) <span class="op">&amp;</span> (df_san[<span class="st">&#39;REGION&#39;</span>] <span class="op">==</span> <span class="st">&#39;World&#39;</span>), [<span class="st">&#39;Population&#39;</span>, <span class="st">&#39;REGION&#39;</span>, <span class="st">&#39;national&#39;</span>, <span class="st">&#39;rural&#39;</span>,<span class="st">&#39;urban&#39;</span>]] <span class="op">=</span> [<span class="dv">7794799</span>, <span class="st">&#39;World&#39;</span>,<span class="dv">78</span>,<span class="dv">66</span>,<span class="dv">88</span>]</span>
+<span id="cb2-43"><a href="#cb2-43" aria-hidden="true" tabindex="-1"></a></span></code></pre></div>
+</div>
+<div class="cell code" data-execution_count="3">
+<div class="sourceCode" id="cb3"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co">#inspect water data</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>df_wat.columns</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(df_wat.head(<span class="op">-</span><span class="dv">10</span>))</span></code></pre></div>
+<div class="output stream stdout">
+<pre><code>       Year    Population                     REGION national rural urban
+0       NaN           NaN                        NaN       99    99    99
+1       NaN           NaN  Australia and New Zealand       99    99    99
+2    2000.0  2.285043e+04  Australia and New Zealand       99    99    99
+3    2001.0  2.310262e+04  Australia and New Zealand       99    99    99
+4    2002.0  2.336457e+04  Australia and New Zealand       99    99    99
+..      ...           ...                        ...      ...   ...   ...
+344  2006.0  6.615611e+06                      World       85    75    96
+345  2007.0  6.697632e+06                      World       86    75    96
+346  2008.0  6.780352e+06                      World       86    76    96
+347  2009.0  6.863625e+06                      World       87    76    96
+348  2010.0  6.947315e+06                      World       87    77    96
+
+[349 rows x 6 columns]
+</code></pre>
+</div>
+</div>
+<div class="cell code" data-execution_count="4">
+<div class="sourceCode" id="cb5"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co">#inspect sanitation data</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>df_san.columns</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(df_wat.head(<span class="op">-</span><span class="dv">10</span>))</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>     </span></code></pre></div>
+<div class="output stream stdout">
+<pre><code>       Year    Population                     REGION national rural urban
+0       NaN           NaN                        NaN       99    99    99
+1       NaN           NaN  Australia and New Zealand       99    99    99
+2    2000.0  2.285043e+04  Australia and New Zealand       99    99    99
+3    2001.0  2.310262e+04  Australia and New Zealand       99    99    99
+4    2002.0  2.336457e+04  Australia and New Zealand       99    99    99
+..      ...           ...                        ...      ...   ...   ...
+344  2006.0  6.615611e+06                      World       85    75    96
+345  2007.0  6.697632e+06                      World       86    75    96
+346  2008.0  6.780352e+06                      World       86    76    96
+347  2009.0  6.863625e+06                      World       87    76    96
+348  2010.0  6.947315e+06                      World       87    77    96
+
+[349 rows x 6 columns]
+</code></pre>
+</div>
+</div>
+<section id="data-cleaning" class="cell markdown">
+<h2>Data Cleaning</h2>
+<p>The data is not clean. There are empty cells in the dataframe which
+to be replaced with NaN's and then interpolated. The type of year,
+population, andnational,rural, and urban values have been changed for
+both water and sanitation. For water and sanitaion missing data, my
+strategy for national, urban and rural was to fill tha missing data with
+the previous value of the same column supposing that the situation in
+the related regions has not changed over a year. If the first value of
+the column is missing, it will remain missing as ffill only propagates
+values forward. However, I used the bfill method (backward fill) instead
+to fill to the both direction in a column. For probable missing year and
+region's name I deleted data where the year is missing, and for missing
+population I used linear interpolation.</p>
+</section>
+<div class="cell code" data-execution_count="5">
+<div class="sourceCode" id="cb7"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="co">#replace cells with &#39;-&#39; to NaN</span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>df_wat.replace(<span class="st">&#39;-&#39;</span>, np.nan, inplace<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>df_san.replace(<span class="st">&#39;-&#39;</span>, np.nan, inplace<span class="op">=</span><span class="va">True</span>) </span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a><span class="co">#This will return a  DataFrame that contains only the rows where</span></span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a><span class="co">#  the year is not missingrue)</span></span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>df_wat <span class="op">=</span> df_wat.dropna(subset<span class="op">=</span>[<span class="st">&#39;Year&#39;</span>])</span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a>df_san <span class="op">=</span> df_san.dropna(subset<span class="op">=</span>[<span class="st">&#39;Year&#39;</span>])</span>
+<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a><span class="co">#change year type to integer</span></span>
+<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a>df_wat[<span class="st">&#39;Year&#39;</span>]<span class="op">=</span>df_wat[<span class="st">&#39;Year&#39;</span>].astype(<span class="bu">int</span>)</span>
+<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a>df_san[<span class="st">&#39;Year&#39;</span>]<span class="op">=</span>df_san[<span class="st">&#39;Year&#39;</span>].astype(<span class="bu">int</span>)</span>
+<span id="cb7-15"><a href="#cb7-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-16"><a href="#cb7-16" aria-hidden="true" tabindex="-1"></a><span class="co">#This will return a  DataFrame that contains only the rows where</span></span>
+<span id="cb7-17"><a href="#cb7-17" aria-hidden="true" tabindex="-1"></a><span class="co">#  the year is not missingrue)</span></span>
+<span id="cb7-18"><a href="#cb7-18" aria-hidden="true" tabindex="-1"></a>df_wat <span class="op">=</span> df_wat.dropna(subset<span class="op">=</span>[<span class="st">&#39;REGION&#39;</span>])</span>
+<span id="cb7-19"><a href="#cb7-19" aria-hidden="true" tabindex="-1"></a>df_san <span class="op">=</span> df_san.dropna(subset<span class="op">=</span>[<span class="st">&#39;REGION&#39;</span>])</span>
+<span id="cb7-20"><a href="#cb7-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-21"><a href="#cb7-21" aria-hidden="true" tabindex="-1"></a><span class="co">#change year type to string</span></span>
+<span id="cb7-22"><a href="#cb7-22" aria-hidden="true" tabindex="-1"></a>df_wat[<span class="st">&#39;REGION&#39;</span>]<span class="op">=</span>df_wat[<span class="st">&#39;REGION&#39;</span>].astype(<span class="bu">str</span>)</span>
+<span id="cb7-23"><a href="#cb7-23" aria-hidden="true" tabindex="-1"></a>df_san[<span class="st">&#39;REGION&#39;</span>]<span class="op">=</span>df_san[<span class="st">&#39;REGION&#39;</span>].astype(<span class="bu">str</span>)</span>
+<span id="cb7-24"><a href="#cb7-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-25"><a href="#cb7-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-26"><a href="#cb7-26" aria-hidden="true" tabindex="-1"></a><span class="co">#Interpolating population</span></span>
+<span id="cb7-27"><a href="#cb7-27" aria-hidden="true" tabindex="-1"></a>df_wat[<span class="st">&#39;Population&#39;</span>].fillna(method<span class="op">=</span><span class="st">&#39;ffill&#39;</span>, inplace<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb7-28"><a href="#cb7-28" aria-hidden="true" tabindex="-1"></a>df_san[<span class="st">&#39;Population&#39;</span>].fillna(method<span class="op">=</span><span class="st">&#39;ffill&#39;</span>, inplace<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb7-29"><a href="#cb7-29" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-30"><a href="#cb7-30" aria-hidden="true" tabindex="-1"></a><span class="co">#change year type to int</span></span>
+<span id="cb7-31"><a href="#cb7-31" aria-hidden="true" tabindex="-1"></a>df_wat[<span class="st">&#39;Population&#39;</span>]<span class="op">=</span>df_wat[<span class="st">&#39;Population&#39;</span>].astype(<span class="bu">int</span>)</span>
+<span id="cb7-32"><a href="#cb7-32" aria-hidden="true" tabindex="-1"></a>df_san[<span class="st">&#39;Population&#39;</span>]<span class="op">=</span>df_san[<span class="st">&#39;Population&#39;</span>].astype(<span class="bu">int</span>)</span>
+<span id="cb7-33"><a href="#cb7-33" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-34"><a href="#cb7-34" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-35"><a href="#cb7-35" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-36"><a href="#cb7-36" aria-hidden="true" tabindex="-1"></a><span class="co">#to cahnge the type to int</span></span>
+<span id="cb7-37"><a href="#cb7-37" aria-hidden="true" tabindex="-1"></a>df_wat[<span class="st">&#39;national&#39;</span>].fillna(<span class="dv">0</span>, inplace<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb7-38"><a href="#cb7-38" aria-hidden="true" tabindex="-1"></a>df_wat[<span class="st">&#39;rural&#39;</span>].fillna(<span class="dv">0</span>, inplace<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb7-39"><a href="#cb7-39" aria-hidden="true" tabindex="-1"></a>df_wat[<span class="st">&#39;urban&#39;</span>].fillna(<span class="dv">0</span>, inplace<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb7-40"><a href="#cb7-40" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-41"><a href="#cb7-41" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-42"><a href="#cb7-42" aria-hidden="true" tabindex="-1"></a>df_san[<span class="st">&#39;national&#39;</span>].fillna(<span class="dv">0</span>, inplace<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb7-43"><a href="#cb7-43" aria-hidden="true" tabindex="-1"></a>df_san[<span class="st">&#39;rural&#39;</span>].fillna(<span class="dv">0</span>, inplace<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb7-44"><a href="#cb7-44" aria-hidden="true" tabindex="-1"></a>df_san[<span class="st">&#39;urban&#39;</span>].fillna(<span class="dv">0</span>, inplace<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb7-45"><a href="#cb7-45" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-46"><a href="#cb7-46" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-47"><a href="#cb7-47" aria-hidden="true" tabindex="-1"></a>df_wat[<span class="st">&#39;national&#39;</span>]<span class="op">=</span>df_wat[<span class="st">&#39;national&#39;</span>].astype(<span class="bu">int</span>)</span>
+<span id="cb7-48"><a href="#cb7-48" aria-hidden="true" tabindex="-1"></a>df_san[<span class="st">&#39;national&#39;</span>]<span class="op">=</span>df_san[<span class="st">&#39;national&#39;</span>].astype(<span class="bu">int</span>)</span>
+<span id="cb7-49"><a href="#cb7-49" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-50"><a href="#cb7-50" aria-hidden="true" tabindex="-1"></a>df_wat[<span class="st">&#39;rural&#39;</span>]<span class="op">=</span>df_wat[<span class="st">&#39;rural&#39;</span>].astype(<span class="bu">int</span>)</span>
+<span id="cb7-51"><a href="#cb7-51" aria-hidden="true" tabindex="-1"></a>df_san[<span class="st">&#39;rural&#39;</span>]<span class="op">=</span>df_san[<span class="st">&#39;rural&#39;</span>].astype(<span class="bu">int</span>)</span>
+<span id="cb7-52"><a href="#cb7-52" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-53"><a href="#cb7-53" aria-hidden="true" tabindex="-1"></a>df_wat[<span class="st">&#39;urban&#39;</span>]<span class="op">=</span>df_wat[<span class="st">&#39;urban&#39;</span>].astype(<span class="bu">int</span>)</span>
+<span id="cb7-54"><a href="#cb7-54" aria-hidden="true" tabindex="-1"></a>df_san[<span class="st">&#39;urban&#39;</span>]<span class="op">=</span>df_san[<span class="st">&#39;urban&#39;</span>].astype(<span class="bu">int</span>)</span>
+<span id="cb7-55"><a href="#cb7-55" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-56"><a href="#cb7-56" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-57"><a href="#cb7-57" aria-hidden="true" tabindex="-1"></a></span></code></pre></div>
+</div>
+<div class="cell code" data-execution_count="6">
+<div class="sourceCode" id="cb8"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co">#inspect the data</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>df_wat.info()</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>df_san.info()</span></code></pre></div>
+<div class="output stream stdout">
+<pre><code>&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
+Int64Index: 356 entries, 2 to 357
+Data columns (total 6 columns):
+ #   Column      Non-Null Count  Dtype 
+---  ------      --------------  ----- 
+ 0   Year        356 non-null    int32 
+ 1   Population  356 non-null    int32 
+ 2   REGION      356 non-null    object
+ 3   national    356 non-null    int32 
+ 4   rural       356 non-null    int32 
+ 5   urban       356 non-null    int32 
+dtypes: int32(5), object(1)
+memory usage: 12.5+ KB
+&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
+Int64Index: 356 entries, 2 to 357
+Data columns (total 6 columns):
+ #   Column      Non-Null Count  Dtype 
+---  ------      --------------  ----- 
+ 0   Year        356 non-null    int32 
+ 1   Population  356 non-null    int32 
+ 2   REGION      356 non-null    object
+ 3   national    356 non-null    int32 
+ 4   rural       356 non-null    int32 
+ 5   urban       356 non-null    int32 
+dtypes: int32(5), object(1)
+memory usage: 12.5+ KB
+</code></pre>
+</div>
+</div>
+<section id="more-data-cleaning-to-draw-a-plot" class="cell markdown">
+<h2>More data cleaning to draw a plot</h2>
+<p>First I separated the global data for both sanitation and water.
+Then, did more data cleaning. I did data interpolation here becuase I
+found out that it yields better results on data set with smaller size.
+Next, two line graphs created to display the changes in population and
+access to the clean water and sanition facilities from 2000 to 2020.</p>
+</section>
+<div class="cell code" data-execution_count="7">
+<div class="sourceCode" id="cb10"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Create global DataFrame</span></span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a>glob_df_wat <span class="op">=</span> df_wat[df_wat.loc[:, <span class="st">&#39;REGION&#39;</span>] <span class="op">==</span><span class="st">&#39;World&#39;</span>]</span>
+<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a>glob_san_df <span class="op">=</span> df_san[df_san.loc[:, <span class="st">&#39;REGION&#39;</span>] <span class="op">==</span><span class="st">&#39;World&#39;</span>]</span>
+<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-11"><a href="#cb10-11" aria-hidden="true" tabindex="-1"></a><span class="co"># more data cleaning</span></span>
+<span id="cb10-12"><a href="#cb10-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Data interpolation</span></span>
+<span id="cb10-13"><a href="#cb10-13" aria-hidden="true" tabindex="-1"></a>glob_df_wat.replace(<span class="dv">0</span>, np.nan, inplace<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb10-14"><a href="#cb10-14" aria-hidden="true" tabindex="-1"></a>glob_san_df.replace(<span class="dv">0</span>, np.nan, inplace<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb10-15"><a href="#cb10-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-16"><a href="#cb10-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-17"><a href="#cb10-17" aria-hidden="true" tabindex="-1"></a>glob_df_wat[<span class="st">&#39;national&#39;</span>].interpolate(method<span class="op">=</span><span class="st">&#39;linear&#39;</span>, inplace<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb10-18"><a href="#cb10-18" aria-hidden="true" tabindex="-1"></a>glob_df_wat[<span class="st">&#39;rural&#39;</span>].interpolate(method<span class="op">=</span><span class="st">&#39;linear&#39;</span>, inplace<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb10-19"><a href="#cb10-19" aria-hidden="true" tabindex="-1"></a>glob_df_wat[<span class="st">&#39;urban&#39;</span>].interpolate(method<span class="op">=</span><span class="st">&#39;linear&#39;</span>, inplace<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb10-20"><a href="#cb10-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-21"><a href="#cb10-21" aria-hidden="true" tabindex="-1"></a>glob_san_df[<span class="st">&#39;national&#39;</span>].interpolate(method<span class="op">=</span><span class="st">&#39;linear&#39;</span>, inplace<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb10-22"><a href="#cb10-22" aria-hidden="true" tabindex="-1"></a>glob_san_df[<span class="st">&#39;rural&#39;</span>].interpolate(method<span class="op">=</span><span class="st">&#39;linear&#39;</span>, inplace<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb10-23"><a href="#cb10-23" aria-hidden="true" tabindex="-1"></a>glob_san_df[<span class="st">&#39;urban&#39;</span>].interpolate(method<span class="op">=</span><span class="st">&#39;linear&#39;</span>, inplace<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb10-24"><a href="#cb10-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-25"><a href="#cb10-25" aria-hidden="true" tabindex="-1"></a>glob_df_wat.sort_values(by<span class="op">=</span><span class="st">&#39;Year&#39;</span>, ascending<span class="op">=</span><span class="va">True</span>, inplace<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb10-26"><a href="#cb10-26" aria-hidden="true" tabindex="-1"></a>glob_san_df.sort_values(by<span class="op">=</span><span class="st">&#39;Year&#39;</span>, ascending<span class="op">=</span><span class="va">True</span>, inplace<span class="op">=</span><span class="va">True</span>)</span></code></pre></div>
+<div class="output stream stderr">
+<pre><code>C:\Users\Hedieh\AppData\Local\Temp\ipykernel_7504\439233402.py:12: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  glob_df_wat.replace(0, np.nan, inplace=True)
+C:\Users\Hedieh\AppData\Local\Temp\ipykernel_7504\439233402.py:13: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  glob_san_df.replace(0, np.nan, inplace=True)
+C:\Users\Hedieh\AppData\Local\Temp\ipykernel_7504\439233402.py:16: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  glob_df_wat[&#39;national&#39;].interpolate(method=&#39;linear&#39;, inplace=True)
+C:\Users\Hedieh\AppData\Local\Temp\ipykernel_7504\439233402.py:17: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  glob_df_wat[&#39;rural&#39;].interpolate(method=&#39;linear&#39;, inplace=True)
+C:\Users\Hedieh\AppData\Local\Temp\ipykernel_7504\439233402.py:18: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  glob_df_wat[&#39;urban&#39;].interpolate(method=&#39;linear&#39;, inplace=True)
+C:\Users\Hedieh\AppData\Local\Temp\ipykernel_7504\439233402.py:20: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  glob_san_df[&#39;national&#39;].interpolate(method=&#39;linear&#39;, inplace=True)
+C:\Users\Hedieh\AppData\Local\Temp\ipykernel_7504\439233402.py:21: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  glob_san_df[&#39;rural&#39;].interpolate(method=&#39;linear&#39;, inplace=True)
+C:\Users\Hedieh\AppData\Local\Temp\ipykernel_7504\439233402.py:22: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  glob_san_df[&#39;urban&#39;].interpolate(method=&#39;linear&#39;, inplace=True)
+C:\Users\Hedieh\AppData\Local\Temp\ipykernel_7504\439233402.py:24: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  glob_df_wat.sort_values(by=&#39;Year&#39;, ascending=True, inplace=True)
+C:\Users\Hedieh\AppData\Local\Temp\ipykernel_7504\439233402.py:25: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  glob_san_df.sort_values(by=&#39;Year&#39;, ascending=True, inplace=True)
+</code></pre>
+</div>
+</div>
+<div class="cell code" data-execution_count="8">
+<div class="sourceCode" id="cb12"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(glob_df_wat)</span></code></pre></div>
+<div class="output stream stdout">
+<pre><code>     Year  Population REGION  national  rural  urban
+338  2000     6135796  World      83.0   71.0   95.0
+339  2001     6214664  World      83.0   71.0   95.0
+340  2002     6294471  World      83.0   72.0   96.0
+341  2003     6373635  World      84.0   73.0   96.0
+342  2004     6453330  World      84.0   73.0   96.0
+343  2005     6533754  World      85.0   74.0   96.0
+344  2006     6615610  World      85.0   75.0   96.0
+345  2007     6697631  World      86.0   75.0   96.0
+346  2008     6780351  World      86.0   76.0   96.0
+347  2009     6863624  World      87.0   76.0   96.0
+348  2010     6947315  World      87.0   77.0   96.0
+349  2011     7041194  World      87.0   78.0   96.0
+350  2012     7125827  World      88.0   78.0   96.0
+351  2013     7210582  World      88.0   79.0   96.0
+352  2014     7295290  World      89.0   80.0   96.0
+353  2015     7379796  World      89.0   80.0   96.0
+354  2016     7464022  World      89.0   81.0   96.0
+355  2017     7547858  World      90.0   81.0   96.0
+356  2018     7631091  World      90.0   82.0   96.0
+357  2019     7713468  World      90.0   82.0   96.0
+337  2020     7794799  World      90.0   82.0   96.0
+</code></pre>
+</div>
+</div>
+<div class="cell code" data-execution_count="9">
+<div class="sourceCode" id="cb14"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(glob_san_df)</span></code></pre></div>
+<div class="output stream stdout">
+<pre><code>     Year  Population REGION  national  rural  urban
+338  2000     6135796  World      58.0   38.0   80.0
+339  2001     6214664  World      59.0   39.0   80.0
+340  2002     6294471  World      60.0   41.0   80.0
+341  2003     6373635  World      61.0   42.0   81.0
+342  2004     6453330  World      62.0   44.0   81.0
+343  2005     6533754  World      64.0   45.0   82.0
+344  2006     6615610  World      65.0   47.0   82.0
+345  2007     6697631  World      66.0   48.0   83.0
+346  2008     6780351  World      67.0   50.0   83.0
+347  2009     6863624  World      68.0   52.0   83.0
+348  2010     6947315  World      69.0   53.0   84.0
+349  2011     7041194  World      71.0   55.0   84.0
+350  2012     7125827  World      72.0   57.0   85.0
+351  2013     7210582  World      73.0   58.0   85.0
+352  2014     7295290  World      74.0   60.0   86.0
+353  2015     7379796  World      75.0   62.0   86.0
+354  2016     7464022  World      76.0   63.0   87.0
+355  2017     7547858  World      77.0   65.0   87.0
+356  2018     7631091  World      78.0   66.0   88.0
+357  2019     7713468  World      78.0   66.0   88.0
+337  2020     7794799  World      78.0   66.0   88.0
+</code></pre>
+</div>
+</div>
+<section id="create-the-plots" class="cell markdown">
+<h2>Create the plots</h2>
+</section>
+<div class="cell code" data-execution_count="10">
+<div class="sourceCode" id="cb16"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> glob_df_wat[<span class="st">&#39;Year&#39;</span>]</span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a>y_water_national <span class="op">=</span> glob_df_wat[<span class="st">&#39;national&#39;</span>]</span>
+<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a>y_water_rural <span class="op">=</span> glob_df_wat[<span class="st">&#39;rural&#39;</span>]</span>
+<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a>y_water_urban <span class="op">=</span> glob_df_wat[<span class="st">&#39;urban&#39;</span>]</span>
+<span id="cb16-7"><a href="#cb16-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-8"><a href="#cb16-8" aria-hidden="true" tabindex="-1"></a>y_pop <span class="op">=</span> glob_df_wat[<span class="st">&#39;Population&#39;</span>]</span>
+<span id="cb16-9"><a href="#cb16-9" aria-hidden="true" tabindex="-1"></a>y_san_national<span class="op">=</span>glob_san_df[<span class="st">&#39;national&#39;</span>]</span>
+<span id="cb16-10"><a href="#cb16-10" aria-hidden="true" tabindex="-1"></a>y_san_rural<span class="op">=</span>glob_san_df[<span class="st">&#39;rural&#39;</span>]</span>
+<span id="cb16-11"><a href="#cb16-11" aria-hidden="true" tabindex="-1"></a>y_san_urban<span class="op">=</span>glob_san_df[<span class="st">&#39;urban&#39;</span>]</span>
+<span id="cb16-12"><a href="#cb16-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-13"><a href="#cb16-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-14"><a href="#cb16-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-15"><a href="#cb16-15" aria-hidden="true" tabindex="-1"></a>fig, (ax1, ax2) <span class="op">=</span> plt.subplots(<span class="dv">1</span>, <span class="dv">2</span>, figsize<span class="op">=</span>(<span class="dv">13</span>,<span class="dv">4</span>))</span>
+<span id="cb16-16"><a href="#cb16-16" aria-hidden="true" tabindex="-1"></a>fig.subplots_adjust(wspace<span class="op">=</span><span class="fl">0.4</span>) <span class="co"># adjust the width space between the two subplots</span></span>
+<span id="cb16-17"><a href="#cb16-17" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot the first figure on ax1</span></span>
+<span id="cb16-18"><a href="#cb16-18" aria-hidden="true" tabindex="-1"></a>color <span class="op">=</span> <span class="st">&#39;tab:blue&#39;</span></span>
+<span id="cb16-19"><a href="#cb16-19" aria-hidden="true" tabindex="-1"></a>ax1.set_xlabel(<span class="st">&#39;Year&#39;</span>)</span>
+<span id="cb16-20"><a href="#cb16-20" aria-hidden="true" tabindex="-1"></a>ax1.set_ylabel(<span class="st">&#39;Access to clean Water (%)&#39;</span>, color<span class="op">=</span>color)</span>
+<span id="cb16-21"><a href="#cb16-21" aria-hidden="true" tabindex="-1"></a><span class="co">#ax1.scatter(x, y_water_national, color=color)</span></span>
+<span id="cb16-22"><a href="#cb16-22" aria-hidden="true" tabindex="-1"></a>ax1.plot(x, y_water_national, color<span class="op">=</span>color, label<span class="op">=</span><span class="st">&#39; national&#39;</span>)</span>
+<span id="cb16-23"><a href="#cb16-23" aria-hidden="true" tabindex="-1"></a>ax1.plot(x, y_water_rural,<span class="st">&#39;k--&#39;</span>, color<span class="op">=</span>color, label<span class="op">=</span><span class="st">&#39; rural&#39;</span>)</span>
+<span id="cb16-24"><a href="#cb16-24" aria-hidden="true" tabindex="-1"></a>ax1.plot(x, y_water_urban,<span class="st">&#39;k:&#39;</span>, color<span class="op">=</span>color, label<span class="op">=</span><span class="st">&#39; urban&#39;</span>)</span>
+<span id="cb16-25"><a href="#cb16-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-26"><a href="#cb16-26" aria-hidden="true" tabindex="-1"></a>ax1.tick_params(axis<span class="op">=</span><span class="st">&#39;y&#39;</span>, labelcolor<span class="op">=</span>color)</span>
+<span id="cb16-27"><a href="#cb16-27" aria-hidden="true" tabindex="-1"></a>ax1.set_xticks(x)</span>
+<span id="cb16-28"><a href="#cb16-28" aria-hidden="true" tabindex="-1"></a>ax1.set_xticklabels(x, rotation<span class="op">=-</span><span class="dv">45</span>)</span>
+<span id="cb16-29"><a href="#cb16-29" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-30"><a href="#cb16-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-31"><a href="#cb16-31" aria-hidden="true" tabindex="-1"></a><span class="co"># a second axes that shares the same x-axis</span></span>
+<span id="cb16-32"><a href="#cb16-32" aria-hidden="true" tabindex="-1"></a>ax2_1 <span class="op">=</span> ax1.twinx() </span>
+<span id="cb16-33"><a href="#cb16-33" aria-hidden="true" tabindex="-1"></a>ax2_1.get_yaxis().get_major_formatter().set_scientific(<span class="va">False</span>)</span>
+<span id="cb16-34"><a href="#cb16-34" aria-hidden="true" tabindex="-1"></a>color <span class="op">=</span> <span class="st">&#39;tab:red&#39;</span></span>
+<span id="cb16-35"><a href="#cb16-35" aria-hidden="true" tabindex="-1"></a>ax2_1.set_ylabel(<span class="st">&#39;Population (thousands)&#39;</span>, color<span class="op">=</span>color)  </span>
+<span id="cb16-36"><a href="#cb16-36" aria-hidden="true" tabindex="-1"></a><span class="co">#ax2_1.scatter(x, y_pop, color=color)</span></span>
+<span id="cb16-37"><a href="#cb16-37" aria-hidden="true" tabindex="-1"></a>ax2_1.plot(x, y_pop, color<span class="op">=</span>color, label<span class="op">=</span><span class="st">&#39;Population &#39;</span>)</span>
+<span id="cb16-38"><a href="#cb16-38" aria-hidden="true" tabindex="-1"></a>ax2_1.tick_params(axis<span class="op">=</span><span class="st">&#39;y&#39;</span>, labelcolor<span class="op">=</span>color)</span>
+<span id="cb16-39"><a href="#cb16-39" aria-hidden="true" tabindex="-1"></a>ax2_1.set_yticks(y_pop)</span>
+<span id="cb16-40"><a href="#cb16-40" aria-hidden="true" tabindex="-1"></a><span class="co">#ax2_1.legend(loc=&#39;upper right&#39;)</span></span>
+<span id="cb16-41"><a href="#cb16-41" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-42"><a href="#cb16-42" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">&#39;Trend of global Population Access to clean water from 2000 to 2019</span><span class="ch">\n</span><span class="st">&#39;</span>, size<span class="op">=</span><span class="dv">10</span>)</span>
+<span id="cb16-43"><a href="#cb16-43" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot the second figure on ax2</span></span>
+<span id="cb16-44"><a href="#cb16-44" aria-hidden="true" tabindex="-1"></a>color <span class="op">=</span> <span class="st">&#39;tab:green&#39;</span></span>
+<span id="cb16-45"><a href="#cb16-45" aria-hidden="true" tabindex="-1"></a>ax2.set_xlabel(<span class="st">&#39;Year&#39;</span>)</span>
+<span id="cb16-46"><a href="#cb16-46" aria-hidden="true" tabindex="-1"></a>ax2.set_ylabel(<span class="st">&#39;Access to sanitation (%)&#39;</span>, color<span class="op">=</span>color)</span>
+<span id="cb16-47"><a href="#cb16-47" aria-hidden="true" tabindex="-1"></a><span class="co">#ax2.scatter(x, y_san.astype(str), color=color)</span></span>
+<span id="cb16-48"><a href="#cb16-48" aria-hidden="true" tabindex="-1"></a>ax2.plot(x, y_san_national, color<span class="op">=</span>color, label<span class="op">=</span><span class="st">&#39;national&#39;</span>)</span>
+<span id="cb16-49"><a href="#cb16-49" aria-hidden="true" tabindex="-1"></a>ax2.plot(x, y_san_rural,<span class="st">&#39;k--&#39;</span> ,color<span class="op">=</span>color, label<span class="op">=</span><span class="st">&#39;rural &#39;</span>)</span>
+<span id="cb16-50"><a href="#cb16-50" aria-hidden="true" tabindex="-1"></a>ax2.plot(x, y_san_urban,<span class="st">&#39;k:&#39;</span>, color<span class="op">=</span>color, label<span class="op">=</span><span class="st">&#39;urban&#39;</span>)</span>
+<span id="cb16-51"><a href="#cb16-51" aria-hidden="true" tabindex="-1"></a>ax2.tick_params(axis<span class="op">=</span><span class="st">&#39;y&#39;</span>, labelcolor<span class="op">=</span>color)</span>
+<span id="cb16-52"><a href="#cb16-52" aria-hidden="true" tabindex="-1"></a>ax2.set_xticks(x)</span>
+<span id="cb16-53"><a href="#cb16-53" aria-hidden="true" tabindex="-1"></a>ax2.set_xticklabels(x, rotation<span class="op">=-</span><span class="dv">45</span>,fontsize<span class="op">=</span><span class="dv">10</span>)</span>
+<span id="cb16-54"><a href="#cb16-54" aria-hidden="true" tabindex="-1"></a><span class="co">#ax2.legend(loc=&#39;upper left&#39;)</span></span>
+<span id="cb16-55"><a href="#cb16-55" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-56"><a href="#cb16-56" aria-hidden="true" tabindex="-1"></a>ax2_2 <span class="op">=</span> ax2.twinx() </span>
+<span id="cb16-57"><a href="#cb16-57" aria-hidden="true" tabindex="-1"></a>ax2_2.get_yaxis().get_major_formatter().set_scientific(<span class="va">False</span>)</span>
+<span id="cb16-58"><a href="#cb16-58" aria-hidden="true" tabindex="-1"></a>color <span class="op">=</span> <span class="st">&#39;tab:red&#39;</span></span>
+<span id="cb16-59"><a href="#cb16-59" aria-hidden="true" tabindex="-1"></a>ax2_2.set_ylabel(<span class="st">&#39;Population (thousands)&#39;</span>, color<span class="op">=</span>color, fontsize<span class="op">=</span><span class="dv">10</span>)  </span>
+<span id="cb16-60"><a href="#cb16-60" aria-hidden="true" tabindex="-1"></a><span class="co">#ax2_2.scatter(x, y_pop, color=color)</span></span>
+<span id="cb16-61"><a href="#cb16-61" aria-hidden="true" tabindex="-1"></a>ax2_2.plot(x, y_pop, color<span class="op">=</span>color, label<span class="op">=</span><span class="st">&#39;Population&#39;</span>)</span>
+<span id="cb16-62"><a href="#cb16-62" aria-hidden="true" tabindex="-1"></a>ax2_2.tick_params(axis<span class="op">=</span><span class="st">&#39;y&#39;</span>, labelcolor<span class="op">=</span>color)</span>
+<span id="cb16-63"><a href="#cb16-63" aria-hidden="true" tabindex="-1"></a>ax2_2.set_yticks(y_pop)</span>
+<span id="cb16-64"><a href="#cb16-64" aria-hidden="true" tabindex="-1"></a><span class="co">#ax2_2.legend(loc=&#39;upper right&#39;)</span></span>
+<span id="cb16-65"><a href="#cb16-65" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-66"><a href="#cb16-66" aria-hidden="true" tabindex="-1"></a><span class="co">#add the legends</span></span>
+<span id="cb16-67"><a href="#cb16-67" aria-hidden="true" tabindex="-1"></a>ax1.legend(loc<span class="op">=</span><span class="st">&#39;lower center&#39;</span>, fontsize<span class="op">=</span><span class="dv">8</span>)</span>
+<span id="cb16-68"><a href="#cb16-68" aria-hidden="true" tabindex="-1"></a>ax2_1.legend(loc<span class="op">=</span><span class="st">&#39;lower right&#39;</span>, fontsize<span class="op">=</span><span class="dv">8</span>)</span>
+<span id="cb16-69"><a href="#cb16-69" aria-hidden="true" tabindex="-1"></a>ax2.legend(loc<span class="op">=</span><span class="st">&#39;lower center&#39;</span>, fontsize<span class="op">=</span><span class="dv">8</span>)</span>
+<span id="cb16-70"><a href="#cb16-70" aria-hidden="true" tabindex="-1"></a>ax2_2.legend(loc<span class="op">=</span><span class="st">&#39;lower right&#39;</span>, fontsize<span class="op">=</span><span class="dv">8</span>)</span>
+<span id="cb16-71"><a href="#cb16-71" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-72"><a href="#cb16-72" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">&#39;Trend of global Population Access to  sanitation from 2000 to 2019</span><span class="ch">\n</span><span class="st">&#39;</span>, size<span class="op">=</span><span class="dv">10</span>)</span>
+<span id="cb16-73"><a href="#cb16-73" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div>
+<div class="output stream stderr">
+<pre><code>C:\Users\Hedieh\AppData\Local\Temp\ipykernel_7504\4233860454.py:21: UserWarning: color is redundantly defined by the &#39;color&#39; keyword argument and the fmt string &quot;k--&quot; (-&gt; color=&#39;k&#39;). The keyword argument will take precedence.
+  ax1.plot(x, y_water_rural,&#39;k--&#39;, color=color, label=&#39; rural&#39;)
+C:\Users\Hedieh\AppData\Local\Temp\ipykernel_7504\4233860454.py:22: UserWarning: color is redundantly defined by the &#39;color&#39; keyword argument and the fmt string &quot;k:&quot; (-&gt; color=&#39;k&#39;). The keyword argument will take precedence.
+  ax1.plot(x, y_water_urban,&#39;k:&#39;, color=color, label=&#39; urban&#39;)
+C:\Users\Hedieh\AppData\Local\Temp\ipykernel_7504\4233860454.py:47: UserWarning: color is redundantly defined by the &#39;color&#39; keyword argument and the fmt string &quot;k--&quot; (-&gt; color=&#39;k&#39;). The keyword argument will take precedence.
+  ax2.plot(x, y_san_rural,&#39;k--&#39; ,color=color, label=&#39;rural &#39;)
+C:\Users\Hedieh\AppData\Local\Temp\ipykernel_7504\4233860454.py:48: UserWarning: color is redundantly defined by the &#39;color&#39; keyword argument and the fmt string &quot;k:&quot; (-&gt; color=&#39;k&#39;). The keyword argument will take precedence.
+  ax2.plot(x, y_san_urban,&#39;k:&#39;, color=color, label=&#39;urban&#39;)
+</code></pre>
+</div>
+<div class="output display_data">
+<p><img
+src="vertopal_1901c7a14e934d17aaeddbda539ec253/eea533275189975a29ed2fc0adcb17155f39e5c0.png" /></p>
+</div>
+</div>
+<section
+id="questioncan-we-observe-any-correlation-between-the-global-access-to-clean-water-and-sanitation"
+class="cell markdown">
+<h1>Question:Can we observe any correlation between the global access to
+clean water and sanitation?</h1>
+<p>In this code, a scatterplot is created to visualize the relationship
+between the access to drinking water and population . The pearsonr
+function is then used to calculate Pearson's correlation coefficient and
+the corresponding p-value.</p>
+</section>
+<div class="cell code" data-execution_count="11">
+<div class="sourceCode" id="cb18"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> scipy.stats <span class="im">import</span> pearsonr</span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> calc_pearson(x,y):</span>
+<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a>    <span class="co">#calculate  Pearson&#39;s correlation coefficient and the corresponding p-value. </span></span>
+<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a>    correlation, p_value <span class="op">=</span> pearsonr(x, y)</span>
+<span id="cb18-6"><a href="#cb18-6" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">&quot;Pearson correlation coefficient:&quot;</span>, correlation)</span>
+<span id="cb18-7"><a href="#cb18-7" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">&quot;P-value:&quot;</span>, p_value)</span>
+<span id="cb18-8"><a href="#cb18-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-9"><a href="#cb18-9" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> p_value <span class="op">&lt;</span> <span class="fl">0.05</span>:</span>
+<span id="cb18-10"><a href="#cb18-10" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="st">&quot;There is a significant correlation between access to clean water and population growth.&quot;</span>)</span>
+<span id="cb18-11"><a href="#cb18-11" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span>:</span>
+<span id="cb18-12"><a href="#cb18-12" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="st">&quot;There is no significant correlation between access to clean water and population growth.&quot;</span>)</span>
+<span id="cb18-13"><a href="#cb18-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-14"><a href="#cb18-14" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> correlation <span class="op">==</span> <span class="dv">1</span>:</span>
+<span id="cb18-15"><a href="#cb18-15" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="st">&quot;There is a strong positive correlation.&quot;</span>)</span>
+<span id="cb18-16"><a href="#cb18-16" aria-hidden="true" tabindex="-1"></a>    <span class="cf">elif</span> correlation <span class="op">==</span> <span class="op">-</span><span class="dv">1</span>:</span>
+<span id="cb18-17"><a href="#cb18-17" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="st">&quot;There is a strong negative correlation.&quot;</span>)</span>
+<span id="cb18-18"><a href="#cb18-18" aria-hidden="true" tabindex="-1"></a>    <span class="cf">elif</span> correlation <span class="op">==</span> <span class="dv">0</span>:</span>
+<span id="cb18-19"><a href="#cb18-19" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="st">&quot;There is no correlation.&quot;</span>)</span>
+<span id="cb18-20"><a href="#cb18-20" aria-hidden="true" tabindex="-1"></a>    <span class="cf">elif</span> correlation <span class="op">!=</span> <span class="dv">0</span>:</span>
+<span id="cb18-21"><a href="#cb18-21" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="st">&quot;There is a positive correlation.&quot;</span>)</span>
+<span id="cb18-22"><a href="#cb18-22" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span>:</span>
+<span id="cb18-23"><a href="#cb18-23" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="st">&quot;There is a negative correlation.&quot;</span>) </span>
+<span id="cb18-24"><a href="#cb18-24" aria-hidden="true" tabindex="-1"></a>         </span>
+<span id="cb18-25"><a href="#cb18-25" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&#39;_____________national_______________________________</span><span class="ch">\n</span><span class="st">&#39;</span>)</span>
+<span id="cb18-26"><a href="#cb18-26" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb18-27"><a href="#cb18-27" aria-hidden="true" tabindex="-1"></a>calc_pearson(y_water_national,y_san_national)</span>
+<span id="cb18-28"><a href="#cb18-28" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&#39;____________rural________________________________</span><span class="ch">\n</span><span class="st">&#39;</span>)</span>
+<span id="cb18-29"><a href="#cb18-29" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-30"><a href="#cb18-30" aria-hidden="true" tabindex="-1"></a>calc_pearson(y_water_rural,y_san_rural)</span>
+<span id="cb18-31"><a href="#cb18-31" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&#39;____________urban________________________________</span><span class="ch">\n</span><span class="st">&#39;</span>)</span>
+<span id="cb18-32"><a href="#cb18-32" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-33"><a href="#cb18-33" aria-hidden="true" tabindex="-1"></a>calc_pearson(y_water_urban,y_san_urban)</span></code></pre></div>
+<div class="output stream stdout">
+<pre><code>_____________national_______________________________
+
+Pearson correlation coefficient: 0.9932546139726738
+P-value: 3.0263596215855493e-19
+There is a significant correlation between access to clean water and population growth.
+There is a positive correlation.
+____________rural________________________________
+
+Pearson correlation coefficient: 0.996146756854424
+P-value: 1.4981226638634996e-21
+There is a significant correlation between access to clean water and population growth.
+There is a positive correlation.
+____________urban________________________________
+
+Pearson correlation coefficient: 0.47514757972740435
+P-value: 0.029499418093632407
+There is a significant correlation between access to clean water and population growth.
+There is a positive correlation.
+</code></pre>
+</div>
+</div>
+<section id="visualization" class="cell markdown">
+<h2>Visualization</h2>
+<p>To investigate the correlation between two variables visually, I made
+a plot on the variables,clean water and sanitation, andscatter plot to
+see if there is a relationship between clean water and sanitation</p>
+<p>Distribution of points: If the points are clustered together, it
+suggests a strong relationship between the variables. If the points are
+dispersed, it suggests a weak relationship.</p>
+<p>Direction of relationship: If the points tend to increase as they
+move from left to right, it suggests a positive relationship between the
+variables. If the points decrease as they move from left to right, it
+suggests a negative relationship.</p>
+<p>Strength of relationship: The strength of the relationship can be
+determined by the amount of scatter in the plot. A small amount of
+scatter suggests a strong relationship, while a large amount of scatter
+suggests a weak relationship.</p>
+<p>Outliers: Points that lie significantly away from the main pattern of
+the plot are called outliers and can indicate a departure from the
+overall relationship between the variables</p>
+</section>
+<div class="cell code" data-execution_count="12">
+<div class="sourceCode" id="cb20"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>fig, (ax1,ax2,ax3) <span class="op">=</span> plt.subplots(<span class="dv">1</span>, <span class="dv">3</span>, figsize<span class="op">=</span>(<span class="dv">13</span>,<span class="dv">4</span>))</span>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Make a plot of the marginal prior, likelihood and posterior distributions:</span></span>
+<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a>ax1.scatter(y_water_national,y_san_national, label<span class="op">=</span><span class="st">&#39;national&#39;</span>)</span>
+<span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a>ax1.set_xlabel(<span class="st">&quot;clean water (%)&quot;</span>)</span>
+<span id="cb20-5"><a href="#cb20-5" aria-hidden="true" tabindex="-1"></a>ax1.set_ylabel(<span class="st">&quot;sanitation (%)&quot;</span>)</span>
+<span id="cb20-6"><a href="#cb20-6" aria-hidden="true" tabindex="-1"></a>ax1.legend(loc<span class="op">=</span><span class="st">&#39;best&#39;</span>)</span>
+<span id="cb20-7"><a href="#cb20-7" aria-hidden="true" tabindex="-1"></a><span class="co">#ax1.ylim(0,0.8)</span></span>
+<span id="cb20-8"><a href="#cb20-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-9"><a href="#cb20-9" aria-hidden="true" tabindex="-1"></a>ax2.scatter(y_water_rural,y_san_rural, label<span class="op">=</span><span class="st">&#39;rural&#39;</span>)</span>
+<span id="cb20-10"><a href="#cb20-10" aria-hidden="true" tabindex="-1"></a>ax2.set_xlabel(<span class="st">&quot;clean water (%)&quot;</span>)</span>
+<span id="cb20-11"><a href="#cb20-11" aria-hidden="true" tabindex="-1"></a>ax2.set_ylabel(<span class="st">&quot;sanitation (%)&quot;</span>)</span>
+<span id="cb20-12"><a href="#cb20-12" aria-hidden="true" tabindex="-1"></a>ax2.legend(loc<span class="op">=</span><span class="st">&#39;best&#39;</span>)</span>
+<span id="cb20-13"><a href="#cb20-13" aria-hidden="true" tabindex="-1"></a><span class="co"># ax2.ylim(0,0.8)</span></span>
+<span id="cb20-14"><a href="#cb20-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-15"><a href="#cb20-15" aria-hidden="true" tabindex="-1"></a>ax3.scatter(y_water_urban,y_san_urban, label<span class="op">=</span><span class="st">&#39;urban&#39;</span>)</span>
+<span id="cb20-16"><a href="#cb20-16" aria-hidden="true" tabindex="-1"></a>ax3.set_xlabel(<span class="st">&quot;clean water (%)&quot;</span>)</span>
+<span id="cb20-17"><a href="#cb20-17" aria-hidden="true" tabindex="-1"></a>ax3.set_ylabel(<span class="st">&quot;sanitation (%)&quot;</span>)</span>
+<span id="cb20-18"><a href="#cb20-18" aria-hidden="true" tabindex="-1"></a>ax3.legend(loc<span class="op">=</span><span class="st">&#39;best&#39;</span>)</span>
+<span id="cb20-19"><a href="#cb20-19" aria-hidden="true" tabindex="-1"></a>fig.suptitle(<span class="st">&#39;Relationship between percentage of population who access to clean water and the percentage who access to sanitation </span><span class="ch">\n</span><span class="st">&#39;</span>, size<span class="op">=</span><span class="dv">12</span>)</span>
+<span id="cb20-20"><a href="#cb20-20" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div>
+<div class="output display_data">
+<p><img
+src="vertopal_1901c7a14e934d17aaeddbda539ec253/0a2100ca301142448212b1a881aa59bb5a0c7878.png" /></p>
+</div>
+</div>
+<section
+id="questionhow-has-been-regional-access-to-clean-water-and-sanitation-over-the-years"
+class="cell markdown">
+<h1>Question:How has been regional access to clean water and sanitation
+over the years</h1>
+</section>
+<section id="data-cleaning-and-creating-dataframes"
+class="cell markdown">
+<h2>Data cleaning and creating dataframes</h2>
+<p>Three data frames were created according to 8 main SDG regions
+(Australia and New Zealand, Central and Southern Asia, Eastern, and
+South-Eastern Asia, Europe and Northern America, Latin America and the
+Caribbean, Northern Africa and Western Asia, Oceania, and Sub-Saharan
+Africa ) additional to Others which refers to the minor regions
+together. There is also another data frame according to SDG's income
+categories</p>
+</section>
+<section id="create-and-clean-water-data-frames" class="cell markdown">
+<h3>Create and clean water data frames</h3>
+</section>
+<div class="cell code" data-execution_count="14">
+<div class="sourceCode" id="cb21"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Do more data cleaning to create the required data frame </span></span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a><span class="co">#the minor regions and income data have been removed from the data</span></span>
+<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a>except_list<span class="op">=</span>[<span class="st">&#39;World&#39;</span>,<span class="st">&#39;Small Island Developing States&#39;</span>,</span>
+<span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a>                               <span class="st">&#39;Landlocked Developing Countries&#39;</span>,</span>
+<span id="cb21-5"><a href="#cb21-5" aria-hidden="true" tabindex="-1"></a>                               <span class="st">&#39;Least Developed Countries&#39;</span>,<span class="st">&#39;Low-income&#39;</span>,</span>
+<span id="cb21-6"><a href="#cb21-6" aria-hidden="true" tabindex="-1"></a>                                <span class="st">&#39;Lower-middle-income&#39;</span>,<span class="st">&#39;Upper-middle-income&#39;</span>,</span>
+<span id="cb21-7"><a href="#cb21-7" aria-hidden="true" tabindex="-1"></a>                                  <span class="st">&#39;High-income&#39;</span>,<span class="st">&#39;Fragile or Extremely Fragile&#39;</span>]</span>
+<span id="cb21-8"><a href="#cb21-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-9"><a href="#cb21-9" aria-hidden="true" tabindex="-1"></a>minor_region_list<span class="op">=</span>[<span class="st">&#39;Small Island Developing States&#39;</span>,</span>
+<span id="cb21-10"><a href="#cb21-10" aria-hidden="true" tabindex="-1"></a>                               <span class="st">&#39;Landlocked Developing Countries&#39;</span>,</span>
+<span id="cb21-11"><a href="#cb21-11" aria-hidden="true" tabindex="-1"></a>                               <span class="st">&#39;Least Developed Countries&#39;</span>,</span>
+<span id="cb21-12"><a href="#cb21-12" aria-hidden="true" tabindex="-1"></a>                               <span class="st">&#39;Fragile or Extremely Fragile&#39;</span>]</span>
+<span id="cb21-13"><a href="#cb21-13" aria-hidden="true" tabindex="-1"></a>income_region_list<span class="op">=</span>[<span class="st">&#39;Low-income&#39;</span>,</span>
+<span id="cb21-14"><a href="#cb21-14" aria-hidden="true" tabindex="-1"></a>                               <span class="st">&#39;Lower-middle-income&#39;</span>,<span class="st">&#39;Upper-middle-income&#39;</span>,</span>
+<span id="cb21-15"><a href="#cb21-15" aria-hidden="true" tabindex="-1"></a>                               <span class="st">&#39;High-income&#39;</span>]</span>
+<span id="cb21-16"><a href="#cb21-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-17"><a href="#cb21-17" aria-hidden="true" tabindex="-1"></a>df_wat.replace(np.nan,<span class="dv">0</span>, inplace<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb21-18"><a href="#cb21-18" aria-hidden="true" tabindex="-1"></a><span class="co">#SDG main regions data </span></span>
+<span id="cb21-19"><a href="#cb21-19" aria-hidden="true" tabindex="-1"></a>df_reg_wat<span class="op">=</span> df_wat[<span class="op">~</span>df_wat[<span class="st">&#39;REGION&#39;</span>].isin(except_list)]</span>
+<span id="cb21-20"><a href="#cb21-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-21"><a href="#cb21-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-22"><a href="#cb21-22" aria-hidden="true" tabindex="-1"></a><span class="co">#create dataset accordin to income categories</span></span>
+<span id="cb21-23"><a href="#cb21-23" aria-hidden="true" tabindex="-1"></a>income_reg_wat<span class="op">=</span>df_wat[df_wat[<span class="st">&#39;REGION&#39;</span>].isin(income_region_list)]</span>
+<span id="cb21-24"><a href="#cb21-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-25"><a href="#cb21-25" aria-hidden="true" tabindex="-1"></a><span class="co">#to  add  water access for minor regions together  to the main dataframe</span></span>
+<span id="cb21-26"><a href="#cb21-26" aria-hidden="true" tabindex="-1"></a><span class="co"># it is done to interpolate abundant null data in the </span></span>
+<span id="cb21-27"><a href="#cb21-27" aria-hidden="true" tabindex="-1"></a><span class="co"># &#39;Small Island Developing States&#39;,&#39;Landlocked Developing Countries&#39;,</span></span>
+<span id="cb21-28"><a href="#cb21-28" aria-hidden="true" tabindex="-1"></a><span class="co"># and &#39;Least Developed Countries&#39; regions   </span></span>
+<span id="cb21-29"><a href="#cb21-29" aria-hidden="true" tabindex="-1"></a>minor_reg_wat<span class="op">=</span>df_wat[df_wat[<span class="st">&#39;REGION&#39;</span>].isin(minor_region_list)]</span>
+<span id="cb21-30"><a href="#cb21-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-31"><a href="#cb21-31" aria-hidden="true" tabindex="-1"></a><span class="co">#creat minor regions together data frame</span></span>
+<span id="cb21-32"><a href="#cb21-32" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> year <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">2000</span>,<span class="dv">2021</span>): </span>
+<span id="cb21-33"><a href="#cb21-33" aria-hidden="true" tabindex="-1"></a>    df_temp<span class="op">=</span>minor_reg_wat[minor_reg_wat[<span class="st">&#39;Year&#39;</span>]<span class="op">==</span>year]  </span>
+<span id="cb21-34"><a href="#cb21-34" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb21-35"><a href="#cb21-35" aria-hidden="true" tabindex="-1"></a>    new_data <span class="op">=</span> {</span>
+<span id="cb21-36"><a href="#cb21-36" aria-hidden="true" tabindex="-1"></a>    <span class="st">&#39;Year&#39;</span>: year,</span>
+<span id="cb21-37"><a href="#cb21-37" aria-hidden="true" tabindex="-1"></a>    <span class="st">&#39;REGION&#39;</span>: <span class="st">&#39;Others&#39;</span>,</span>
+<span id="cb21-38"><a href="#cb21-38" aria-hidden="true" tabindex="-1"></a>    <span class="st">&#39;Population&#39;</span>: <span class="bu">sum</span>(df_temp[<span class="st">&#39;Population&#39;</span>]),</span>
+<span id="cb21-39"><a href="#cb21-39" aria-hidden="true" tabindex="-1"></a>    <span class="st">&#39;national&#39;</span>:(df_temp[<span class="st">&#39;national&#39;</span>].mean()),</span>
+<span id="cb21-40"><a href="#cb21-40" aria-hidden="true" tabindex="-1"></a>    <span class="st">&#39;rural&#39;</span>:(df_temp[<span class="st">&#39;rural&#39;</span>].mean()),</span>
+<span id="cb21-41"><a href="#cb21-41" aria-hidden="true" tabindex="-1"></a>    <span class="st">&#39;urban&#39;</span>:(df_temp[<span class="st">&#39;urban&#39;</span>].mean()),</span>
+<span id="cb21-42"><a href="#cb21-42" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb21-43"><a href="#cb21-43" aria-hidden="true" tabindex="-1"></a>    new_df <span class="op">=</span> pd.DataFrame(new_data, index<span class="op">=</span>[<span class="dv">0</span>])</span>
+<span id="cb21-44"><a href="#cb21-44" aria-hidden="true" tabindex="-1"></a>    df_reg_wat <span class="op">=</span> pd.concat([df_reg_wat, new_df], ignore_index<span class="op">=</span><span class="va">True</span>) </span>
+<span id="cb21-45"><a href="#cb21-45" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-46"><a href="#cb21-46" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-47"><a href="#cb21-47" aria-hidden="true" tabindex="-1"></a><span class="co"># Data interpolation</span></span>
+<span id="cb21-48"><a href="#cb21-48" aria-hidden="true" tabindex="-1"></a>df_reg_wat.replace(<span class="dv">0</span>, np.nan, inplace<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb21-49"><a href="#cb21-49" aria-hidden="true" tabindex="-1"></a>df_reg_wat[<span class="st">&#39;national&#39;</span>].interpolate(method<span class="op">=</span><span class="st">&#39;linear&#39;</span>, inplace<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb21-50"><a href="#cb21-50" aria-hidden="true" tabindex="-1"></a>df_reg_wat[<span class="st">&#39;rural&#39;</span>].interpolate(method<span class="op">=</span><span class="st">&#39;linear&#39;</span>, inplace<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb21-51"><a href="#cb21-51" aria-hidden="true" tabindex="-1"></a>df_reg_wat[<span class="st">&#39;urban&#39;</span>].interpolate(method<span class="op">=</span><span class="st">&#39;linear&#39;</span>, inplace<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb21-52"><a href="#cb21-52" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-53"><a href="#cb21-53" aria-hidden="true" tabindex="-1"></a>income_reg_wat.replace(<span class="dv">0</span>, np.nan, inplace<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb21-54"><a href="#cb21-54" aria-hidden="true" tabindex="-1"></a>income_reg_wat[<span class="st">&#39;national&#39;</span>].interpolate(method<span class="op">=</span><span class="st">&#39;linear&#39;</span>, inplace<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb21-55"><a href="#cb21-55" aria-hidden="true" tabindex="-1"></a>income_reg_wat[<span class="st">&#39;rural&#39;</span>].interpolate(method<span class="op">=</span><span class="st">&#39;linear&#39;</span>, inplace<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb21-56"><a href="#cb21-56" aria-hidden="true" tabindex="-1"></a>income_reg_wat[<span class="st">&#39;urban&#39;</span>].interpolate(method<span class="op">=</span><span class="st">&#39;linear&#39;</span>, inplace<span class="op">=</span><span class="va">True</span>)</span></code></pre></div>
+<div class="output stream stderr">
+<pre><code>C:\Users\Hedieh\AppData\Local\Temp\ipykernel_7504\714021978.py:53: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  income_reg_wat.replace(0, np.nan, inplace=True)
+C:\Users\Hedieh\AppData\Local\Temp\ipykernel_7504\714021978.py:54: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  income_reg_wat[&#39;national&#39;].interpolate(method=&#39;linear&#39;, inplace=True)
+C:\Users\Hedieh\AppData\Local\Temp\ipykernel_7504\714021978.py:55: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  income_reg_wat[&#39;rural&#39;].interpolate(method=&#39;linear&#39;, inplace=True)
+C:\Users\Hedieh\AppData\Local\Temp\ipykernel_7504\714021978.py:56: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  income_reg_wat[&#39;urban&#39;].interpolate(method=&#39;linear&#39;, inplace=True)
+</code></pre>
+</div>
+</div>
+<section id="create-and-clean-sanitation-data-frames"
+class="cell markdown">
+<h3>Create and clean sanitation data frames</h3>
+</section>
+<div class="cell code" data-execution_count="15">
+<div class="sourceCode" id="cb23"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>df_san.replace(np.nan,<span class="dv">0</span>, inplace<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a><span class="co">#SDG main regions data </span></span>
+<span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a>df_reg_san<span class="op">=</span> df_san[<span class="op">~</span>df_san[<span class="st">&#39;REGION&#39;</span>].isin(except_list)]</span>
+<span id="cb23-4"><a href="#cb23-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-5"><a href="#cb23-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-6"><a href="#cb23-6" aria-hidden="true" tabindex="-1"></a><span class="co">#create dataset accordin to income categories</span></span>
+<span id="cb23-7"><a href="#cb23-7" aria-hidden="true" tabindex="-1"></a>income_reg_san<span class="op">=</span>df_san[df_san[<span class="st">&#39;REGION&#39;</span>].isin(income_region_list)]</span>
+<span id="cb23-8"><a href="#cb23-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-9"><a href="#cb23-9" aria-hidden="true" tabindex="-1"></a><span class="co">#to  add  water access for minor regions together  to the main dataframe</span></span>
+<span id="cb23-10"><a href="#cb23-10" aria-hidden="true" tabindex="-1"></a><span class="co"># it is done to interpolate abundant null data in the </span></span>
+<span id="cb23-11"><a href="#cb23-11" aria-hidden="true" tabindex="-1"></a><span class="co"># &#39;Small Island Developing States&#39;,&#39;Landlocked Developing Countries&#39;,</span></span>
+<span id="cb23-12"><a href="#cb23-12" aria-hidden="true" tabindex="-1"></a><span class="co"># and &#39;Least Developed Countries&#39; regions   </span></span>
+<span id="cb23-13"><a href="#cb23-13" aria-hidden="true" tabindex="-1"></a>minor_reg_san<span class="op">=</span>df_san[df_san[<span class="st">&#39;REGION&#39;</span>].isin(minor_region_list)]</span>
+<span id="cb23-14"><a href="#cb23-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-15"><a href="#cb23-15" aria-hidden="true" tabindex="-1"></a><span class="co">#creat minor regions together data frame</span></span>
+<span id="cb23-16"><a href="#cb23-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-17"><a href="#cb23-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-18"><a href="#cb23-18" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> year <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">2000</span>,<span class="dv">2021</span>): </span>
+<span id="cb23-19"><a href="#cb23-19" aria-hidden="true" tabindex="-1"></a>    df_temp<span class="op">=</span>minor_reg_san[minor_reg_san[<span class="st">&#39;Year&#39;</span>]<span class="op">==</span>year]  </span>
+<span id="cb23-20"><a href="#cb23-20" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb23-21"><a href="#cb23-21" aria-hidden="true" tabindex="-1"></a>    new_data <span class="op">=</span> {</span>
+<span id="cb23-22"><a href="#cb23-22" aria-hidden="true" tabindex="-1"></a>    <span class="st">&#39;Year&#39;</span>: year,</span>
+<span id="cb23-23"><a href="#cb23-23" aria-hidden="true" tabindex="-1"></a>    <span class="st">&#39;REGION&#39;</span>: <span class="st">&#39;Others&#39;</span>,</span>
+<span id="cb23-24"><a href="#cb23-24" aria-hidden="true" tabindex="-1"></a>    <span class="st">&#39;Population&#39;</span>: <span class="bu">sum</span>(df_temp[<span class="st">&#39;Population&#39;</span>]),</span>
+<span id="cb23-25"><a href="#cb23-25" aria-hidden="true" tabindex="-1"></a>    <span class="st">&#39;national&#39;</span>:(df_temp[<span class="st">&#39;national&#39;</span>].mean()),</span>
+<span id="cb23-26"><a href="#cb23-26" aria-hidden="true" tabindex="-1"></a>    <span class="st">&#39;rural&#39;</span>:(df_temp[<span class="st">&#39;rural&#39;</span>].mean()),</span>
+<span id="cb23-27"><a href="#cb23-27" aria-hidden="true" tabindex="-1"></a>    <span class="st">&#39;urban&#39;</span>:(df_temp[<span class="st">&#39;urban&#39;</span>].mean()),</span>
+<span id="cb23-28"><a href="#cb23-28" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb23-29"><a href="#cb23-29" aria-hidden="true" tabindex="-1"></a>    new_df <span class="op">=</span> pd.DataFrame(new_data, index<span class="op">=</span>[<span class="dv">0</span>])</span>
+<span id="cb23-30"><a href="#cb23-30" aria-hidden="true" tabindex="-1"></a>    df_reg_san <span class="op">=</span> pd.concat([df_reg_san, new_df], ignore_index<span class="op">=</span><span class="va">True</span>) </span>
+<span id="cb23-31"><a href="#cb23-31" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-32"><a href="#cb23-32" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-33"><a href="#cb23-33" aria-hidden="true" tabindex="-1"></a><span class="co"># Data interpolation</span></span>
+<span id="cb23-34"><a href="#cb23-34" aria-hidden="true" tabindex="-1"></a>df_reg_san.replace(<span class="dv">0</span>, np.nan, inplace<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb23-35"><a href="#cb23-35" aria-hidden="true" tabindex="-1"></a>df_reg_san[<span class="st">&#39;national&#39;</span>].interpolate(method<span class="op">=</span><span class="st">&#39;linear&#39;</span>, inplace<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb23-36"><a href="#cb23-36" aria-hidden="true" tabindex="-1"></a>df_reg_san[<span class="st">&#39;rural&#39;</span>].interpolate(method<span class="op">=</span><span class="st">&#39;linear&#39;</span>, inplace<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb23-37"><a href="#cb23-37" aria-hidden="true" tabindex="-1"></a>df_reg_san[<span class="st">&#39;urban&#39;</span>].interpolate(method<span class="op">=</span><span class="st">&#39;linear&#39;</span>, inplace<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb23-38"><a href="#cb23-38" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-39"><a href="#cb23-39" aria-hidden="true" tabindex="-1"></a>income_reg_san.replace(<span class="dv">0</span>, np.nan, inplace<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb23-40"><a href="#cb23-40" aria-hidden="true" tabindex="-1"></a>income_reg_san[<span class="st">&#39;national&#39;</span>].interpolate(method<span class="op">=</span><span class="st">&#39;linear&#39;</span>, inplace<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb23-41"><a href="#cb23-41" aria-hidden="true" tabindex="-1"></a>income_reg_san[<span class="st">&#39;rural&#39;</span>].interpolate(method<span class="op">=</span><span class="st">&#39;linear&#39;</span>, inplace<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb23-42"><a href="#cb23-42" aria-hidden="true" tabindex="-1"></a>income_reg_san[<span class="st">&#39;urban&#39;</span>].interpolate(method<span class="op">=</span><span class="st">&#39;linear&#39;</span>, inplace<span class="op">=</span><span class="va">True</span>)</span></code></pre></div>
+<div class="output stream stderr">
+<pre><code>C:\Users\Hedieh\AppData\Local\Temp\ipykernel_7504\2459563868.py:39: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  income_reg_san.replace(0, np.nan, inplace=True)
+C:\Users\Hedieh\AppData\Local\Temp\ipykernel_7504\2459563868.py:40: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  income_reg_san[&#39;national&#39;].interpolate(method=&#39;linear&#39;, inplace=True)
+C:\Users\Hedieh\AppData\Local\Temp\ipykernel_7504\2459563868.py:41: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  income_reg_san[&#39;rural&#39;].interpolate(method=&#39;linear&#39;, inplace=True)
+C:\Users\Hedieh\AppData\Local\Temp\ipykernel_7504\2459563868.py:42: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  income_reg_san[&#39;urban&#39;].interpolate(method=&#39;linear&#39;, inplace=True)
+</code></pre>
+</div>
+</div>
+<div class="cell code" data-execution_count="16">
+<div class="sourceCode" id="cb25"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="co">#inspect the data</span></span>
+<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a><span class="co">#inspect the data</span></span>
+<span id="cb25-3"><a href="#cb25-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(income_reg_wat)</span>
+<span id="cb25-4"><a href="#cb25-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(df_reg_wat)</span></code></pre></div>
+<div class="output stream stdout">
+<pre><code>     Year  Population       REGION  national  rural  urban
+169  2020     1094365   Low-income        42     29     76
+170  2000      395568   Low-income        43     30     76
+171  2001      406675   Low-income        44     31     77
+172  2002      418245   Low-income        45     32     77
+173  2003      430231   Low-income        45     33     77
+..    ...         ...          ...       ...    ...    ...
+248  2015     1188496  High-income        99     99     99
+249  2016     1194368  High-income        99     99     99
+250  2017     1199965  High-income        99     99     99
+251  2018     1205242  High-income        99     99     99
+252  2019     1210133  High-income        61     49     84
+
+[84 rows x 6 columns]
+     Year  Population                     REGION  national  rural  urban
+0    2000       22850  Australia and New Zealand     99.00  99.00  99.00
+1    2001       23102  Australia and New Zealand     99.00  99.00  99.00
+2    2002       23364  Australia and New Zealand     99.00  99.00  99.00
+3    2003       23646  Australia and New Zealand     99.00  99.00  99.00
+4    2004       23960  Australia and New Zealand     99.00  99.00  99.00
+..    ...         ...                        ...       ...    ...    ...
+183  2016     3151354                     Others     71.75  59.00  89.75
+184  2017     3221958                     Others     72.50  59.50  90.25
+185  2018     3293796                     Others     73.00  60.25  90.25
+186  2019     3367041                     Others     66.25  53.00  88.00
+187  2020     4586982                     Others     61.25  48.25  85.50
+
+[188 rows x 6 columns]
+</code></pre>
+</div>
+</div>
+<div class="cell code" data-execution_count="17">
+<div class="sourceCode" id="cb27"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a><span class="co">#inspect the data</span></span>
+<span id="cb27-3"><a href="#cb27-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(income_reg_san.info())</span>
+<span id="cb27-4"><a href="#cb27-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(df_reg_san.info())</span></code></pre></div>
+<div class="output stream stdout">
+<pre><code>&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
+Int64Index: 84 entries, 169 to 252
+Data columns (total 6 columns):
+ #   Column      Non-Null Count  Dtype 
+---  ------      --------------  ----- 
+ 0   Year        84 non-null     int32 
+ 1   Population  84 non-null     int32 
+ 2   REGION      84 non-null     object
+ 3   national    84 non-null     int32 
+ 4   rural       84 non-null     int32 
+ 5   urban       84 non-null     int32 
+dtypes: int32(5), object(1)
+memory usage: 3.0+ KB
+None
+&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
+RangeIndex: 188 entries, 0 to 187
+Data columns (total 6 columns):
+ #   Column      Non-Null Count  Dtype  
+---  ------      --------------  -----  
+ 0   Year        188 non-null    int64  
+ 1   Population  188 non-null    int64  
+ 2   REGION      188 non-null    object 
+ 3   national    188 non-null    float64
+ 4   rural       169 non-null    float64
+ 5   urban       169 non-null    float64
+dtypes: float64(3), int64(2), object(1)
+memory usage: 8.9+ KB
+None
+</code></pre>
+</div>
+</div>
+<div class="cell code" data-execution_count="18">
+<div class="sourceCode" id="cb29"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a><span class="co">#inspect the data</span></span>
+<span id="cb29-3"><a href="#cb29-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(income_reg_wat.info())</span>
+<span id="cb29-4"><a href="#cb29-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(df_reg_wat.info())</span></code></pre></div>
+<div class="output stream stdout">
+<pre><code>&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
+Int64Index: 84 entries, 169 to 252
+Data columns (total 6 columns):
+ #   Column      Non-Null Count  Dtype 
+---  ------      --------------  ----- 
+ 0   Year        84 non-null     int32 
+ 1   Population  84 non-null     int32 
+ 2   REGION      84 non-null     object
+ 3   national    84 non-null     int32 
+ 4   rural       84 non-null     int32 
+ 5   urban       84 non-null     int32 
+dtypes: int32(5), object(1)
+memory usage: 3.0+ KB
+None
+&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
+RangeIndex: 188 entries, 0 to 187
+Data columns (total 6 columns):
+ #   Column      Non-Null Count  Dtype  
+---  ------      --------------  -----  
+ 0   Year        188 non-null    int64  
+ 1   Population  188 non-null    int64  
+ 2   REGION      188 non-null    object 
+ 3   national    188 non-null    float64
+ 4   rural       188 non-null    float64
+ 5   urban       188 non-null    float64
+dtypes: float64(3), int64(2), object(1)
+memory usage: 8.9+ KB
+None
+</code></pre>
+</div>
+</div>
+<section id="visualization" class="cell markdown">
+<h2>visualization</h2>
+<p>Two plots were created to show regional access to clean water and
+sanitation per year, in addition to a plot for reginal water and
+sanitation according to income categories . The plots are interactive as
+they show the changes using a slider taht slide from 2000 to 2020. in
+this code draw_plot and draw_plot_san, which are used to create two bar
+charts that represent the access to clean water and sanitation in eight
+main SDG regions, respectively. Both functions take a year parameter,
+which is used to filter the data for that year. The data for the bar
+charts is stored in two dataframes: df_reg_wat and df_reg_san. The
+draw_plot function uses the ColumnDataSource method to create a bar
+chart that displays the access to clean water in each of the eight
+regions. The draw_plot_san function is similar to the draw_plot
+function, with the difference that it displays the access to sanitation
+in each region. In addition to these two functions, there is another
+function named draw_plot_income_water that is similar to the first two
+functions, but it considers the region's income categories instead of
+the regions. This function uses the data stored in the income_reg_wat
+dataframe</p>
+</section>
+<div class="cell code" data-execution_count="46">
+<div class="sourceCode" id="cb31"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> bokeh.io <span class="im">import</span> output_notebook, show</span>
+<span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> bokeh.plotting <span class="im">import</span> figure</span>
+<span id="cb31-3"><a href="#cb31-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> bokeh.layouts <span class="im">import</span> column</span>
+<span id="cb31-4"><a href="#cb31-4" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> ipywidgets <span class="im">import</span> interact, IntSlider, Select, Layout, HBox, VBox</span>
+<span id="cb31-5"><a href="#cb31-5" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> bokeh.models <span class="im">import</span> ColumnDataSource, LabelSet</span>
+<span id="cb31-6"><a href="#cb31-6" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> bokeh.layouts <span class="im">import</span> row</span>
+<span id="cb31-7"><a href="#cb31-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Enable display of Bokeh plots in the notebook</span></span>
+<span id="cb31-8"><a href="#cb31-8" aria-hidden="true" tabindex="-1"></a>output_notebook()</span>
+<span id="cb31-9"><a href="#cb31-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-10"><a href="#cb31-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-11"><a href="#cb31-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-12"><a href="#cb31-12" aria-hidden="true" tabindex="-1"></a>blue_colors<span class="op">=</span>[<span class="st">&#39;#00BFFF&#39;</span>,<span class="st">&#39;#87CEEB&#39;</span>,<span class="st">&#39;#1E90FF&#39;</span>,<span class="st">&#39;#ADD8E6&#39;</span>,<span class="st">&#39;#6495ED&#39;</span>,<span class="st">&#39;#4682B4&#39;</span>,</span>
+<span id="cb31-13"><a href="#cb31-13" aria-hidden="true" tabindex="-1"></a>          <span class="st">&#39;#0077BE&#39;</span>,<span class="st">&#39;#7B68EE&#39;</span>,<span class="st">&#39;#007FFF&#39;</span>]</span>
+<span id="cb31-14"><a href="#cb31-14" aria-hidden="true" tabindex="-1"></a>green_colors <span class="op">=</span> [<span class="st">&#39;#00FF7F&#39;</span>, <span class="st">&#39;#90EE90&#39;</span>, <span class="st">&#39;#32CD32&#39;</span>, <span class="st">&#39;#228B22&#39;</span>, <span class="st">&#39;#008000&#39;</span>, </span>
+<span id="cb31-15"><a href="#cb31-15" aria-hidden="true" tabindex="-1"></a>                <span class="st">&#39;#7FFF00&#39;</span>, <span class="st">&#39;#ADFF2F&#39;</span>, <span class="st">&#39;#006400&#39;</span>, <span class="st">&#39;#66CDAA&#39;</span>]</span>
+<span id="cb31-16"><a href="#cb31-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-17"><a href="#cb31-17" aria-hidden="true" tabindex="-1"></a><span class="co">############################################################################ </span></span>
+<span id="cb31-18"><a href="#cb31-18" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> draw_plot(year,select):</span>
+<span id="cb31-19"><a href="#cb31-19" aria-hidden="true" tabindex="-1"></a>    <span class="co">&quot;&quot;&quot;</span></span>
+<span id="cb31-20"><a href="#cb31-20" aria-hidden="true" tabindex="-1"></a><span class="co">     function draws plot for acces to clean water in </span></span>
+<span id="cb31-21"><a href="#cb31-21" aria-hidden="true" tabindex="-1"></a><span class="co">     8 main SDG regions </span></span>
+<span id="cb31-22"><a href="#cb31-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-23"><a href="#cb31-23" aria-hidden="true" tabindex="-1"></a><span class="co">    &quot;&quot;&quot;</span></span>
+<span id="cb31-24"><a href="#cb31-24" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Get the unique regions in the data</span></span>
+<span id="cb31-25"><a href="#cb31-25" aria-hidden="true" tabindex="-1"></a>    x_list <span class="op">=</span> <span class="bu">sorted</span>(<span class="bu">list</span>(<span class="bu">set</span>(df_reg_wat[<span class="st">&#39;REGION&#39;</span>])))</span>
+<span id="cb31-26"><a href="#cb31-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-27"><a href="#cb31-27" aria-hidden="true" tabindex="-1"></a>    year_df <span class="op">=</span> df_reg_wat[df_reg_wat[<span class="st">&#39;Year&#39;</span>] <span class="op">==</span> year]</span>
+<span id="cb31-28"><a href="#cb31-28" aria-hidden="true" tabindex="-1"></a>    year_df<span class="op">=</span><span class="bu">sorted</span>(year_df)</span>
+<span id="cb31-29"><a href="#cb31-29" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-30"><a href="#cb31-30" aria-hidden="true" tabindex="-1"></a>    source1<span class="op">=</span> ColumnDataSource(data<span class="op">=</span><span class="bu">dict</span>(REGION<span class="op">=</span>year_df[<span class="st">&#39;REGION&#39;</span>] ,</span>
+<span id="cb31-31"><a href="#cb31-31" aria-hidden="true" tabindex="-1"></a>     Access_to_CleanWater<span class="op">=</span>year_df[select], color<span class="op">=</span>blue_colors))</span>
+<span id="cb31-32"><a href="#cb31-32" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-33"><a href="#cb31-33" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Create the bar chart</span></span>
+<span id="cb31-34"><a href="#cb31-34" aria-hidden="true" tabindex="-1"></a>    p <span class="op">=</span> figure(x_range<span class="op">=</span>x_list, y_range<span class="op">=</span>(<span class="dv">0</span>, <span class="dv">100</span>), plot_height<span class="op">=</span><span class="dv">350</span>,</span>
+<span id="cb31-35"><a href="#cb31-35" aria-hidden="true" tabindex="-1"></a>                title<span class="op">=</span><span class="st">&#39;Access to Drinking Water per Region in &#39;</span> <span class="op">+</span> <span class="bu">str</span>(year),</span>
+<span id="cb31-36"><a href="#cb31-36" aria-hidden="true" tabindex="-1"></a>            toolbar_location<span class="op">=</span><span class="va">None</span>, tools<span class="op">=</span><span class="st">&quot;&quot;</span>)</span>
+<span id="cb31-37"><a href="#cb31-37" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-38"><a href="#cb31-38" aria-hidden="true" tabindex="-1"></a>    p.vbar(x<span class="op">=</span><span class="st">&#39;REGION&#39;</span>, top<span class="op">=</span><span class="st">&#39;Access_to_CleanWater&#39;</span>, width<span class="op">=</span><span class="fl">0.7</span>,</span>
+<span id="cb31-39"><a href="#cb31-39" aria-hidden="true" tabindex="-1"></a>            source<span class="op">=</span>source1, color<span class="op">=</span><span class="st">&#39;color&#39;</span>)</span>
+<span id="cb31-40"><a href="#cb31-40" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-41"><a href="#cb31-41" aria-hidden="true" tabindex="-1"></a>    p.xgrid.grid_line_color <span class="op">=</span> <span class="va">None</span></span>
+<span id="cb31-42"><a href="#cb31-42" aria-hidden="true" tabindex="-1"></a>    p.y_range.start <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb31-43"><a href="#cb31-43" aria-hidden="true" tabindex="-1"></a>    p.y_range.end <span class="op">=</span> <span class="dv">100</span></span>
+<span id="cb31-44"><a href="#cb31-44" aria-hidden="true" tabindex="-1"></a>    p.xaxis.major_label_orientation <span class="op">=</span> <span class="dv">1</span></span>
+<span id="cb31-45"><a href="#cb31-45" aria-hidden="true" tabindex="-1"></a>    p.xaxis.axis_label <span class="op">=</span> <span class="st">&quot;Region&quot;</span></span>
+<span id="cb31-46"><a href="#cb31-46" aria-hidden="true" tabindex="-1"></a>    p.yaxis.axis_label <span class="op">=</span> <span class="st">&quot;Access to Drinking Water (%)&quot;</span></span>
+<span id="cb31-47"><a href="#cb31-47" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-48"><a href="#cb31-48" aria-hidden="true" tabindex="-1"></a>   </span>
+<span id="cb31-49"><a href="#cb31-49" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Add the labels on top of the bars</span></span>
+<span id="cb31-50"><a href="#cb31-50" aria-hidden="true" tabindex="-1"></a>    <span class="co"># labels = LabelSet(x=&#39;REGION&#39;, y=&#39;Access_to_CleanWater&#39;,</span></span>
+<span id="cb31-51"><a href="#cb31-51" aria-hidden="true" tabindex="-1"></a>    <span class="co">#                    text=&#39;Access_to_CleanWater&#39;, level=&#39;glyph&#39;,</span></span>
+<span id="cb31-52"><a href="#cb31-52" aria-hidden="true" tabindex="-1"></a>    <span class="co">#           x_offset=-13.5, y_offset=0, source=source1, render_mode=&#39;canvas&#39;)</span></span>
+<span id="cb31-53"><a href="#cb31-53" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> p</span>
+<span id="cb31-54"><a href="#cb31-54" aria-hidden="true" tabindex="-1"></a><span class="co">############################################################################</span></span>
+<span id="cb31-55"><a href="#cb31-55" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> draw_plot_san(year,select):</span>
+<span id="cb31-56"><a href="#cb31-56" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-57"><a href="#cb31-57" aria-hidden="true" tabindex="-1"></a>    <span class="co">&quot;&quot;&quot;</span></span>
+<span id="cb31-58"><a href="#cb31-58" aria-hidden="true" tabindex="-1"></a><span class="co">     function draws plot for acces to clean sanitatin in </span></span>
+<span id="cb31-59"><a href="#cb31-59" aria-hidden="true" tabindex="-1"></a><span class="co">     8 main SDG regions </span></span>
+<span id="cb31-60"><a href="#cb31-60" aria-hidden="true" tabindex="-1"></a><span class="co">     </span></span>
+<span id="cb31-61"><a href="#cb31-61" aria-hidden="true" tabindex="-1"></a><span class="co">    &quot;&quot;&quot;</span></span>
+<span id="cb31-62"><a href="#cb31-62" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Get the unique regions in the data</span></span>
+<span id="cb31-63"><a href="#cb31-63" aria-hidden="true" tabindex="-1"></a>    x_list <span class="op">=</span> <span class="bu">sorted</span>(<span class="bu">list</span>(<span class="bu">set</span>(df_reg_wat[<span class="st">&#39;REGION&#39;</span>])))</span>
+<span id="cb31-64"><a href="#cb31-64" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-65"><a href="#cb31-65" aria-hidden="true" tabindex="-1"></a>    year_df <span class="op">=</span> df_reg_san[df_reg_san[<span class="st">&#39;Year&#39;</span>] <span class="op">==</span> year]</span>
+<span id="cb31-66"><a href="#cb31-66" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb31-67"><a href="#cb31-67" aria-hidden="true" tabindex="-1"></a>    source2 <span class="op">=</span> ColumnDataSource(data<span class="op">=</span><span class="bu">dict</span>(REGION<span class="op">=</span>year_df[<span class="st">&#39;REGION&#39;</span>] ,</span>
+<span id="cb31-68"><a href="#cb31-68" aria-hidden="true" tabindex="-1"></a>     Access_to_sanitation<span class="op">=</span>year_df[select], color<span class="op">=</span>green_colors))</span>
+<span id="cb31-69"><a href="#cb31-69" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-70"><a href="#cb31-70" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Create the bar chart</span></span>
+<span id="cb31-71"><a href="#cb31-71" aria-hidden="true" tabindex="-1"></a>    p <span class="op">=</span> figure(x_range<span class="op">=</span>x_list, y_range<span class="op">=</span>(<span class="dv">0</span>, <span class="dv">100</span>), plot_height<span class="op">=</span><span class="dv">350</span>,</span>
+<span id="cb31-72"><a href="#cb31-72" aria-hidden="true" tabindex="-1"></a>                title<span class="op">=</span><span class="st">&#39;Access to sanitation per Region in &#39;</span> <span class="op">+</span> <span class="bu">str</span>(year),</span>
+<span id="cb31-73"><a href="#cb31-73" aria-hidden="true" tabindex="-1"></a>            toolbar_location<span class="op">=</span><span class="va">None</span>, tools<span class="op">=</span><span class="st">&quot;&quot;</span>)</span>
+<span id="cb31-74"><a href="#cb31-74" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-75"><a href="#cb31-75" aria-hidden="true" tabindex="-1"></a>    p.vbar(x<span class="op">=</span><span class="st">&#39;REGION&#39;</span>, top<span class="op">=</span><span class="st">&#39;Access_to_sanitation&#39;</span>, </span>
+<span id="cb31-76"><a href="#cb31-76" aria-hidden="true" tabindex="-1"></a>           width<span class="op">=</span><span class="fl">0.7</span>, source<span class="op">=</span>source2, color<span class="op">=</span><span class="st">&#39;color&#39;</span>)</span>
+<span id="cb31-77"><a href="#cb31-77" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-78"><a href="#cb31-78" aria-hidden="true" tabindex="-1"></a>    p.xgrid.grid_line_color <span class="op">=</span> <span class="va">None</span></span>
+<span id="cb31-79"><a href="#cb31-79" aria-hidden="true" tabindex="-1"></a>    p.y_range.start <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb31-80"><a href="#cb31-80" aria-hidden="true" tabindex="-1"></a>    p.y_range.end <span class="op">=</span> <span class="dv">100</span></span>
+<span id="cb31-81"><a href="#cb31-81" aria-hidden="true" tabindex="-1"></a>    p.xaxis.major_label_orientation <span class="op">=</span> <span class="dv">1</span></span>
+<span id="cb31-82"><a href="#cb31-82" aria-hidden="true" tabindex="-1"></a>    p.xaxis.axis_label <span class="op">=</span> <span class="st">&quot;Region&quot;</span></span>
+<span id="cb31-83"><a href="#cb31-83" aria-hidden="true" tabindex="-1"></a>    p.yaxis.axis_label <span class="op">=</span> <span class="st">&quot;Access to sanitation (%)&quot;</span></span>
+<span id="cb31-84"><a href="#cb31-84" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-85"><a href="#cb31-85" aria-hidden="true" tabindex="-1"></a>   </span>
+<span id="cb31-86"><a href="#cb31-86" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Add the labels on top of the bars</span></span>
+<span id="cb31-87"><a href="#cb31-87" aria-hidden="true" tabindex="-1"></a>    <span class="co"># labels = LabelSet(x=&#39;REGION&#39;, y=&#39;Access_to_sanitation&#39;,</span></span>
+<span id="cb31-88"><a href="#cb31-88" aria-hidden="true" tabindex="-1"></a>    <span class="co">#                    text=&#39;Access_to_sanitation&#39;, level=&#39;glyph&#39;,</span></span>
+<span id="cb31-89"><a href="#cb31-89" aria-hidden="true" tabindex="-1"></a>    <span class="co">#           x_offset=-13.5, y_offset=0, source=source2, render_mode=&#39;canvas&#39;)</span></span>
+<span id="cb31-90"><a href="#cb31-90" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> p</span>
+<span id="cb31-91"><a href="#cb31-91" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-92"><a href="#cb31-92" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-93"><a href="#cb31-93" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> draw_all_plots(year,select):</span>
+<span id="cb31-94"><a href="#cb31-94" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb31-95"><a href="#cb31-95" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-96"><a href="#cb31-96" aria-hidden="true" tabindex="-1"></a>    p1 <span class="op">=</span> draw_plot(year,select)</span>
+<span id="cb31-97"><a href="#cb31-97" aria-hidden="true" tabindex="-1"></a>    p2 <span class="op">=</span> draw_plot_san(year,select)</span>
+<span id="cb31-98"><a href="#cb31-98" aria-hidden="true" tabindex="-1"></a>   </span>
+<span id="cb31-99"><a href="#cb31-99" aria-hidden="true" tabindex="-1"></a>    show(row(p1, p2))</span>
+<span id="cb31-100"><a href="#cb31-100" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-101"><a href="#cb31-101" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> main():</span>
+<span id="cb31-102"><a href="#cb31-102" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb31-103"><a href="#cb31-103" aria-hidden="true" tabindex="-1"></a>    select <span class="op">=</span> Select(title<span class="op">=</span><span class="st">&quot;Population Type:&quot;</span>, value<span class="op">=</span><span class="st">&#39;national&#39;</span>, options<span class="op">=</span>[<span class="st">&#39;national&#39;</span>,<span class="st">&#39;rural&#39;</span>,<span class="st">&#39;urban&#39;</span>], </span>
+<span id="cb31-104"><a href="#cb31-104" aria-hidden="true" tabindex="-1"></a>                 description<span class="op">=</span><span class="st">&#39;Select population type:&#39;</span>, layout<span class="op">=</span>Layout(height<span class="op">=</span><span class="st">&#39;auto&#39;</span>, width<span class="op">=</span><span class="st">&#39;500&#39;</span>, align_items<span class="op">=</span><span class="st">&#39;center&#39;</span>))</span>
+<span id="cb31-105"><a href="#cb31-105" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-106"><a href="#cb31-106" aria-hidden="true" tabindex="-1"></a>    slider <span class="op">=</span> IntSlider(<span class="bu">min</span><span class="op">=</span><span class="dv">2000</span>, <span class="bu">max</span><span class="op">=</span><span class="dv">2020</span>, step<span class="op">=</span><span class="dv">1</span>, description<span class="op">=</span><span class="st">&#39;Year:&#39;</span>, readout_format<span class="op">=</span><span class="st">&#39;d&#39;</span>, </span>
+<span id="cb31-107"><a href="#cb31-107" aria-hidden="true" tabindex="-1"></a>                   layout<span class="op">=</span>Layout(height<span class="op">=</span><span class="st">&#39;auto&#39;</span>, width<span class="op">=</span><span class="st">&#39;1000&#39;</span>, align_items<span class="op">=</span><span class="st">&#39;center&#39;</span>))</span>
+<span id="cb31-108"><a href="#cb31-108" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-109"><a href="#cb31-109" aria-hidden="true" tabindex="-1"></a>    interact(draw_all_plots, year<span class="op">=</span>slider, select<span class="op">=</span>select)</span>
+<span id="cb31-110"><a href="#cb31-110" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-111"><a href="#cb31-111" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb31-112"><a href="#cb31-112" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="va">__name__</span> <span class="op">==</span> <span class="st">&quot;__main__&quot;</span>:</span>
+<span id="cb31-113"><a href="#cb31-113" aria-hidden="true" tabindex="-1"></a>    main()</span></code></pre></div>
+<div class="output display_data">
+<div class="bk-root">
+        <a href="https://bokeh.org" target="_blank" class="bk-logo bk-logo-small bk-logo-notebook"></a>
+        <span id="56864">Loading BokehJS ...</span>
+    </div>
+
+</div>
+<div class="output display_data">
+<div class="sourceCode" id="cb32"><pre
+class="sourceCode json"><code class="sourceCode json"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a><span class="er">&quot;&quot;</span></span></code></pre></div>
+</div>
+<div class="output display_data">
+<div class="sourceCode" id="cb33"><pre
+class="sourceCode json"><code class="sourceCode json"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="er">&quot;&quot;</span></span></code></pre></div>
+</div>
+<div class="output display_data">
+<div class="sourceCode" id="cb34"><pre
+class="sourceCode json"><code class="sourceCode json"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span><span class="dt">&quot;model_id&quot;</span><span class="fu">:</span><span class="st">&quot;bb3aa14f86274c2e898f7b91753f40af&quot;</span><span class="fu">,</span><span class="dt">&quot;version_major&quot;</span><span class="fu">:</span><span class="dv">2</span><span class="fu">,</span><span class="dt">&quot;version_minor&quot;</span><span class="fu">:</span><span class="dv">0</span><span class="fu">}</span></span></code></pre></div>
+</div>
+<div class="output display_data">
+<div class="sourceCode" id="cb35"><pre
+class="sourceCode json"><code class="sourceCode json"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a><span class="er">&quot;&quot;</span></span></code></pre></div>
+</div>
+<div class="output display_data">
+<div class="sourceCode" id="cb36"><pre
+class="sourceCode json"><code class="sourceCode json"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a><span class="er">&quot;&quot;</span></span></code></pre></div>
+</div>
+<div class="output display_data">
+<div class="sourceCode" id="cb37"><pre
+class="sourceCode json"><code class="sourceCode json"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a><span class="er">&quot;&quot;</span></span></code></pre></div>
+</div>
+<div class="output display_data">
+<div class="sourceCode" id="cb38"><pre
+class="sourceCode json"><code class="sourceCode json"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a><span class="er">&quot;&quot;</span></span></code></pre></div>
+</div>
+</div>
+<section
+id="questionhow-does-the-access-to-clean-water-and-sanitation-differ-between-high_income-and-low_income-regions"
+class="cell markdown">
+<h1>Question:How does the access to clean water and sanitation differ
+between High_income and low_income regions?</h1>
+</section>
+<section id="visualization" class="cell markdown">
+<h2>visualization</h2>
+<p>These two functions, draw_plot_income_water and draw_plot_income_san,
+are similar to the first two above functions, but they consider the
+region's income categories instead of the regions.</p>
+</section>
+<div class="cell code" data-execution_count="51">
+<div class="sourceCode" id="cb39"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Enable display of Bokeh plots in the notebook</span></span>
+<span id="cb39-2"><a href="#cb39-2" aria-hidden="true" tabindex="-1"></a>output_notebook()</span>
+<span id="cb39-3"><a href="#cb39-3" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb39-4"><a href="#cb39-4" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> draw_plot_income_water(year,select):</span>
+<span id="cb39-5"><a href="#cb39-5" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb39-6"><a href="#cb39-6" aria-hidden="true" tabindex="-1"></a>    <span class="co">&quot;&quot;&quot;</span></span>
+<span id="cb39-7"><a href="#cb39-7" aria-hidden="true" tabindex="-1"></a><span class="co">     function draws plot for acces to clean water considering</span></span>
+<span id="cb39-8"><a href="#cb39-8" aria-hidden="true" tabindex="-1"></a><span class="co">     region&#39;s income categories</span></span>
+<span id="cb39-9"><a href="#cb39-9" aria-hidden="true" tabindex="-1"></a><span class="co">     </span></span>
+<span id="cb39-10"><a href="#cb39-10" aria-hidden="true" tabindex="-1"></a><span class="co">    &quot;&quot;&quot;</span></span>
+<span id="cb39-11"><a href="#cb39-11" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Get the unique regions in the data</span></span>
+<span id="cb39-12"><a href="#cb39-12" aria-hidden="true" tabindex="-1"></a>    x_list <span class="op">=</span> <span class="bu">sorted</span>(<span class="bu">list</span>(<span class="bu">set</span>(income_reg_wat[<span class="st">&#39;REGION&#39;</span>])))</span>
+<span id="cb39-13"><a href="#cb39-13" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb39-14"><a href="#cb39-14" aria-hidden="true" tabindex="-1"></a>    year_df <span class="op">=</span> income_reg_wat[income_reg_wat[<span class="st">&#39;Year&#39;</span>] <span class="op">==</span> year]</span>
+<span id="cb39-15"><a href="#cb39-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-16"><a href="#cb39-16" aria-hidden="true" tabindex="-1"></a>    source1 <span class="op">=</span> ColumnDataSource(data<span class="op">=</span><span class="bu">dict</span>(REGION<span class="op">=</span>year_df[<span class="st">&#39;REGION&#39;</span>] ,</span>
+<span id="cb39-17"><a href="#cb39-17" aria-hidden="true" tabindex="-1"></a>     Access_to_cleanWater<span class="op">=</span>year_df[select], </span>
+<span id="cb39-18"><a href="#cb39-18" aria-hidden="true" tabindex="-1"></a>     color<span class="op">=</span>[<span class="st">&#39;#00BFFF&#39;</span>,<span class="st">&#39;#87CEEB&#39;</span>,<span class="st">&#39;#1E90FF&#39;</span>,<span class="st">&#39;#ADD8E6&#39;</span>]))</span>
+<span id="cb39-19"><a href="#cb39-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-20"><a href="#cb39-20" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Create the bar chart</span></span>
+<span id="cb39-21"><a href="#cb39-21" aria-hidden="true" tabindex="-1"></a>    p <span class="op">=</span> figure(x_range<span class="op">=</span>x_list, y_range<span class="op">=</span>(<span class="dv">0</span>, <span class="dv">100</span>), plot_height<span class="op">=</span><span class="dv">350</span>,</span>
+<span id="cb39-22"><a href="#cb39-22" aria-hidden="true" tabindex="-1"></a>                title<span class="op">=</span><span class="st">&#39;Access to clean water per income category in &#39;</span></span>
+<span id="cb39-23"><a href="#cb39-23" aria-hidden="true" tabindex="-1"></a>                  <span class="op">+</span> <span class="bu">str</span>(year),toolbar_location<span class="op">=</span><span class="va">None</span>, tools<span class="op">=</span><span class="st">&quot;&quot;</span>)</span>
+<span id="cb39-24"><a href="#cb39-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-25"><a href="#cb39-25" aria-hidden="true" tabindex="-1"></a>    p.vbar(x<span class="op">=</span><span class="st">&#39;REGION&#39;</span>, top<span class="op">=</span><span class="st">&#39;Access_to_cleanWater&#39;</span>, width<span class="op">=</span><span class="fl">0.4</span>,</span>
+<span id="cb39-26"><a href="#cb39-26" aria-hidden="true" tabindex="-1"></a>            source<span class="op">=</span>source1, color<span class="op">=</span><span class="st">&#39;color&#39;</span>)</span>
+<span id="cb39-27"><a href="#cb39-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-28"><a href="#cb39-28" aria-hidden="true" tabindex="-1"></a>    p.xgrid.grid_line_color <span class="op">=</span> <span class="va">None</span></span>
+<span id="cb39-29"><a href="#cb39-29" aria-hidden="true" tabindex="-1"></a>    p.y_range.start <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb39-30"><a href="#cb39-30" aria-hidden="true" tabindex="-1"></a>    p.y_range.end <span class="op">=</span> <span class="dv">100</span></span>
+<span id="cb39-31"><a href="#cb39-31" aria-hidden="true" tabindex="-1"></a>    p.xaxis.major_label_orientation <span class="op">=</span> <span class="dv">1</span></span>
+<span id="cb39-32"><a href="#cb39-32" aria-hidden="true" tabindex="-1"></a>    p.xaxis.axis_label <span class="op">=</span> <span class="st">&quot;Income&quot;</span></span>
+<span id="cb39-33"><a href="#cb39-33" aria-hidden="true" tabindex="-1"></a>    p.yaxis.axis_label <span class="op">=</span> <span class="st">&quot;Access to clean water (%)&quot;</span></span>
+<span id="cb39-34"><a href="#cb39-34" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-35"><a href="#cb39-35" aria-hidden="true" tabindex="-1"></a>   </span>
+<span id="cb39-36"><a href="#cb39-36" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Add the labels on top of the bars</span></span>
+<span id="cb39-37"><a href="#cb39-37" aria-hidden="true" tabindex="-1"></a>    labels <span class="op">=</span> LabelSet(x<span class="op">=</span><span class="st">&#39;REGION&#39;</span>, y<span class="op">=</span><span class="st">&#39;Access_to_cleanWater&#39;</span>,</span>
+<span id="cb39-38"><a href="#cb39-38" aria-hidden="true" tabindex="-1"></a>                       text<span class="op">=</span><span class="st">&#39;Access_to_clean&#39;</span>, level<span class="op">=</span><span class="st">&#39;glyph&#39;</span>,</span>
+<span id="cb39-39"><a href="#cb39-39" aria-hidden="true" tabindex="-1"></a>              source<span class="op">=</span>source1, render_mode<span class="op">=</span><span class="st">&#39;canvas&#39;</span>)</span>
+<span id="cb39-40"><a href="#cb39-40" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> p</span>
+<span id="cb39-41"><a href="#cb39-41" aria-hidden="true" tabindex="-1"></a><span class="co">############################################################################</span></span>
+<span id="cb39-42"><a href="#cb39-42" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> draw_plot_income_san(year,select):</span>
+<span id="cb39-43"><a href="#cb39-43" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb39-44"><a href="#cb39-44" aria-hidden="true" tabindex="-1"></a>    <span class="co">&quot;&quot;&quot;</span></span>
+<span id="cb39-45"><a href="#cb39-45" aria-hidden="true" tabindex="-1"></a><span class="co">     function draws plot for acces to sanitation considering</span></span>
+<span id="cb39-46"><a href="#cb39-46" aria-hidden="true" tabindex="-1"></a><span class="co">     region&#39;s income categories</span></span>
+<span id="cb39-47"><a href="#cb39-47" aria-hidden="true" tabindex="-1"></a><span class="co">     </span></span>
+<span id="cb39-48"><a href="#cb39-48" aria-hidden="true" tabindex="-1"></a><span class="co">    &quot;&quot;&quot;</span></span>
+<span id="cb39-49"><a href="#cb39-49" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Get the unique regions in the data</span></span>
+<span id="cb39-50"><a href="#cb39-50" aria-hidden="true" tabindex="-1"></a>    x_list <span class="op">=</span> <span class="bu">sorted</span>(<span class="bu">list</span>(<span class="bu">set</span>(income_reg_san[<span class="st">&#39;REGION&#39;</span>])))</span>
+<span id="cb39-51"><a href="#cb39-51" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb39-52"><a href="#cb39-52" aria-hidden="true" tabindex="-1"></a>    year_df <span class="op">=</span> income_reg_san[income_reg_san[<span class="st">&#39;Year&#39;</span>] <span class="op">==</span> year]</span>
+<span id="cb39-53"><a href="#cb39-53" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-54"><a href="#cb39-54" aria-hidden="true" tabindex="-1"></a>    source2 <span class="op">=</span> ColumnDataSource(data<span class="op">=</span><span class="bu">dict</span>(REGION<span class="op">=</span>year_df[<span class="st">&#39;REGION&#39;</span>] ,</span>
+<span id="cb39-55"><a href="#cb39-55" aria-hidden="true" tabindex="-1"></a>     Access_to_sanitation<span class="op">=</span>year_df[select], </span>
+<span id="cb39-56"><a href="#cb39-56" aria-hidden="true" tabindex="-1"></a>     color<span class="op">=</span>[<span class="st">&#39;#00FF7F&#39;</span>, <span class="st">&#39;#90EE90&#39;</span>, <span class="st">&#39;#32CD32&#39;</span>, <span class="st">&#39;#228B22&#39;</span>]))</span>
+<span id="cb39-57"><a href="#cb39-57" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-58"><a href="#cb39-58" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Create the bar chart</span></span>
+<span id="cb39-59"><a href="#cb39-59" aria-hidden="true" tabindex="-1"></a>    p <span class="op">=</span> figure(x_range<span class="op">=</span>x_list, y_range<span class="op">=</span>(<span class="dv">0</span>, <span class="dv">100</span>), plot_height<span class="op">=</span><span class="dv">350</span>,</span>
+<span id="cb39-60"><a href="#cb39-60" aria-hidden="true" tabindex="-1"></a>                title<span class="op">=</span><span class="st">&#39;Access to sanitation per income category in &#39;</span></span>
+<span id="cb39-61"><a href="#cb39-61" aria-hidden="true" tabindex="-1"></a>                  <span class="op">+</span> <span class="bu">str</span>(year),toolbar_location<span class="op">=</span><span class="va">None</span>, tools<span class="op">=</span><span class="st">&quot;&quot;</span>)</span>
+<span id="cb39-62"><a href="#cb39-62" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-63"><a href="#cb39-63" aria-hidden="true" tabindex="-1"></a>    p.vbar(x<span class="op">=</span><span class="st">&#39;REGION&#39;</span>, top<span class="op">=</span><span class="st">&#39;Access_to_sanitation&#39;</span>, width<span class="op">=</span><span class="fl">0.4</span>, source<span class="op">=</span>source2, </span>
+<span id="cb39-64"><a href="#cb39-64" aria-hidden="true" tabindex="-1"></a>           color<span class="op">=</span><span class="st">&#39;color&#39;</span>)</span>
+<span id="cb39-65"><a href="#cb39-65" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-66"><a href="#cb39-66" aria-hidden="true" tabindex="-1"></a>    p.xgrid.grid_line_color <span class="op">=</span> <span class="va">None</span></span>
+<span id="cb39-67"><a href="#cb39-67" aria-hidden="true" tabindex="-1"></a>    p.y_range.start <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb39-68"><a href="#cb39-68" aria-hidden="true" tabindex="-1"></a>    p.y_range.end <span class="op">=</span> <span class="dv">100</span></span>
+<span id="cb39-69"><a href="#cb39-69" aria-hidden="true" tabindex="-1"></a>    p.xaxis.major_label_orientation <span class="op">=</span> <span class="dv">1</span></span>
+<span id="cb39-70"><a href="#cb39-70" aria-hidden="true" tabindex="-1"></a>    p.xaxis.axis_label <span class="op">=</span> <span class="st">&quot;Incom&quot;</span></span>
+<span id="cb39-71"><a href="#cb39-71" aria-hidden="true" tabindex="-1"></a>    p.yaxis.axis_label <span class="op">=</span> <span class="st">&quot;Access to sanitation (%)&quot;</span></span>
+<span id="cb39-72"><a href="#cb39-72" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-73"><a href="#cb39-73" aria-hidden="true" tabindex="-1"></a>   </span>
+<span id="cb39-74"><a href="#cb39-74" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Add the labels on top of the bars</span></span>
+<span id="cb39-75"><a href="#cb39-75" aria-hidden="true" tabindex="-1"></a>    labels <span class="op">=</span> LabelSet(x<span class="op">=</span><span class="st">&#39;REGION&#39;</span>, y<span class="op">=</span><span class="st">&#39;Access_to_sanitation&#39;</span>,</span>
+<span id="cb39-76"><a href="#cb39-76" aria-hidden="true" tabindex="-1"></a>                       text<span class="op">=</span><span class="st">&#39;Access_to_sanitation&#39;</span>, level<span class="op">=</span><span class="st">&#39;glyph&#39;</span>,</span>
+<span id="cb39-77"><a href="#cb39-77" aria-hidden="true" tabindex="-1"></a>               source<span class="op">=</span>source2, render_mode<span class="op">=</span><span class="st">&#39;canvas&#39;</span>)</span>
+<span id="cb39-78"><a href="#cb39-78" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> p</span>
+<span id="cb39-79"><a href="#cb39-79" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-80"><a href="#cb39-80" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> draw_all_plots(year,select):</span>
+<span id="cb39-81"><a href="#cb39-81" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb39-82"><a href="#cb39-82" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-83"><a href="#cb39-83" aria-hidden="true" tabindex="-1"></a>    p1<span class="op">=</span> draw_plot_income_water(year,select)</span>
+<span id="cb39-84"><a href="#cb39-84" aria-hidden="true" tabindex="-1"></a>    p2<span class="op">=</span> draw_plot_income_san(year,select)</span>
+<span id="cb39-85"><a href="#cb39-85" aria-hidden="true" tabindex="-1"></a>    show(row(p1, p2))</span>
+<span id="cb39-86"><a href="#cb39-86" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb39-87"><a href="#cb39-87" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-88"><a href="#cb39-88" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> main():</span>
+<span id="cb39-89"><a href="#cb39-89" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb39-90"><a href="#cb39-90" aria-hidden="true" tabindex="-1"></a>    select <span class="op">=</span> Select(title<span class="op">=</span><span class="st">&quot;Population Type:&quot;</span>, value<span class="op">=</span><span class="st">&#39;national&#39;</span>,</span>
+<span id="cb39-91"><a href="#cb39-91" aria-hidden="true" tabindex="-1"></a>                     options<span class="op">=</span>[<span class="st">&#39;national&#39;</span>,<span class="st">&#39;rural&#39;</span>,<span class="st">&#39;urban&#39;</span>], </span>
+<span id="cb39-92"><a href="#cb39-92" aria-hidden="true" tabindex="-1"></a>                     description<span class="op">=</span><span class="st">&#39;Select population type:&#39;</span>, </span>
+<span id="cb39-93"><a href="#cb39-93" aria-hidden="true" tabindex="-1"></a>                     layout<span class="op">=</span>Layout(height<span class="op">=</span><span class="st">&#39;auto&#39;</span>, width<span class="op">=</span><span class="st">&#39;500&#39;</span>,</span>
+<span id="cb39-94"><a href="#cb39-94" aria-hidden="true" tabindex="-1"></a>                                    align_items<span class="op">=</span><span class="st">&#39;center&#39;</span>))</span>
+<span id="cb39-95"><a href="#cb39-95" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-96"><a href="#cb39-96" aria-hidden="true" tabindex="-1"></a>    slider <span class="op">=</span> IntSlider(<span class="bu">min</span><span class="op">=</span><span class="dv">2000</span>, <span class="bu">max</span><span class="op">=</span><span class="dv">2020</span>, step<span class="op">=</span><span class="dv">1</span>, description<span class="op">=</span><span class="st">&#39;Year:&#39;</span>,</span>
+<span id="cb39-97"><a href="#cb39-97" aria-hidden="true" tabindex="-1"></a>                        readout_format<span class="op">=</span><span class="st">&#39;d&#39;</span>,</span>
+<span id="cb39-98"><a href="#cb39-98" aria-hidden="true" tabindex="-1"></a>                          layout<span class="op">=</span>Layout(height<span class="op">=</span><span class="st">&#39;auto&#39;</span>, </span>
+<span id="cb39-99"><a href="#cb39-99" aria-hidden="true" tabindex="-1"></a>                                        width<span class="op">=</span><span class="st">&#39;1000&#39;</span>, align_items<span class="op">=</span><span class="st">&#39;center&#39;</span>))</span>
+<span id="cb39-100"><a href="#cb39-100" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-101"><a href="#cb39-101" aria-hidden="true" tabindex="-1"></a>    interact(draw_all_plots, year<span class="op">=</span>slider, select<span class="op">=</span>select)</span>
+<span id="cb39-102"><a href="#cb39-102" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-103"><a href="#cb39-103" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb39-104"><a href="#cb39-104" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="va">__name__</span> <span class="op">==</span> <span class="st">&quot;__main__&quot;</span>:</span>
+<span id="cb39-105"><a href="#cb39-105" aria-hidden="true" tabindex="-1"></a>    main()</span>
+<span id="cb39-106"><a href="#cb39-106" aria-hidden="true" tabindex="-1"></a> </span></code></pre></div>
+<div class="output display_data">
+<div class="bk-root">
+        <a href="https://bokeh.org" target="_blank" class="bk-logo bk-logo-small bk-logo-notebook"></a>
+        <span id="87845">Loading BokehJS ...</span>
+    </div>
+
+</div>
+<div class="output display_data">
+<div class="sourceCode" id="cb40"><pre
+class="sourceCode json"><code class="sourceCode json"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a><span class="er">&quot;&quot;</span></span></code></pre></div>
+</div>
+<div class="output display_data">
+<div class="sourceCode" id="cb41"><pre
+class="sourceCode json"><code class="sourceCode json"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a><span class="er">&quot;&quot;</span></span></code></pre></div>
+</div>
+<div class="output display_data">
+<div class="sourceCode" id="cb42"><pre
+class="sourceCode json"><code class="sourceCode json"><span id="cb42-1"><a href="#cb42-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span><span class="dt">&quot;model_id&quot;</span><span class="fu">:</span><span class="st">&quot;e15378480390429a95c60aa7f145eb00&quot;</span><span class="fu">,</span><span class="dt">&quot;version_major&quot;</span><span class="fu">:</span><span class="dv">2</span><span class="fu">,</span><span class="dt">&quot;version_minor&quot;</span><span class="fu">:</span><span class="dv">0</span><span class="fu">}</span></span></code></pre></div>
+</div>
+<div class="output display_data">
+<div class="sourceCode" id="cb43"><pre
+class="sourceCode json"><code class="sourceCode json"><span id="cb43-1"><a href="#cb43-1" aria-hidden="true" tabindex="-1"></a><span class="er">&quot;&quot;</span></span></code></pre></div>
+</div>
+<div class="output display_data">
+<div class="sourceCode" id="cb44"><pre
+class="sourceCode json"><code class="sourceCode json"><span id="cb44-1"><a href="#cb44-1" aria-hidden="true" tabindex="-1"></a><span class="er">&quot;&quot;</span></span></code></pre></div>
+</div>
+<div class="output display_data">
+<div class="sourceCode" id="cb45"><pre
+class="sourceCode json"><code class="sourceCode json"><span id="cb45-1"><a href="#cb45-1" aria-hidden="true" tabindex="-1"></a><span class="er">&quot;&quot;</span></span></code></pre></div>
+</div>
+<div class="output display_data">
+<div class="sourceCode" id="cb46"><pre
+class="sourceCode json"><code class="sourceCode json"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true" tabindex="-1"></a><span class="er">&quot;&quot;</span></span></code></pre></div>
+</div>
+<div class="output display_data">
+<div class="sourceCode" id="cb47"><pre
+class="sourceCode json"><code class="sourceCode json"><span id="cb47-1"><a href="#cb47-1" aria-hidden="true" tabindex="-1"></a><span class="er">&quot;&quot;</span></span></code></pre></div>
+</div>
+<div class="output display_data">
+<div class="sourceCode" id="cb48"><pre
+class="sourceCode json"><code class="sourceCode json"><span id="cb48-1"><a href="#cb48-1" aria-hidden="true" tabindex="-1"></a><span class="er">&quot;&quot;</span></span></code></pre></div>
+</div>
+</div>
+<section id="statistics" class="cell markdown">
+<h2>Statistics</h2>
+<p>To statistically investigating the difference between high and low
+incom regions, the t-test can be used to determine if high-income
+regions and the low-income regions, are equal accorfding to the means of
+access to the clean water and sanitation, or not. The variables of
+interest would be access to clean water and access to sanitation.</p>
+<p>To perform a t-test, I first separated the data for high-income
+regions and low-income regions, and then calculated the mean for each
+group for the access to clean water and access to sanitation. Then, I
+would use a t-test to compare the means between the two groups and
+calculate a p-value. A p-value of less than 0.05 would indicate that the
+differences between the two groups are statistically significant.</p>
+<p>A t-test assumes that the data is normally distributed and that the
+variances of the two groups are equal. If these assumptions are not met,
+alternative tests, such as a Welch's t-test or a Mann-Whitney U test,
+may need to be used.</p>
+</section>
+<section id="histograms" class="cell markdown">
+<h3>Histograms</h3>
+</section>
+<div class="cell code" data-execution_count="52">
+<div class="sourceCode" id="cb49"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb49-1"><a href="#cb49-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> hist_plot(y1_law,y1_high,y2_law,y2_high):</span>
+<span id="cb49-2"><a href="#cb49-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb49-3"><a href="#cb49-3" aria-hidden="true" tabindex="-1"></a>    <span class="co">#print(&#39;mean = {:.4g}, variance = {:.4g}&#39;.format(y_av_law_wat, m2_law_wat))</span></span>
+<span id="cb49-4"><a href="#cb49-4" aria-hidden="true" tabindex="-1"></a>    fig, (ax1,ax2) <span class="op">=</span> plt.subplots(<span class="dv">1</span>, <span class="dv">2</span>, figsize<span class="op">=</span>(<span class="dv">13</span>,<span class="dv">4</span>))</span>
+<span id="cb49-5"><a href="#cb49-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb49-6"><a href="#cb49-6" aria-hidden="true" tabindex="-1"></a>    <span class="co">#Draw His plot for clean water in low/high incom regions</span></span>
+<span id="cb49-7"><a href="#cb49-7" aria-hidden="true" tabindex="-1"></a>    my_bins <span class="op">=</span> np.arange(<span class="dv">30</span>,<span class="dv">85</span>, <span class="dv">5</span>)</span>
+<span id="cb49-8"><a href="#cb49-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb49-9"><a href="#cb49-9" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Make histograms of water access in low_income and  high_income regions:</span></span>
+<span id="cb49-10"><a href="#cb49-10" aria-hidden="true" tabindex="-1"></a>    ax1.hist(x<span class="op">=</span>y1_law, density<span class="op">=</span><span class="va">True</span>,</span>
+<span id="cb49-11"><a href="#cb49-11" aria-hidden="true" tabindex="-1"></a>            bins<span class="op">=</span>my_bins, </span>
+<span id="cb49-12"><a href="#cb49-12" aria-hidden="true" tabindex="-1"></a>            color<span class="op">=</span><span class="st">&#39;pink&#39;</span>,alpha<span class="op">=</span><span class="fl">0.50</span>, rwidth<span class="op">=</span><span class="dv">1</span>, label<span class="op">=</span><span class="st">&#39;low incom &#39;</span>)</span>
+<span id="cb49-13"><a href="#cb49-13" aria-hidden="true" tabindex="-1"></a>    ax1.hist(x<span class="op">=</span>y1_high, density<span class="op">=</span><span class="va">True</span>,</span>
+<span id="cb49-14"><a href="#cb49-14" aria-hidden="true" tabindex="-1"></a>            bins<span class="op">=</span>my_bins, </span>
+<span id="cb49-15"><a href="#cb49-15" aria-hidden="true" tabindex="-1"></a>            color<span class="op">=</span><span class="st">&#39;blue&#39;</span>,alpha<span class="op">=</span><span class="fl">0.50</span>, rwidth<span class="op">=</span><span class="dv">1</span>, label<span class="op">=</span><span class="st">&#39;high income)&#39;</span>)</span>
+<span id="cb49-16"><a href="#cb49-16" aria-hidden="true" tabindex="-1"></a>    ax1.grid(axis<span class="op">=</span><span class="st">&#39;y&#39;</span>, alpha<span class="op">=</span><span class="fl">0.5</span>)</span>
+<span id="cb49-17"><a href="#cb49-17" aria-hidden="true" tabindex="-1"></a>    ax1.set_xlabel(<span class="st">&#39;population, $y$ (%)&#39;</span>)</span>
+<span id="cb49-18"><a href="#cb49-18" aria-hidden="true" tabindex="-1"></a>    ax1.set_ylabel(<span class="st">&#39;Probability $f(y)$&#39;</span>)</span>
+<span id="cb49-19"><a href="#cb49-19" aria-hidden="true" tabindex="-1"></a>    ax1.set_title(<span class="st">&#39;Histogram of access to clean water&#39;</span>)</span>
+<span id="cb49-20"><a href="#cb49-20" aria-hidden="true" tabindex="-1"></a>    ax1.legend(loc<span class="op">=</span><span class="st">&#39;best&#39;</span>)</span>
+<span id="cb49-21"><a href="#cb49-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb49-22"><a href="#cb49-22" aria-hidden="true" tabindex="-1"></a>    <span class="co">#Draw His plot for sanitation in low/high incom regions</span></span>
+<span id="cb49-23"><a href="#cb49-23" aria-hidden="true" tabindex="-1"></a>    my_bins <span class="op">=</span> np.arange(<span class="dv">0</span>,<span class="dv">50</span>, <span class="dv">5</span>)</span>
+<span id="cb49-24"><a href="#cb49-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb49-25"><a href="#cb49-25" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Make histograms of water access in low_income and  high_income regions:</span></span>
+<span id="cb49-26"><a href="#cb49-26" aria-hidden="true" tabindex="-1"></a>    ax2.hist(x<span class="op">=</span>y2_law, density<span class="op">=</span><span class="va">True</span>,</span>
+<span id="cb49-27"><a href="#cb49-27" aria-hidden="true" tabindex="-1"></a>            bins<span class="op">=</span>my_bins, </span>
+<span id="cb49-28"><a href="#cb49-28" aria-hidden="true" tabindex="-1"></a>            color<span class="op">=</span><span class="st">&#39;pink&#39;</span>,alpha<span class="op">=</span><span class="fl">0.50</span>, rwidth<span class="op">=</span><span class="dv">1</span>, label<span class="op">=</span><span class="st">&#39;low incom &#39;</span>)</span>
+<span id="cb49-29"><a href="#cb49-29" aria-hidden="true" tabindex="-1"></a>    ax2.hist(x<span class="op">=</span>y2_high, density<span class="op">=</span><span class="va">True</span>,</span>
+<span id="cb49-30"><a href="#cb49-30" aria-hidden="true" tabindex="-1"></a>            bins<span class="op">=</span>my_bins, </span>
+<span id="cb49-31"><a href="#cb49-31" aria-hidden="true" tabindex="-1"></a>            color<span class="op">=</span><span class="st">&#39;blue&#39;</span>,alpha<span class="op">=</span><span class="fl">0.50</span>, rwidth<span class="op">=</span><span class="dv">1</span>, label<span class="op">=</span><span class="st">&#39;high income)&#39;</span>)</span>
+<span id="cb49-32"><a href="#cb49-32" aria-hidden="true" tabindex="-1"></a>    ax2.grid(axis<span class="op">=</span><span class="st">&#39;y&#39;</span>, alpha<span class="op">=</span><span class="fl">0.5</span>)</span>
+<span id="cb49-33"><a href="#cb49-33" aria-hidden="true" tabindex="-1"></a>    ax2.set_xlabel(<span class="st">&#39;population, $y$ (%)&#39;</span>)</span>
+<span id="cb49-34"><a href="#cb49-34" aria-hidden="true" tabindex="-1"></a>    ax2.set_ylabel(<span class="st">&#39;Probability $f(y)$&#39;</span>)</span>
+<span id="cb49-35"><a href="#cb49-35" aria-hidden="true" tabindex="-1"></a>    ax2.set_title(<span class="st">&#39;Histogram of access to sanitation)&#39;</span>)</span>
+<span id="cb49-36"><a href="#cb49-36" aria-hidden="true" tabindex="-1"></a>    ax2.legend(loc<span class="op">=</span><span class="st">&#39;best&#39;</span>)</span></code></pre></div>
+</div>
+<div class="cell code" data-execution_count="53">
+<div class="sourceCode" id="cb50"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb50-1"><a href="#cb50-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> DS_Q_Q_parameters(y, est <span class="op">=</span> <span class="st">&#39;ML&#39;</span>):</span>
+<span id="cb50-2"><a href="#cb50-2" aria-hidden="true" tabindex="-1"></a>    <span class="co">&quot;&quot;&quot;</span></span>
+<span id="cb50-3"><a href="#cb50-3" aria-hidden="true" tabindex="-1"></a><span class="co">    *</span></span>
+<span id="cb50-4"><a href="#cb50-4" aria-hidden="true" tabindex="-1"></a><span class="co">    Function DS_Q_Q_Plot(y, est = &#39;preset&#39;, **kwargs)</span></span>
+<span id="cb50-5"><a href="#cb50-5" aria-hidden="true" tabindex="-1"></a><span class="co">    </span></span>
+<span id="cb50-6"><a href="#cb50-6" aria-hidden="true" tabindex="-1"></a><span class="co">       This function makes a normal quantile-quantile plot (Q-Q-plot), also known</span></span>
+<span id="cb50-7"><a href="#cb50-7" aria-hidden="true" tabindex="-1"></a><span class="co">       as a probability plot, to visually check whether data follow a normal distribution.</span></span>
+<span id="cb50-8"><a href="#cb50-8" aria-hidden="true" tabindex="-1"></a><span class="co">    </span></span>
+<span id="cb50-9"><a href="#cb50-9" aria-hidden="true" tabindex="-1"></a><span class="co">    Requires:            - </span></span>
+<span id="cb50-10"><a href="#cb50-10" aria-hidden="true" tabindex="-1"></a><span class="co">    </span></span>
+<span id="cb50-11"><a href="#cb50-11" aria-hidden="true" tabindex="-1"></a><span class="co">    Arguments:</span></span>
+<span id="cb50-12"><a href="#cb50-12" aria-hidden="true" tabindex="-1"></a><span class="co">      y                  data array</span></span>
+<span id="cb50-13"><a href="#cb50-13" aria-hidden="true" tabindex="-1"></a><span class="co">      est                Estimation method for normal parameters mu and sigma:</span></span>
+<span id="cb50-14"><a href="#cb50-14" aria-hidden="true" tabindex="-1"></a><span class="co">                         either &#39;robust&#39; (default), or &#39;ML&#39; (Maximum Likelihood),</span></span>
+<span id="cb50-15"><a href="#cb50-15" aria-hidden="true" tabindex="-1"></a><span class="co">                         or &#39;preset&#39; (given values)</span></span>
+<span id="cb50-16"><a href="#cb50-16" aria-hidden="true" tabindex="-1"></a><span class="co">      N.B. If est=&#39;preset&#39; than the *optional* parameters mu, sigma must be provided:</span></span>
+<span id="cb50-17"><a href="#cb50-17" aria-hidden="true" tabindex="-1"></a><span class="co">      mu                 preset value of mu</span></span>
+<span id="cb50-18"><a href="#cb50-18" aria-hidden="true" tabindex="-1"></a><span class="co">      sigma              preset value of sigma</span></span>
+<span id="cb50-19"><a href="#cb50-19" aria-hidden="true" tabindex="-1"></a><span class="co">      </span></span>
+<span id="cb50-20"><a href="#cb50-20" aria-hidden="true" tabindex="-1"></a><span class="co">    Returns:</span></span>
+<span id="cb50-21"><a href="#cb50-21" aria-hidden="true" tabindex="-1"></a><span class="co">      Estimated mu, sigma, n, and expected number of datapoints outside CI in Q-Q-plot.</span></span>
+<span id="cb50-22"><a href="#cb50-22" aria-hidden="true" tabindex="-1"></a><span class="co">      Q-Q-plot</span></span>
+<span id="cb50-23"><a href="#cb50-23" aria-hidden="true" tabindex="-1"></a><span class="co">      </span></span>
+<span id="cb50-24"><a href="#cb50-24" aria-hidden="true" tabindex="-1"></a><span class="co">    Author:            M.E.F. Apol</span></span>
+<span id="cb50-25"><a href="#cb50-25" aria-hidden="true" tabindex="-1"></a><span class="co">    Date:              2020-01-06, revision 2022-08-30</span></span>
+<span id="cb50-26"><a href="#cb50-26" aria-hidden="true" tabindex="-1"></a><span class="co">    &quot;&quot;&quot;</span></span>
+<span id="cb50-27"><a href="#cb50-27" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb50-28"><a href="#cb50-28" aria-hidden="true" tabindex="-1"></a>   </span>
+<span id="cb50-29"><a href="#cb50-29" aria-hidden="true" tabindex="-1"></a>    <span class="im">from</span> scipy.stats <span class="im">import</span> iqr <span class="co"># iqr is the Interquartile Range function</span></span>
+<span id="cb50-30"><a href="#cb50-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb50-31"><a href="#cb50-31" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb50-32"><a href="#cb50-32" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb50-33"><a href="#cb50-33" aria-hidden="true" tabindex="-1"></a>    n <span class="op">=</span> <span class="bu">len</span>(y)</span>
+<span id="cb50-34"><a href="#cb50-34" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb50-35"><a href="#cb50-35" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Calculate order statistic:</span></span>
+<span id="cb50-36"><a href="#cb50-36" aria-hidden="true" tabindex="-1"></a>    y_os <span class="op">=</span> np.sort(y)</span>
+<span id="cb50-37"><a href="#cb50-37" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb50-38"><a href="#cb50-38" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Estimates of mu and sigma:</span></span>
+<span id="cb50-39"><a href="#cb50-39" aria-hidden="true" tabindex="-1"></a>    <span class="co"># ML estimates:</span></span>
+<span id="cb50-40"><a href="#cb50-40" aria-hidden="true" tabindex="-1"></a>    mu_ML <span class="op">=</span> np.mean(y)</span>
+<span id="cb50-41"><a href="#cb50-41" aria-hidden="true" tabindex="-1"></a>    sigma2_ML <span class="op">=</span> np.var(y)</span>
+<span id="cb50-42"><a href="#cb50-42" aria-hidden="true" tabindex="-1"></a>    sigma_ML <span class="op">=</span> np.std(y) <span class="co"># biased estimate</span></span>
+<span id="cb50-43"><a href="#cb50-43" aria-hidden="true" tabindex="-1"></a>    s2 <span class="op">=</span> np.var(y, ddof<span class="op">=</span><span class="dv">1</span>)</span>
+<span id="cb50-44"><a href="#cb50-44" aria-hidden="true" tabindex="-1"></a>    s <span class="op">=</span> np.std(y, ddof<span class="op">=</span><span class="dv">1</span>) <span class="co"># unbiased estimate</span></span>
+<span id="cb50-45"><a href="#cb50-45" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Robust estimates:</span></span>
+<span id="cb50-46"><a href="#cb50-46" aria-hidden="true" tabindex="-1"></a>    mu_R <span class="op">=</span> np.median(y)</span>
+<span id="cb50-47"><a href="#cb50-47" aria-hidden="true" tabindex="-1"></a>    sigma_R <span class="op">=</span> iqr(y)<span class="op">/</span><span class="fl">1.349</span></span>
+<span id="cb50-48"><a href="#cb50-48" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb50-49"><a href="#cb50-49" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Assign values of mu and sigma for z-transform:</span></span>
+<span id="cb50-50"><a href="#cb50-50" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> est <span class="op">==</span> <span class="st">&#39;ML&#39;</span>:</span>
+<span id="cb50-51"><a href="#cb50-51" aria-hidden="true" tabindex="-1"></a>        mu, sigma <span class="op">=</span> mu_ML, s</span>
+<span id="cb50-52"><a href="#cb50-52" aria-hidden="true" tabindex="-1"></a>    <span class="cf">elif</span> est <span class="op">==</span> <span class="st">&#39;robust&#39;</span>:</span>
+<span id="cb50-53"><a href="#cb50-53" aria-hidden="true" tabindex="-1"></a>        mu, sigma <span class="op">=</span> mu_R, sigma_R</span>
+<span id="cb50-54"><a href="#cb50-54" aria-hidden="true" tabindex="-1"></a>   </span>
+<span id="cb50-55"><a href="#cb50-55" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span>:</span>
+<span id="cb50-56"><a href="#cb50-56" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="st">&#39;Wrong estimation method chosen!&#39;</span>)</span>
+<span id="cb50-57"><a href="#cb50-57" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span>()</span>
+<span id="cb50-58"><a href="#cb50-58" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb50-59"><a href="#cb50-59" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb50-60"><a href="#cb50-60" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Expected number of deviations (95% confidence level):</span></span>
+<span id="cb50-61"><a href="#cb50-61" aria-hidden="true" tabindex="-1"></a>    n_dev <span class="op">=</span> np.<span class="bu">round</span>(<span class="fl">0.05</span><span class="op">*</span>n)</span>
+<span id="cb50-62"><a href="#cb50-62" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb50-63"><a href="#cb50-63" aria-hidden="true" tabindex="-1"></a>   </span>
+<span id="cb50-64"><a href="#cb50-64" aria-hidden="true" tabindex="-1"></a>         </span>
+<span id="cb50-65"><a href="#cb50-65" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Perform z-transform: sample quantiles z.i</span></span>
+<span id="cb50-66"><a href="#cb50-66" aria-hidden="true" tabindex="-1"></a>    z_i <span class="op">=</span> (y_os <span class="op">-</span> mu)<span class="op">/</span>sigma</span>
+<span id="cb50-67"><a href="#cb50-67" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb50-68"><a href="#cb50-68" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Calculate cumulative probabilities p.i:</span></span>
+<span id="cb50-69"><a href="#cb50-69" aria-hidden="true" tabindex="-1"></a>    i <span class="op">=</span> np.array(<span class="bu">range</span>(n)) <span class="op">+</span> <span class="dv">1</span></span>
+<span id="cb50-70"><a href="#cb50-70" aria-hidden="true" tabindex="-1"></a>    p_i <span class="op">=</span> (i <span class="op">-</span> <span class="fl">0.5</span>)<span class="op">/</span>n</span>
+<span id="cb50-71"><a href="#cb50-71" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb50-72"><a href="#cb50-72" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Calculate theoretical quantiles z.(i):</span></span>
+<span id="cb50-73"><a href="#cb50-73" aria-hidden="true" tabindex="-1"></a>    <span class="im">from</span> scipy.stats <span class="im">import</span> norm</span>
+<span id="cb50-74"><a href="#cb50-74" aria-hidden="true" tabindex="-1"></a>    z_th <span class="op">=</span> norm.ppf(p_i, <span class="dv">0</span>, <span class="dv">1</span>)</span>
+<span id="cb50-75"><a href="#cb50-75" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb50-76"><a href="#cb50-76" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Calculate SE or theoretical quantiles:</span></span>
+<span id="cb50-77"><a href="#cb50-77" aria-hidden="true" tabindex="-1"></a>    SE_z_th <span class="op">=</span> (<span class="dv">1</span><span class="op">/</span>norm.pdf(z_th, <span class="dv">0</span>, <span class="dv">1</span>)) <span class="op">*</span> np.sqrt((p_i <span class="op">*</span> (<span class="dv">1</span> <span class="op">-</span> p_i)) <span class="op">/</span> n)</span>
+<span id="cb50-78"><a href="#cb50-78" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb50-79"><a href="#cb50-79" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Calculate 95% CI of diagonal line:</span></span>
+<span id="cb50-80"><a href="#cb50-80" aria-hidden="true" tabindex="-1"></a>    CI_upper <span class="op">=</span> z_th <span class="op">+</span> <span class="fl">1.96</span> <span class="op">*</span> SE_z_th</span>
+<span id="cb50-81"><a href="#cb50-81" aria-hidden="true" tabindex="-1"></a>    CI_lower <span class="op">=</span> z_th <span class="op">-</span> <span class="fl">1.96</span> <span class="op">*</span> SE_z_th</span>
+<span id="cb50-82"><a href="#cb50-82" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> z_th, z_i, CI_upper,CI_lower,mu, sigma</span></code></pre></div>
+</div>
+<div class="cell code" data-execution_count="54">
+<div class="sourceCode" id="cb51"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb51-1"><a href="#cb51-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> DS_Q_Q_plots(y1_low,y1_high,y2_low,y2_high) :</span>
+<span id="cb51-2"><a href="#cb51-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb51-3"><a href="#cb51-3" aria-hidden="true" tabindex="-1"></a>    fig, (ax1,ax2,ax3,ax4) <span class="op">=</span> plt.subplots(<span class="dv">1</span>, <span class="dv">4</span>, figsize<span class="op">=</span>(<span class="dv">13</span>,<span class="dv">4</span>) )</span>
+<span id="cb51-4"><a href="#cb51-4" aria-hidden="true" tabindex="-1"></a> </span>
+<span id="cb51-5"><a href="#cb51-5" aria-hidden="true" tabindex="-1"></a>    z_th, z_i, CI_upper,CI_lower,mu,sigma<span class="op">=</span>DS_Q_Q_parameters(y1_low, est <span class="op">=</span> <span class="st">&#39;ML&#39;</span>)</span>
+<span id="cb51-6"><a href="#cb51-6" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Make first Q-Q plots:</span></span>
+<span id="cb51-7"><a href="#cb51-7" aria-hidden="true" tabindex="-1"></a>    ax1.plot(z_th, z_i, <span class="st">&#39;o&#39;</span>, color<span class="op">=</span><span class="st">&#39;k&#39;</span>, label<span class="op">=</span><span class="st">&#39;clean water&#39;</span>)</span>
+<span id="cb51-8"><a href="#cb51-8" aria-hidden="true" tabindex="-1"></a>    ax1.plot(z_th, z_th, <span class="st">&#39;--&#39;</span>, color<span class="op">=</span><span class="st">&#39;r&#39;</span>, label<span class="op">=</span><span class="st">&#39;normal line&#39;</span>)</span>
+<span id="cb51-9"><a href="#cb51-9" aria-hidden="true" tabindex="-1"></a>    ax1.plot(z_th, CI_upper, <span class="st">&#39;--&#39;</span>, color<span class="op">=</span><span class="st">&#39;b&#39;</span>, label<span class="op">=</span><span class="st">&#39;95% CI&#39;</span>)</span>
+<span id="cb51-10"><a href="#cb51-10" aria-hidden="true" tabindex="-1"></a>    ax1.plot(z_th, CI_lower, <span class="st">&#39;--&#39;</span>, color<span class="op">=</span><span class="st">&#39;b&#39;</span>)</span>
+<span id="cb51-11"><a href="#cb51-11" aria-hidden="true" tabindex="-1"></a>    ax1.set_xlabel(<span class="st">&#39;Theoretical quantiles, $z_{(i)}$&#39;</span>)</span>
+<span id="cb51-12"><a href="#cb51-12" aria-hidden="true" tabindex="-1"></a>    ax1.set_ylabel(<span class="st">&#39;Sample quantiles, $z_i$&#39;</span>)</span>
+<span id="cb51-13"><a href="#cb51-13" aria-hidden="true" tabindex="-1"></a>    ax1.set_title(<span class="st">&#39;low_income</span><span class="ch">\n</span><span class="st">  mu = </span><span class="sc">{:.4g}</span><span class="st">, sigma = </span><span class="sc">{:.4g}</span><span class="st">&#39;</span>.<span class="bu">format</span>(mu,sigma))</span>
+<span id="cb51-14"><a href="#cb51-14" aria-hidden="true" tabindex="-1"></a>    ax1.legend(loc<span class="op">=</span><span class="st">&#39;best&#39;</span>)</span>
+<span id="cb51-15"><a href="#cb51-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb51-16"><a href="#cb51-16" aria-hidden="true" tabindex="-1"></a>    z_th, z_i, CI_upper,CI_lower,mu,sigma<span class="op">=</span>DS_Q_Q_parameters(y1_high, est <span class="op">=</span> <span class="st">&#39;ML&#39;</span>)</span>
+<span id="cb51-17"><a href="#cb51-17" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Make second  Q-Q plots:</span></span>
+<span id="cb51-18"><a href="#cb51-18" aria-hidden="true" tabindex="-1"></a>    ax2.plot(z_th, z_i, <span class="st">&#39;o&#39;</span>, color<span class="op">=</span><span class="st">&#39;k&#39;</span>, label<span class="op">=</span><span class="st">&#39;clean water&#39;</span>)</span>
+<span id="cb51-19"><a href="#cb51-19" aria-hidden="true" tabindex="-1"></a>    ax2.plot(z_th, z_th, <span class="st">&#39;--&#39;</span>, color<span class="op">=</span><span class="st">&#39;r&#39;</span>, label<span class="op">=</span><span class="st">&#39;normal line&#39;</span>)</span>
+<span id="cb51-20"><a href="#cb51-20" aria-hidden="true" tabindex="-1"></a>    ax2.plot(z_th, CI_upper, <span class="st">&#39;--&#39;</span>, color<span class="op">=</span><span class="st">&#39;b&#39;</span>, label<span class="op">=</span><span class="st">&#39;95% CI&#39;</span>)</span>
+<span id="cb51-21"><a href="#cb51-21" aria-hidden="true" tabindex="-1"></a>    ax2.plot(z_th, CI_lower, <span class="st">&#39;--&#39;</span>, color<span class="op">=</span><span class="st">&#39;b&#39;</span>)</span>
+<span id="cb51-22"><a href="#cb51-22" aria-hidden="true" tabindex="-1"></a>    ax2.set_xlabel(<span class="st">&#39;Theoretical quantiles, $z_{(i)}$&#39;</span>)</span>
+<span id="cb51-23"><a href="#cb51-23" aria-hidden="true" tabindex="-1"></a>    ax2.set_ylabel(<span class="st">&#39;Sample quantiles, $z_i$&#39;</span>)</span>
+<span id="cb51-24"><a href="#cb51-24" aria-hidden="true" tabindex="-1"></a>    ax2.set_title(<span class="st">&#39;high_income</span><span class="ch">\n</span><span class="st">  mu = </span><span class="sc">{:.4g}</span><span class="st">, sigma = </span><span class="sc">{:.4g}</span><span class="st">&#39;</span>.<span class="bu">format</span>(mu,sigma))</span>
+<span id="cb51-25"><a href="#cb51-25" aria-hidden="true" tabindex="-1"></a>    ax2.legend(loc<span class="op">=</span><span class="st">&#39;best&#39;</span>)</span>
+<span id="cb51-26"><a href="#cb51-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb51-27"><a href="#cb51-27" aria-hidden="true" tabindex="-1"></a>    z_th, z_i, CI_upper,CI_lower,mu,sigma<span class="op">=</span>DS_Q_Q_parameters(y2_low, est <span class="op">=</span> <span class="st">&#39;ML&#39;</span>)</span>
+<span id="cb51-28"><a href="#cb51-28" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Make third  Q-Q plots:</span></span>
+<span id="cb51-29"><a href="#cb51-29" aria-hidden="true" tabindex="-1"></a>    ax3.plot(z_th, z_i, <span class="st">&#39;o&#39;</span>, color<span class="op">=</span><span class="st">&#39;k&#39;</span>, label<span class="op">=</span><span class="st">&#39;sanitation&#39;</span>)</span>
+<span id="cb51-30"><a href="#cb51-30" aria-hidden="true" tabindex="-1"></a>    ax3.plot(z_th, z_th, <span class="st">&#39;--&#39;</span>, color<span class="op">=</span><span class="st">&#39;r&#39;</span>, label<span class="op">=</span><span class="st">&#39;normal line&#39;</span>)</span>
+<span id="cb51-31"><a href="#cb51-31" aria-hidden="true" tabindex="-1"></a>    ax3.plot(z_th, CI_upper, <span class="st">&#39;--&#39;</span>, color<span class="op">=</span><span class="st">&#39;b&#39;</span>, label<span class="op">=</span><span class="st">&#39;95% CI&#39;</span>)</span>
+<span id="cb51-32"><a href="#cb51-32" aria-hidden="true" tabindex="-1"></a>    ax3.plot(z_th, CI_lower, <span class="st">&#39;--&#39;</span>, color<span class="op">=</span><span class="st">&#39;b&#39;</span>)</span>
+<span id="cb51-33"><a href="#cb51-33" aria-hidden="true" tabindex="-1"></a>    ax3.set_xlabel(<span class="st">&#39;Theoretical quantiles, $z_{(i)}$&#39;</span>)</span>
+<span id="cb51-34"><a href="#cb51-34" aria-hidden="true" tabindex="-1"></a>    ax3.set_ylabel(<span class="st">&#39;Sample quantiles, $z_i$&#39;</span>)</span>
+<span id="cb51-35"><a href="#cb51-35" aria-hidden="true" tabindex="-1"></a>    ax3.set_title(<span class="st">&#39;low_income</span><span class="ch">\n</span><span class="st">  mu = </span><span class="sc">{:.4g}</span><span class="st">, sigma = </span><span class="sc">{:.4g}</span><span class="st">&#39;</span>.<span class="bu">format</span>(mu,sigma))</span>
+<span id="cb51-36"><a href="#cb51-36" aria-hidden="true" tabindex="-1"></a>    ax3.legend(loc<span class="op">=</span><span class="st">&#39;best&#39;</span>)</span>
+<span id="cb51-37"><a href="#cb51-37" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb51-38"><a href="#cb51-38" aria-hidden="true" tabindex="-1"></a>    z_th, z_i, CI_upper,CI_lowe,mu,sigmar<span class="op">=</span>DS_Q_Q_parameters(y2_high, est <span class="op">=</span> <span class="st">&#39;ML&#39;</span>)</span>
+<span id="cb51-39"><a href="#cb51-39" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Make forth  Q-Q plots:</span></span>
+<span id="cb51-40"><a href="#cb51-40" aria-hidden="true" tabindex="-1"></a>    ax4.plot(z_th, z_i, <span class="st">&#39;o&#39;</span>, color<span class="op">=</span><span class="st">&#39;k&#39;</span>, label<span class="op">=</span><span class="st">&#39;sanitation&#39;</span>)</span>
+<span id="cb51-41"><a href="#cb51-41" aria-hidden="true" tabindex="-1"></a>    ax4.plot(z_th, z_th, <span class="st">&#39;--&#39;</span>, color<span class="op">=</span><span class="st">&#39;r&#39;</span>, label<span class="op">=</span><span class="st">&#39;normal line&#39;</span>)</span>
+<span id="cb51-42"><a href="#cb51-42" aria-hidden="true" tabindex="-1"></a>    ax4.plot(z_th, CI_upper, <span class="st">&#39;--&#39;</span>, color<span class="op">=</span><span class="st">&#39;b&#39;</span>, label<span class="op">=</span><span class="st">&#39;95% CI&#39;</span>)</span>
+<span id="cb51-43"><a href="#cb51-43" aria-hidden="true" tabindex="-1"></a>    ax4.plot(z_th, CI_lower, <span class="st">&#39;--&#39;</span>, color<span class="op">=</span><span class="st">&#39;b&#39;</span>)</span>
+<span id="cb51-44"><a href="#cb51-44" aria-hidden="true" tabindex="-1"></a>    ax4.set_xlabel(<span class="st">&#39;Theoretical quantiles, $z_{(i)}$&#39;</span>)</span>
+<span id="cb51-45"><a href="#cb51-45" aria-hidden="true" tabindex="-1"></a>    ax4.set_ylabel(<span class="st">&#39;Sample quantiles, $z_i$&#39;</span>)</span>
+<span id="cb51-46"><a href="#cb51-46" aria-hidden="true" tabindex="-1"></a>    ax4.set_title(<span class="st">&#39;high_income</span><span class="ch">\n</span><span class="st">  mu = </span><span class="sc">{:.4g}</span><span class="st">, sigma = </span><span class="sc">{:.4g}</span><span class="st">&#39;</span>.<span class="bu">format</span>(mu,sigma))</span>
+<span id="cb51-47"><a href="#cb51-47" aria-hidden="true" tabindex="-1"></a>    ax4.legend(loc<span class="op">=</span><span class="st">&#39;best&#39;</span>)</span></code></pre></div>
+</div>
+<div class="cell code" data-execution_count="56">
+<div class="sourceCode" id="cb52"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb52-1"><a href="#cb52-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Data preperation for water</span></span>
+<span id="cb52-2"><a href="#cb52-2" aria-hidden="true" tabindex="-1"></a>Low_income_reg_wat<span class="op">=</span>income_reg_wat[income_reg_wat[<span class="st">&#39;REGION&#39;</span>] <span class="op">==</span> <span class="st">&#39;Low-income&#39;</span>]</span>
+<span id="cb52-3"><a href="#cb52-3" aria-hidden="true" tabindex="-1"></a>low_list<span class="op">=</span><span class="bu">list</span>(Low_income_reg_wat[<span class="st">&#39;national&#39;</span>])</span>
+<span id="cb52-4"><a href="#cb52-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb52-5"><a href="#cb52-5" aria-hidden="true" tabindex="-1"></a>High_income_reg_wat<span class="op">=</span>income_reg_wat[income_reg_wat[<span class="st">&#39;REGION&#39;</span>] <span class="op">==</span> <span class="st">&#39;High-income&#39;</span>]</span>
+<span id="cb52-6"><a href="#cb52-6" aria-hidden="true" tabindex="-1"></a>High_list<span class="op">=</span><span class="bu">list</span>(High_income_reg_wat[<span class="st">&#39;national&#39;</span>])</span>
+<span id="cb52-7"><a href="#cb52-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb52-8"><a href="#cb52-8" aria-hidden="true" tabindex="-1"></a>y1_law <span class="op">=</span> np.array(low_list)</span>
+<span id="cb52-9"><a href="#cb52-9" aria-hidden="true" tabindex="-1"></a>y1_high<span class="op">=</span>np.array(High_list)</span>
+<span id="cb52-10"><a href="#cb52-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb52-11"><a href="#cb52-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb52-12"><a href="#cb52-12" aria-hidden="true" tabindex="-1"></a>y_av_law_wat <span class="op">=</span> np.mean(y1_law)</span>
+<span id="cb52-13"><a href="#cb52-13" aria-hidden="true" tabindex="-1"></a>m2_law_wat <span class="op">=</span> np.var(y1_law, ddof<span class="op">=</span><span class="dv">0</span>)</span>
+<span id="cb52-14"><a href="#cb52-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb52-15"><a href="#cb52-15" aria-hidden="true" tabindex="-1"></a>y_av_high_wat <span class="op">=</span> np.mean(y1_high)</span>
+<span id="cb52-16"><a href="#cb52-16" aria-hidden="true" tabindex="-1"></a>m2_high_wat <span class="op">=</span> np.var(y1_high, ddof<span class="op">=</span><span class="dv">0</span>)</span>
+<span id="cb52-17"><a href="#cb52-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb52-18"><a href="#cb52-18" aria-hidden="true" tabindex="-1"></a><span class="co"># Data preperation for sanitation</span></span>
+<span id="cb52-19"><a href="#cb52-19" aria-hidden="true" tabindex="-1"></a>Low_income_reg_san<span class="op">=</span>income_reg_san[income_reg_san[<span class="st">&#39;REGION&#39;</span>] <span class="op">==</span> <span class="st">&#39;Low-income&#39;</span>]</span>
+<span id="cb52-20"><a href="#cb52-20" aria-hidden="true" tabindex="-1"></a>low_list<span class="op">=</span><span class="bu">list</span>(Low_income_reg_san[<span class="st">&#39;national&#39;</span>])</span>
+<span id="cb52-21"><a href="#cb52-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb52-22"><a href="#cb52-22" aria-hidden="true" tabindex="-1"></a>High_income_reg_san<span class="op">=</span>income_reg_san[income_reg_san[<span class="st">&#39;REGION&#39;</span>] <span class="op">==</span> <span class="st">&#39;High-income&#39;</span>]</span>
+<span id="cb52-23"><a href="#cb52-23" aria-hidden="true" tabindex="-1"></a>High_list<span class="op">=</span><span class="bu">list</span>(High_income_reg_san[<span class="st">&#39;national&#39;</span>])</span>
+<span id="cb52-24"><a href="#cb52-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb52-25"><a href="#cb52-25" aria-hidden="true" tabindex="-1"></a>y2_law <span class="op">=</span> np.array(low_list)</span>
+<span id="cb52-26"><a href="#cb52-26" aria-hidden="true" tabindex="-1"></a>y2_high<span class="op">=</span>np.array(High_list)</span>
+<span id="cb52-27"><a href="#cb52-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb52-28"><a href="#cb52-28" aria-hidden="true" tabindex="-1"></a>y_av_law_san <span class="op">=</span> np.mean(y2_law)</span>
+<span id="cb52-29"><a href="#cb52-29" aria-hidden="true" tabindex="-1"></a>m2_law_san <span class="op">=</span> np.var(y1_law, ddof<span class="op">=</span><span class="dv">0</span>)</span>
+<span id="cb52-30"><a href="#cb52-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb52-31"><a href="#cb52-31" aria-hidden="true" tabindex="-1"></a>y_av_high_san <span class="op">=</span> np.mean(y2_high)</span>
+<span id="cb52-32"><a href="#cb52-32" aria-hidden="true" tabindex="-1"></a>m2_high_san <span class="op">=</span> np.var(y2_high, ddof<span class="op">=</span><span class="dv">0</span>)</span>
+<span id="cb52-33"><a href="#cb52-33" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb52-34"><a href="#cb52-34" aria-hidden="true" tabindex="-1"></a>hist_plot(y1_law,y1_high,y2_law,y2_high)</span>
+<span id="cb52-35"><a href="#cb52-35" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb52-36"><a href="#cb52-36" aria-hidden="true" tabindex="-1"></a><span class="co">#fig, (ax1,ax2,ax3,ax4) = plt.subplots(1, 4, figsize=(13,4))</span></span>
+<span id="cb52-37"><a href="#cb52-37" aria-hidden="true" tabindex="-1"></a>DS_Q_Q_plots(y1_law,y1_high,y2_law,y2_high)</span></code></pre></div>
+<div class="output display_data">
+<p><img
+src="vertopal_1901c7a14e934d17aaeddbda539ec253/e6a8a57cc6f3211e8a4c87014f3ed1e995bedbe7.png" /></p>
+</div>
+<div class="output display_data">
+<p><img
+src="vertopal_1901c7a14e934d17aaeddbda539ec253/237e9894f03e23efe89676dd389fdf42c196021f.png" /></p>
+</div>
+</div>
+<div class="cell markdown">
+<p>I used Kruskal-Wallis test becuse as you see above data is not
+normalize and varainces are far different so, T-test seems that not a
+proper test for these datasets. The kruskal test takes two or more
+arrays as input and performs the Kruskal-Wallis test. The function
+returns two values: the Kruskal-Wallis statistic and the p-value. If the
+p-value is less than a predetermined significance level (such as 0.05),
+you can conclude that there is a significant difference in the medians
+of the groups. The two-sided test compares the medians of all groups
+against each other, so it can determine if any group has a different
+median, not just if one group has a higher or lower median than the
+others. Before I tried to transform data to normal data using different
+functions such as Logarithmic Transformation, bout the histtograms
+showed that dataalredy is not normal.</p>
+</div>
+<section
+id="investigating-access-to-clean-water-between-high_income-and-low_income-regions"
+class="cell markdown">
+<h3>Investigating Access to clean water between High_income and
+low_income regions</h3>
+</section>
+<div class="cell code" data-execution_count="57">
+<div class="sourceCode" id="cb53"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb53-1"><a href="#cb53-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Kruskal-Wallis test test for water</span></span>
+<span id="cb53-2"><a href="#cb53-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb53-3"><a href="#cb53-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> scipy.stats <span class="im">import</span> kruskal</span>
+<span id="cb53-4"><a href="#cb53-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb53-5"><a href="#cb53-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb53-6"><a href="#cb53-6" aria-hidden="true" tabindex="-1"></a>high_income <span class="op">=</span>np.array(y1_law)</span>
+<span id="cb53-7"><a href="#cb53-7" aria-hidden="true" tabindex="-1"></a>low_income <span class="op">=</span> np.array(y1_high)</span>
+<span id="cb53-8"><a href="#cb53-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb53-9"><a href="#cb53-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Combine the data into a single array</span></span>
+<span id="cb53-10"><a href="#cb53-10" aria-hidden="true" tabindex="-1"></a>data <span class="op">=</span> np.concatenate([high_income, low_income])</span>
+<span id="cb53-11"><a href="#cb53-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb53-12"><a href="#cb53-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a label array to identify the groups</span></span>
+<span id="cb53-13"><a href="#cb53-13" aria-hidden="true" tabindex="-1"></a>groups <span class="op">=</span> [<span class="dv">1</span>] <span class="op">*</span> <span class="bu">len</span>(high_income) <span class="op">+</span> [<span class="dv">2</span>] <span class="op">*</span> <span class="bu">len</span>(low_income)</span>
+<span id="cb53-14"><a href="#cb53-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb53-15"><a href="#cb53-15" aria-hidden="true" tabindex="-1"></a><span class="co"># Perform the Kruskal-Wallis test</span></span>
+<span id="cb53-16"><a href="#cb53-16" aria-hidden="true" tabindex="-1"></a>statistic, p_value <span class="op">=</span> kruskal(high_income, low_income)</span>
+<span id="cb53-17"><a href="#cb53-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb53-18"><a href="#cb53-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb53-19"><a href="#cb53-19" aria-hidden="true" tabindex="-1"></a>statistic, p_value <span class="op">=</span> kruskal(high_income, low_income)</span>
+<span id="cb53-20"><a href="#cb53-20" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&#39;p_value = </span><span class="sc">{:.4g}</span><span class="st">&#39;</span>.<span class="bu">format</span>(p_value))</span>
+<span id="cb53-21"><a href="#cb53-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb53-22"><a href="#cb53-22" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> p_value<span class="op">&lt;</span><span class="fl">0.05</span>:</span>
+<span id="cb53-23"><a href="#cb53-23" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span> (<span class="st">&#39; Access to clean water differs significantly between High_income and low_income regions&#39;</span>)</span>
+<span id="cb53-24"><a href="#cb53-24" aria-hidden="true" tabindex="-1"></a><span class="cf">else</span>:</span>
+<span id="cb53-25"><a href="#cb53-25" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span> (<span class="st">&#39; Access to clean water does not differ significantly between High_income and low_income regions&#39;</span>)</span></code></pre></div>
+<div class="output stream stdout">
+<pre><code>p_value = 5.03e-09
+ Access to clean water differs significantly between High_income and low_income regions
+</code></pre>
+</div>
+</div>
+<section
+id="investigating-access-to-sanitation-between-high_income-and-low_income-regions"
+class="cell markdown">
+<h3>Investigating Access to sanitation between High_income and
+low_income regions</h3>
+</section>
+<div class="cell code" data-execution_count="58">
+<div class="sourceCode" id="cb55"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb55-1"><a href="#cb55-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Kruskal-Wallis test test for sanitation</span></span>
+<span id="cb55-2"><a href="#cb55-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb55-3"><a href="#cb55-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> scipy.stats <span class="im">import</span> kruskal</span>
+<span id="cb55-4"><a href="#cb55-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb55-5"><a href="#cb55-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb55-6"><a href="#cb55-6" aria-hidden="true" tabindex="-1"></a>high_income <span class="op">=</span>np.array(y2_law)</span>
+<span id="cb55-7"><a href="#cb55-7" aria-hidden="true" tabindex="-1"></a>low_income <span class="op">=</span> np.array(y2_high)</span>
+<span id="cb55-8"><a href="#cb55-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb55-9"><a href="#cb55-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Combine the data into a single array</span></span>
+<span id="cb55-10"><a href="#cb55-10" aria-hidden="true" tabindex="-1"></a>data <span class="op">=</span> np.concatenate([high_income, low_income])</span>
+<span id="cb55-11"><a href="#cb55-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb55-12"><a href="#cb55-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a label array to identify the groups</span></span>
+<span id="cb55-13"><a href="#cb55-13" aria-hidden="true" tabindex="-1"></a>groups <span class="op">=</span> [<span class="dv">1</span>] <span class="op">*</span> <span class="bu">len</span>(high_income) <span class="op">+</span> [<span class="dv">2</span>] <span class="op">*</span> <span class="bu">len</span>(low_income)</span>
+<span id="cb55-14"><a href="#cb55-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb55-15"><a href="#cb55-15" aria-hidden="true" tabindex="-1"></a><span class="co"># Perform the Kruskal-Wallis test</span></span>
+<span id="cb55-16"><a href="#cb55-16" aria-hidden="true" tabindex="-1"></a>statistic, p_value <span class="op">=</span> kruskal(high_income, low_income)</span>
+<span id="cb55-17"><a href="#cb55-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb55-18"><a href="#cb55-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb55-19"><a href="#cb55-19" aria-hidden="true" tabindex="-1"></a>statistic, p_value <span class="op">=</span> kruskal(high_income, low_income)</span>
+<span id="cb55-20"><a href="#cb55-20" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&#39;p_value = </span><span class="sc">{:.4g}</span><span class="st">&#39;</span>.<span class="bu">format</span>(p_value))</span>
+<span id="cb55-21"><a href="#cb55-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb55-22"><a href="#cb55-22" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> p_value<span class="op">&lt;</span><span class="fl">0.05</span>:</span>
+<span id="cb55-23"><a href="#cb55-23" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span> (<span class="st">&#39; Access to sanitation differs significantly between High_income and low_income regions&#39;</span>)</span>
+<span id="cb55-24"><a href="#cb55-24" aria-hidden="true" tabindex="-1"></a><span class="cf">else</span>:</span>
+<span id="cb55-25"><a href="#cb55-25" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span> (<span class="st">&#39; Access to csanitation does not differ significantly between High_income and low_income regions&#39;</span>)</span>
+<span id="cb55-26"><a href="#cb55-26" aria-hidden="true" tabindex="-1"></a>    </span></code></pre></div>
+<div class="output stream stdout">
+<pre><code>p_value = 1.271e-08
+ Access to sanitation differs significantly between High_income and low_income regions
+</code></pre>
+</div>
+</div>
+</body>
+</html>
