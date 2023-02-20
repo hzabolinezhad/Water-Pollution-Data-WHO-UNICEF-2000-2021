@@ -24,4 +24,6 @@ Are there significant inequalities in access to clean water and sanitation withi
 How does access to clean water and sanitation differ between high-income and low-income regions?
 
 Note
-The original dataset can be found at https://www.kaggle.com/datasets/harshjhunjhunwala/water-pollution-data-whounicef-20002021?resource=download.
+Because the original dataset consists of about 65 excel files each of which concludes many tabs. To answer the research question,  I extracted the two targeted tabs from two different mega files and then converted them to CSV format, to work on them (region_houshold_sanitation, region_houshold_water). Here is the link access to these files if you would like to execute the code and see the output.   https://drive.google.com/drive/folders/1DYeHlooW6nQ3q_oOnY7qhtlNUyM3yz33?usp=share_link
+The original dataset can be found at https://www.kaggle.com/datasets/harshjhunjhunwala/water-pollution-data-whounicef-20002021?
+However, 
