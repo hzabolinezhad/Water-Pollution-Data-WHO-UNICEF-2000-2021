@@ -12,18 +12,18 @@ The goal of this repository is to spread awareness about the global water pollut
 Dataset Description
 The dataset contains information on drinking water, sanitation, and hygiene for several regions in the world, as well as aggregate values for the world as a whole. The data is divided into categories of household, schools, and healthcare, with some countries having data on inequalities as well.
 
-Research Questions
-How has global access to clean water and sanitation changed from 2000 to 2020?
+Research Questions:
+1-How has global access to clean water and sanitation changed from 2000 to 2020?
 
-Is there any correlation between global access to clean water and sanitation?
+2-Is there any correlation between global access to clean water and sanitation?
 
-How has regional access to clean water and sanitation changed over the years?
+3-How has regional access to clean water and sanitation changed over the years?
 
-Are there significant inequalities in access to clean water and sanitation within different regions?
+4-Are there significant inequalities in access to clean water and sanitation within different regions?
 
-How does access to clean water and sanitation differ between high-income and low-income regions?
+5-How does access to clean water and sanitation differ between high-income and low-income regions?
 
 Note
-Because the original dataset consists of about 65 excel files each of which concludes many tabs. To answer the research question,  I extracted the two targeted tabs from two different mega files and then converted them to CSV format, to work on them (region_houshold_sanitation, region_houshold_water). Here is the link access to these files if you would like to execute the code and see the output.   https://drive.google.com/drive/folders/1DYeHlooW6nQ3q_oOnY7qhtlNUyM3yz33?usp=share_link
+Because the original dataset consists of about 65 excel files each of which concludes many tabs. To answer the research question,  I extracted the two questions_assossiated tabs from two different mega files and then converted them to CSV format, and work on them (region_houshold_sanitation, region_houshold_water). Here is the link access to these files if you would like to execute the code and see the output.   https://drive.google.com/drive/folders/1DYeHlooW6nQ3q_oOnY7qhtlNUyM3yz33?usp=share_link
 The original dataset can be found at https://www.kaggle.com/datasets/harshjhunjhunwala/water-pollution-data-whounicef-20002021?
 However, 
